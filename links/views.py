@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic, View
-from .models import Post
+from .models import url_links
 
 # Create your views here.
 
