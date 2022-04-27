@@ -1,0 +1,47 @@
+body{
+    color: #050a30;
+}
+
+#logo {
+    width:125px;
+}
+
+a {
+    color:#050a30;
+}
+
+#footer-logo{
+    width:100px;
+}
+
+.social-links {
+    padding-bottom: 15px;
+}
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    /* border-radius: 50%; */
+    font-size: 32px;
+    line-height: 7px;
+    text-align: center;
+    color: #111010;
+    background: white;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    color: #2196f3;;
+}
+
+hr {
+    margin-top:5px;
+    margin-bottom:5px;
+    height:1px;
+    width:100%;
+    border-top:2px solid lightgrey;
+   }
