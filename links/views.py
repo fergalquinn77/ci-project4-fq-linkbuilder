@@ -7,3 +7,4 @@ from .models import url_links
 class links_view(generic.ListView):
     model = url_links
     template_name = "index.html"
+    paginate_by = 1
