@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content-section">
+    <div class="media">
+        {% if "placeholder" in user.profile.profile_image.url %}
+        <img class="rounded-circle account-img" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+        {% else %}
+        <img class="rounded-circle account-img" src="{{ user.profile.profile_image.url }}">
+        {% endif %}
+        <div class="media-body">
+            <h2 class="account-heading">{{ user.username }}</h2>
+            <p class="text-secondary">{{ user.email }}</p>
+            <p class="text-secondary">{{ user.profile.company_name }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

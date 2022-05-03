@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from pathlib import Path
+from django.contrib.messages import constants as messages
 import os
 import dj_database_url
 
@@ -38,6 +39,7 @@ ALLOWED_HOSTS = ["ci-fq-linktree-p4.herokuapp.com", "localhost"]
 # Application definition
 
 INSTALLED_APPS = [
+    # 'links.apps.LinksConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,6 +54,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'accounts',
     'links',
+    'crispy_forms',
 ]
 
 SITE_ID = 1
@@ -59,6 +62,16 @@ SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+ACCOUNT_EMAIL_REQUIRED = True
+
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-info',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+    }
+    
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -70,6 +83,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'linktree.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {

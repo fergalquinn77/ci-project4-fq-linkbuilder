@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load crispy_forms_tags %}
 {% load i18n %}
 {% load account socialaccount %}
 
@@ -9,7 +9,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="mx-auto mt-5 jumbotron">
+    <div class="mx-auto mt-5 jumbotron text-center">
+
       <h1>{% trans "Sign In" %}</h1>
 
 
@@ -19,14 +20,17 @@
 
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form|crispy }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
 
         <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
       </form>
+
+
     </div>
   </div>
+</div>
 
-  {% endblock %}
+{% endblock %}

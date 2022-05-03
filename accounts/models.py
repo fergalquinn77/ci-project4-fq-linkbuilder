@@ -11,6 +11,6 @@ class profile(models.Model):
     profile_image = CloudinaryField('image', default='profile_placeholder')
     
     def __str__(self):
-        return f"Profile for {self.username}"
+        return f"Profile for {self.user}"
 
 # Create your models here.

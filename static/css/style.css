@@ -35,7 +35,7 @@ a {
 }
 
 .social-links li a i:hover {
-    color: #2196f3;;
+    color: #2196f3;
 }
 
 hr {
@@ -45,3 +45,15 @@ hr {
     width:100%;
     border-top:2px solid lightgrey;
    }
+
+.jumbotron {
+background-color: #d2eafc;
+border: 2px;
+border-style: solid;
+border-color: black;
+}
+
+.profile-image{
+    width:150px;
+    height:150px
+}
