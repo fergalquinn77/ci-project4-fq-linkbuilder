@@ -51,6 +51,9 @@ background-color: #d2eafc;
 border: 2px;
 border-style: solid;
 border-color: black;
+padding: 0.1rem;
+width:30%;
+margin: 0.2rem auto;
 }
 
 .profile-image{

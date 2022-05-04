@@ -11,6 +11,11 @@ def register(request):
     form=UserCreationForm()
     return render(request, 'register.html', {'form':form})
 
+
+# @login_required
+# def profile(request):
+#     return render(request, 'profile.html',)
+
 @login_required
 def profile(request):
     u_form = UserUpdateForm(request.POST, instance=request.user)
