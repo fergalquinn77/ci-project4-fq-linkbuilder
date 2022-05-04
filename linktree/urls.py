@@ -1,8 +1,10 @@
 from django.contrib import admin
 from django.urls import path, include
 from accounts import views as accounts_views
+from links import views as links_views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -10,6 +12,8 @@ urlpatterns = [
     path('register/', accounts_views.register, name='register'),
     path('accounts/', include('allauth.urls')),
     path('profile/', accounts_views.profile, name='profile'),
+    path('add/', links_views.add_link, name='add-link'),
+    # path('edit/', links_views.edit_link, name='edit-link'),
 ]
 
 

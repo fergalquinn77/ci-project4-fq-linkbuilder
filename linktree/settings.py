@@ -13,6 +13,7 @@ from pathlib import Path
 from django.contrib.messages import constants as messages
 import os
 import dj_database_url
+from django.contrib.messages import constants as messages
 
 if os.path.isfile("env.py"):
    import env

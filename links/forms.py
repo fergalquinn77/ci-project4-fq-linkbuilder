@@ -6,4 +6,4 @@ from . models import url_links
 class LinkForm(ModelForm):
     class Meta:
         model = url_links
-        fields = ['title', 'link']
+        fields = ['title', 'link', 'url_image']
