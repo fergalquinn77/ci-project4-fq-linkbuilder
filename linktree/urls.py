@@ -12,16 +12,8 @@ urlpatterns = [
     path('register/', accounts_views.register, name='register'),
     path('accounts/', include('allauth.urls')),
     path('profile/', accounts_views.profile, name='profile'),
-    path('add/', links_views.add_link, name='add-link'),
-    # path('edit/', links_views.edit_link, name='edit-link'),
 ]
 
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-#     path('', include('links.urls'), name='link-urls'),
-#     path('accounts/', include('allauth.urls')),
-# ]

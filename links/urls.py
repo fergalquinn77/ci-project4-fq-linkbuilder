@@ -6,11 +6,9 @@ from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
     path('', views.links_view.as_view(), name='links-home'),
-    path('add/', views.add_link, name='add-link')
+    path('add/', views.add_link, name='add-link'),
+    path('edit/<int:url_links_id>/', views.edit_link, name='edit-link'),
+    path('delete/<int:url_links_id>/', views.delete_link, name='delete-link'),
 ]
 
-# urlpatterns = [
-#     path('', views.links_view.as_view(), name='home'),
-#     path('links/new/', LinkCreateView.as_view(), name='link-create'),
-# ]
 

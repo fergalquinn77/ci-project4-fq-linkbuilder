@@ -5,24 +5,37 @@
 
 {% for url in object_list %}
 
-<div class="container">
-    <div class="row border border-primary">
-        <div class="col">
-            {% if "placeholder" in url.url_image.url %}
-            <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" class="profile-image">
-            {% else %}
-            <img src="{{ url.url_image.url }}" class="profile-image" alt="image of {{ url.title }}">
-            {% endif %}
-        </div>
-        <div class="col">
-            <h5 class="card-title">{{ url.title }}</h5>
-            <p class="card-text">{{ url.link }}</p>
-        </div>
-    </div>
-</div>
 
-    {% endfor %}
+<table>
+    <tr>
+
+        <td>{{ url.title }}</td>
+        <td>{{ url.link }}</td>
+        <td>
+            <a href="{% url 'edit-link' url.id %}">
+                <button>
+                    Edit
+                </button>
+            </a>
+        </td>
+        <td>
+            <a href="{% url 'delete-link' url.id %}">
+                <button>
+                    Delete
+                </button>
+            </a>
+        </td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td>You have no data</td>
+    </tr>
+
+
+{% endfor %}
+</table>
+<a href="{% url 'add-link' %}"><button>Add an item</button></a>
 
 
 
-    {% endblock %}
+{% endblock %}

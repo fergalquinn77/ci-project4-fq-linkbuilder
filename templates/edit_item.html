@@ -3,14 +3,14 @@
 {% block content %}
 
 
-<h1>Add a link</h1>
-<form method="POST" action="add">
+<h1>Edit a link</h1>
+<form method="POST" action="">
     {% csrf_token %}
     {{ form.as_p }}
     <div>
         <p>
             <button type="submit">
-            Add URL 
+            Update 
             </button>
         </p>
 
