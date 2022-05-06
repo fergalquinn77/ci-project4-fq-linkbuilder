@@ -6,15 +6,21 @@ from .forms import LinkForm
 from django.contrib.auth.decorators import login_required
 from django.views.generic import (
     ListView,
-    DetailView,
-    CreateView,
-    UpdateView,
-    DeleteView
+    # DetailView,
+    # CreateView,
+    # UpdateView,
+    # DeleteView
 )
 
-class links_view(LoginRequiredMixin, generic.ListView):
-    model = url_links
-    template_name = "index.html"
+
+
+
+@login_required
+def links_view(request):
+    context = {
+        }
+    context["dataset"] =url_links.objects.all().filter(user=request.user)
+    return render(request, 'index.html', context)
 
 @login_required
 def add_link(request):
