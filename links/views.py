@@ -48,12 +48,9 @@ def edit_link(request, url_links_id):
 @login_required
 def delete_link(request, url_links_id):
     link = get_object_or_404(url_links, id=url_links_id)
-    # item.delete()
-    # return redirect('links-home')
-    
     
     if request.method=='POST':
         link.delete()
         return redirect('links-home')
-    
-    return render(request, 'confirm_delete.html')
+   
+    return render(request, 'confirm_delete.html',{'link':link})
