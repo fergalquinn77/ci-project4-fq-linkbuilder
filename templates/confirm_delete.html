@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Confirm Deletion</legend>
+                <p>Are you sure you want to delete the link {{ object.title }}</p>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-danger" type="submit" value="Yes">Yes, Delete</button>
+                <a class="btn btn-secondary" href="{% url 'links-home' %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

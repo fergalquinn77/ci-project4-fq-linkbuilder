@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+ 
 {% block content %}
 <div class="text-center">
     <a href="{% url 'add-link' %}"><button class="btn btn-success">Add an item</button></a>
@@ -23,11 +23,13 @@
         </a>
     </div>
     <div class="text-center">
+       
         <a href="{% url 'delete-link' url.id %}">
             <i data-toggle="delete" class="bi bi-archive" title="Delete Link"></i>
         </a>
     </div>
 </div>
+
 
 
 
