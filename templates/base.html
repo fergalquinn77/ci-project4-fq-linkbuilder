@@ -22,15 +22,6 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
 
-    <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-      Dropdown link
-    </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-    </div> -->
-
     <div class="navbar-nav d-flex align-items-center">
       {% if user.is_authenticated %}
       {% if "placeholder" in user.profile.profile_image.url %}
@@ -46,10 +37,7 @@
       <a class="nav-item nav-link" href="{% url 'account_login' %}">Login</a>
       <a class="nav-item nav-link" href="{% url 'account_signup' %}">Register</a>
       {% endif %}
-      <!-- <div class="justify-content-center">
-      <a class="my-2 my-lg-0" href="{% url 'links-home' %}"><img id="logo" 
-          src="{% static 'images/Link_Builder.png' %}" alt="Link Builder"></a>
-        </div> -->
+   
     </div>
     <div id="logo">
       <a href="{% url 'links-home' %}"><img id="logo-image" src="{% static 'images/Link_Builder.png' %}"
