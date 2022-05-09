@@ -2,13 +2,13 @@
 
 {% block content %}
 <div class="text-center">
-<a href="{% url 'add-link' %}"><button class="btn btn-success">Add an item</button></a>
+    <a href="{% url 'add-link' %}"><button class="btn btn-success">Add an item</button></a>
 </div>
+
+
 {% for url in dataset %}
 
-
-
-
+        
 <div class="jumbotron">
 
 
@@ -29,14 +29,14 @@
     </div>
 </div>
 
+
+
 {% empty %}
+
 <tr>
     <td>You have no data</td>
 </tr>
 {% endfor %}
-</table>
-
-
 
 
 {% endblock %}

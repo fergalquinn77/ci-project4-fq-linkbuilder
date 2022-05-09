@@ -1,17 +1,24 @@
-body{
+body, a {
     color: #050a30;
 }
 
 #logo {
-    width:125px;
+    
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+#logo-image{
+    width: 125px;
 }
 
 a {
-    color:#050a30;
+    color: #050a30;
 }
 
-#footer-logo{
-    width:100px;
+#footer-logo {
+    width: 100px;
 }
 
 .social-links {
@@ -39,24 +46,59 @@ a {
 }
 
 hr {
-    margin-top:5px;
-    margin-bottom:5px;
-    height:1px;
-    width:100%;
-    border-top:2px solid lightgrey;
-   }
-
-.jumbotron {
-background-color: #d2eafc;
-border: 2px;
-border-style: solid;
-border-color: black;
-padding: 0.1rem;
-width:30%;
-margin: 0.2rem auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 1px;
+    width: 100%;
+    border-top: 2px solid lightgrey;
 }
 
-.profile-image{
-    width:150px;
-    height:150px
+.jumbotron {
+    background-color: #d2eafc;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    padding: 0.1rem;
+    width: 30%;
+    margin: 0.2rem auto;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+
+}
+
+body.dragging,
+body.dragging * {
+    cursor: move !important;
+}
+
+.dragged {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 2000;
+}
+
+ol.example li.placeholder {
+    position: relative;
+    /** More li styles **/
+}
+
+ol.example li.placeholder:before {
+    position: absolute;
+    /** Define arrowhead **/
+}
+
+#home-profile-image {
+    width: 75px;
+    height: 75px;
+}
+
+hr {
+    margin-top: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #050a30;
 }

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load crispy_forms_tags %}
 {% block content %}
 
 <div class="jumbotron">
@@ -7,7 +7,7 @@
     <h2>Edit details</h2>
     <form method="POST" action="">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form |crispy }}
         <div>
             <p>
                 <button type="submit">

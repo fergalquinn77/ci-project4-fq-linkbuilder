@@ -20,58 +20,42 @@
 </head>
 
 <body>
-
-
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <a class="navbar-brand" href="{% url 'links-home' %}"><img id="logo" src="{% static 'images/Link_Builder.png' %}" alt="Link Builder"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
+    <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+      Dropdown link
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div> -->
 
-      </ul>
-
-    </div>
-
-    <div class="navbar-nav">
+    <div class="navbar-nav d-flex align-items-center">
       {% if user.is_authenticated %}
+      {% if "placeholder" in user.profile.profile_image.url %}
+      <img class="profile-image rounded-circle account-img"
+        src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+      {% else %}
+      <img id="home-profile-image" class="profile-image rounded-circle account-img"
+        src="{{ user.profile.profile_image.url }}">
+      {% endif %}
       <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
       <a class="nav-item nav-link" href="{% url 'account_logout' %}">Logout</a>
       {% else %}
       <a class="nav-item nav-link" href="{% url 'account_login' %}">Login</a>
       <a class="nav-item nav-link" href="{% url 'account_signup' %}">Register</a>
       {% endif %}
+      <!-- <div class="justify-content-center">
+      <a class="my-2 my-lg-0" href="{% url 'links-home' %}"><img id="logo" 
+          src="{% static 'images/Link_Builder.png' %}" alt="Link Builder"></a>
+        </div> -->
+    </div>
+    <div id="logo">
+      <a href="{% url 'links-home' %}"><img id="logo-image" src="{% static 'images/Link_Builder.png' %}"
+          alt="Link Builder"></a>
     </div>
 
-    <!-- <div class="login-container">
-      {% if user.is_authenticated %}
-      <button class="btn btn-warning">
-        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-      </button>
-      {% else %}
-      <button class="btn btn-success">
-        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-      </button>
-      <button class="btn btn-primary">
-        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-      </button>
-      {% endif %} -->
   </nav>
   <hr>
 
@@ -83,7 +67,8 @@
         {% for message in messages %}
         <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
           {{ message | safe }}
-          <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"><span
+              aria-hidden="true">&times;</span></button>
         </div>
         {% endfor %}
       </div>
