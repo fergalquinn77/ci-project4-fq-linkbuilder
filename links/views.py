@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
-# from django.views import generic, View
-# from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+import requests
 from .models import url_links
 from accounts.models import profile
 from .forms import LinkForm
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+
 
 @login_required
 def links_view(request):
@@ -15,9 +16,18 @@ def links_view(request):
 
 @login_required
 def add_link(request):
+    
     if request.method == 'POST':
         form = LinkForm(request.POST)
-        if form.is_valid():
+        form_url = request.POST.get('link')
+        url_pass=''
+        try:
+            requests.get(form_url)
+            url_pass=True
+        except requests.exceptions.ConnectionError:
+            messages.warning(request, 'Invalid URL entered')
+            url_pass=False
+        if form.is_valid() and url_pass==True:
             new_form = form.save(commit=False)
             new_form.user = request.user
             new_form.save()
@@ -33,7 +43,15 @@ def edit_link(request, url_links_id):
     item = get_object_or_404(url_links, id=url_links_id)
     if request.method == 'POST':
         form = LinkForm(request.POST, instance=item)
-        if form.is_valid():
+        form_url = request.POST.get('link')
+        url_pass=''
+        try:
+            requests.get(form_url)
+            url_pass=True
+        except requests.exceptions.ConnectionError:
+            messages.warning(request, 'Invalid URL entered')
+            url_pass=False
+        if form.is_valid() and url_pass==True:
             edit_form = form.save(commit=False)
             edit_form.user = request.user
             edit_form.save()
