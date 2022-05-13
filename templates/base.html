@@ -31,13 +31,15 @@
       <img id="home-profile-image" class="profile-image rounded-circle account-img"
         src="{{ user.profile.profile_image.url }}">
       {% endif %}
+
       <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
       <a class="nav-item nav-link" href="{% url 'account_logout' %}">Logout</a>
       {% else %}
+
       <a class="nav-item nav-link" href="{% url 'account_login' %}">Login</a>
       <a class="nav-item nav-link" href="{% url 'account_signup' %}">Register</a>
       {% endif %}
-   
+
     </div>
     <div id="logo">
       <a href="{% url 'links-home' %}"><img id="logo-image" src="{% static 'images/Link_Builder.png' %}"
@@ -117,7 +119,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
   </script>
- 
+
   <script>
     setTimeout(function () {
       let messages = document.getElementById('msg');

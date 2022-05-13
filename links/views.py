@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
-from django.views import generic, View
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+# from django.views import generic, View
+# from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import url_links
 from accounts.models import profile
 from .forms import LinkForm
@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import login_required
 def links_view(request):
     context = {
         }
-    context["dataset"] =url_links.objects.all().filter(user=request.user)
+    context["dataset"] = url_links.objects.all().filter(user=request.user)
     return render(request, 'index.html', context)
 
 @login_required

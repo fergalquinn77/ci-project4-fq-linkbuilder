@@ -59,7 +59,7 @@ hr {
     border-style: solid;
     border-color: black;
     padding: 0.1rem;
-    width: 30%;
+    width: 40%;
     margin: 0.2rem auto;
 }
 
@@ -101,4 +101,11 @@ hr {
 
 .navbar-light .navbar-nav .nav-link {
     color: #050a30;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .jumbotron {
+        width: 80%;
+    }
 }
