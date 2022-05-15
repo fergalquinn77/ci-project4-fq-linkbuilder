@@ -86,3 +86,8 @@ def delete_link(request, url_links_id):
         return redirect('links-home')
 
 
+def error_500_view(request,):
+    return render(request,'500.html')
+
+def error_404_view(request,exception):
+    return render(request,'404.html')

@@ -15,6 +15,8 @@ urlpatterns = [
     path('profile/', accounts_views.profile, name='profile'),
 ]
 
-
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'links.views.error_404_view'
+handler500 = 'links.views.error_500_view'
