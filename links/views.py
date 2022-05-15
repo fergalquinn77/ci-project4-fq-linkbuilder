@@ -17,6 +17,8 @@ def links_view(request):
 @login_required
 def add_link(request):
     
+    form = LinkForm()
+
     if request.method == 'POST':
         form = LinkForm(request.POST)
         form_url = request.POST.get('link')
@@ -32,15 +34,18 @@ def add_link(request):
             new_form.user = request.user
             new_form.save()
             return redirect('links-home')
-    form = LinkForm()
+    
     context = {
         'form': form
         }
     return render(request, 'add_item.html', context)
 
+
 @login_required
 def edit_link(request, url_links_id):
     item = get_object_or_404(url_links, id=url_links_id)
+    
+
     if request.method == 'POST':
         form = LinkForm(request.POST, instance=item)
         form_url = request.POST.get('link')
@@ -67,8 +72,10 @@ def edit_link(request, url_links_id):
 def delete_link(request, url_links_id):
     link = get_object_or_404(url_links, id=url_links_id)
     
-    if request.method=='POST':
+    if request.method=='POST' and request.user == link.user:
         link.delete()
         return redirect('links-home')
    
     return render(request, 'confirm_delete.html',{'link':link})
+
+
