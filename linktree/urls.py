@@ -11,8 +11,7 @@ urlpatterns = [
     path('', include('links.urls'), name='link-urls'),
     path('register/', accounts_views.register, name='register'),
     path('accounts/', include('allauth.urls')),
-    # path('profile_update/', accounts_views.profile_update, name='profile-update'),
-    path('profile/', accounts_views.profile, name='profile'),
+    path('accounts/profile/', accounts_views.profile, name='profile'),
 ]
 
 if settings.DEBUG:

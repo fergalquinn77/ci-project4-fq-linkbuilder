@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "links/base.html" %}
  
 {% block content %}
 <div class="text-center">
@@ -18,7 +18,7 @@
         </a>
     </div>
     <div class="text-center">
-        <td>{{ url.link }}</td> <a href="{% url 'edit-link' url.id %}">
+        {{ url.link }} <a href="{% url 'edit-link' url.id %}">
             <i data-toggle="edit" class="bi bi-pencil-square" title="Edit Link"></i>
         </a>
     </div>

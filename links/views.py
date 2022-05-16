@@ -5,6 +5,7 @@ from accounts.models import profile
 from .forms import LinkForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.contrib.auth.models import User
 
 
 @login_required
@@ -12,7 +13,7 @@ def links_view(request):
     context = {
         }
     context["dataset"] = url_links.objects.all().filter(user=request.user)
-    return render(request, 'index.html', context)
+    return render(request, 'links/index.html', context)
 
 @login_required
 def add_link(request):
@@ -38,7 +39,7 @@ def add_link(request):
     context = {
         'form': form
         }
-    return render(request, 'add_item.html', context)
+    return render(request, 'links/add_item.html', context)
 
 
 @login_required
@@ -67,7 +68,7 @@ def edit_link(request, url_links_id):
         context = {
             'form': form
             }
-        return render(request, 'edit_item.html', context)
+        return render(request, 'links/edit_item.html', context)
     else:
         return redirect('links-home')
 
@@ -81,13 +82,21 @@ def delete_link(request, url_links_id):
             link.delete()
             return redirect('links-home')
     
-        return render(request, 'confirm_delete.html',{'link':link})
+        return render(request, 'links/confirm_delete.html',{'link':link})
     else:
         return redirect('links-home')
 
+#The view for displaying links for a particular username visable without login
+def links_view_external(request, username):
+    user=User.objects.get(username=username)
+    context = {
+        }
+    context["dataset"] = url_links.objects.all().filter(user=user)
+    return render(request, 'links/index_external.html', context)
+
 
 def error_500_view(request,):
-    return render(request,'500.html')
+    return render(request,'links/500.html')
 
 def error_404_view(request,exception):
-    return render(request,'404.html')
+    return render(request,'links/404.html')

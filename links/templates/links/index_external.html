@@ -1,0 +1,30 @@
+{% extends "links/base.html" %}
+ 
+{% block content %}
+
+
+
+{% for url in dataset %}
+
+        
+<div class="jumbotron">
+
+
+    <div class="text-center">
+        {{ url.title }} 
+    </div>
+    <div class="text-center">
+        {{ url.link }}
+    </div>
+    
+</div>
+
+{% empty %}
+
+<tr>
+    <td>You have no data</td>
+</tr>
+{% endfor %}
+
+
+{% endblock %}

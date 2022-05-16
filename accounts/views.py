@@ -9,7 +9,7 @@ from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 def register(request):
     form=UserCreationForm()
-    return render(request, 'register.html', {'form':form})
+    return render(request, 'accounts/register.html', {'form':form})
 
 @login_required
 def profile(request):
@@ -31,5 +31,5 @@ def profile(request):
         'u_form':u_form,
         'p_form':p_form
     }
-    return render(request, 'profile.html', context)
+    return render(request, 'accounts/profile.html', context)
 
