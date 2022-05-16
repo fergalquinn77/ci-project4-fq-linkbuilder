@@ -2,7 +2,7 @@
  
 {% block content %}
 <div class="text-center">
-    <a href="{% url 'add-link' %}"><button class="btn btn-success">Add an item</button></a>
+    <a href="{% url 'add-link' %}"><button class="btn btn-success">Add a link</button></a>
 </div>
 
 
@@ -31,6 +31,7 @@
     </div>
 </div>
 
+
 {% empty %}
 
 <tr>
@@ -38,5 +39,7 @@
 </tr>
 {% endfor %}
 
-
+<div class="text-center">
+    <a href="{% url 'external-view' user.username %}"><button class="btn btn-success">Preview Page</button></a>
+</div>
 {% endblock %}
