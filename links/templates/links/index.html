@@ -1,5 +1,5 @@
 {% extends "links/base.html" %}
- 
+
 {% block content %}
 <div class="text-center">
     <a href="{% url 'add-link' %}"><button class="btn btn-success">Add a link</button></a>
@@ -8,7 +8,7 @@
 
 {% for url in dataset %}
 
-        
+
 <div class="jumbotron">
 
 
@@ -23,11 +23,22 @@
         </a>
     </div>
     <div class="text-center">
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
         <a href="{% url 'delete-link' url.id %}">
             <i data-toggle="delete" class="bi bi-archive" title="Delete Link"></i>
         </a>
     </div>
+
+    <a href="/toggle/{{ url.id }}">
+        <button>
+            {% if url.visible is True %}
+            Hide
+            {% else %} 
+            Show
+            {% endif %}
+        </button>
+    </a>
+
+
 
 </div>
 

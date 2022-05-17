@@ -94,6 +94,12 @@ def links_view_external(request, username):
     context["dataset"] = url_links.objects.all().filter(user=user)
     return render(request, 'links/index_external.html', context)
 
+def toggle_url(request, url_id):
+    url = get_object_or_404(url_links, id=url_id)
+    url.visible = not url.visible
+    url.save()
+    return redirect('links-home')
+
 def error_500_view(request,):
     return render(request,'links/500.html')
 
