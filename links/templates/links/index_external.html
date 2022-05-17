@@ -6,7 +6,7 @@
 
 {% for url in dataset %}
 
-        
+{% if url.visible == True %}       
 <div class="jumbotron">
 
 
@@ -18,7 +18,7 @@
     </div>
     
 </div>
-
+{% endif %}
 {% empty %}
 
 <tr>

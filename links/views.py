@@ -94,7 +94,6 @@ def links_view_external(request, username):
     context["dataset"] = url_links.objects.all().filter(user=user)
     return render(request, 'links/index_external.html', context)
 
-
 def error_500_view(request,):
     return render(request,'links/500.html')
 
