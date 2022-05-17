@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 def links_view(request):
     context = {
         }
-    context["dataset"] = url_links.objects.all().filter(user=request.user)
+    context["dataset"] = url_links.objects.all().filter(user=request.user).order_by('-id')
     return render(request, 'links/index.html', context)
 
 @login_required
@@ -91,7 +91,7 @@ def links_view_external(request, username):
     user=User.objects.get(username=username)
     context = {
         }
-    context["dataset"] = url_links.objects.all().filter(user=user)
+    context["dataset"] = url_links.objects.all().filter(user=user).order_by('-id')
     return render(request, 'links/index_external.html', context)
 
 def toggle_url(request, url_id):

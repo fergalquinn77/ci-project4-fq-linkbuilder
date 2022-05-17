@@ -29,11 +29,11 @@
     </div>
 
     <a href="/toggle/{{ url.id }}">
-        <button>
+        
             {% if url.visible is True %}
-            Hide
+            <button id="hide">Hide</button>
             {% else %} 
-            Show
+            <button id="show">Show</button>
             {% endif %}
         </button>
     </a>

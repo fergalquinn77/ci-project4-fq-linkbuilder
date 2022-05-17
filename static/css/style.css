@@ -103,6 +103,10 @@ hr {
     color: #050a30;
 }
 
+#show{
+    background-color: lightcoral;
+}
+
 @media screen and (max-width: 1000px) {
     
     .jumbotron {
