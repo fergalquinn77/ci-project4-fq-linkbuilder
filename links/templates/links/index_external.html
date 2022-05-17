@@ -3,8 +3,8 @@
 {% block content %}
 
 
-
-{% for url in dataset %}
+<h1>{{ user_profile.company_name }}</h1>
+{% for url in links %}
 
 {% if url.visible == True %}       
 <div class="jumbotron">
@@ -14,7 +14,16 @@
         {{ url.title }} 
     </div>
     <div class="text-center">
-        {{ url.link }}
+       <a href="{{ url.link }}">{{ url.link }}</a> 
+    </div>
+    <div class="text-center">
+        {% if "placeholder" in url.url_image.url %}
+      <img class="profile-image account-img"
+        src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+      {% else %}
+      <img id="home-profile-image" class="profile-image account-img"
+        src="{{ url.url_image.url }}">
+      {% endif %}
     </div>
     
 </div>

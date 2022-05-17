@@ -7,7 +7,6 @@ from cloudinary.models import CloudinaryField
 
 class url_links(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    # slug = models.SlugField(max_length=100)
     title = models.CharField(max_length=200, blank=False)
     link = models.URLField(blank=False)
     url_image = CloudinaryField('image', default='url_placeholder')

@@ -89,9 +89,14 @@ def delete_link(request, url_links_id):
 #The view for displaying links for a particular username visable without login
 def links_view_external(request, username):
     user=User.objects.get(username=username)
+    user_profile=profile.objects.get(user=user)
+    print(user_profile.company_name)
+    links=url_links.objects.all().filter(user=user).order_by('-id')
     context = {
+        'links':links,
+        'user_profile':user_profile
         }
-    context["dataset"] = url_links.objects.all().filter(user=user).order_by('-id')
+    # context["dataset"] = url_links.objects.all().filter(user=user).order_by('-id')
     return render(request, 'links/index_external.html', context)
 
 def toggle_url(request, url_id):

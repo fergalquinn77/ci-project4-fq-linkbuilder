@@ -9,6 +9,9 @@ body, a {
     transform: translatex(-50%);
 }
 
+#footer{
+    background-color: white;
+}
 #logo-image{
     width: 125px;
 }
