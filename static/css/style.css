@@ -57,19 +57,23 @@ hr {
 }
 
 .jumbotron {
-    background-color: #d2eafc;
+    background-color: #77c3ff;
     border: 2px;
     border-style: solid;
     border-color: black;
-    padding: 0.1rem;
+    padding: 0.5rem;
     width: 40%;
     margin: 0.2rem auto;
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 
+}
+
+#external-page-link-boxes {
+    background-color: #77c3ff;
 }
 
 body.dragging,
@@ -77,7 +81,15 @@ body.dragging * {
     cursor: move !important;
 }
 
-.dragged {
+#external-page-link-boxes:hover {
+    background-color: #007bff;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+/* .dragged {
     position: absolute;
     opacity: 0.5;
     z-index: 2000;
@@ -91,7 +103,7 @@ ol.example li.placeholder {
 ol.example li.placeholder:before {
     position: absolute;
     /** Define arrowhead **/
-}
+} */
 
 #home-profile-image {
     width: 75px;
