@@ -1,5 +1,6 @@
-body, a {
+body {
     color: #050a30;
+    /* background-image: linear-gradient(to bottom, #FFFFFF, rgb(255, 122, 89)); */
 }
 
 #logo {
@@ -9,9 +10,9 @@ body, a {
     transform: translatex(-50%);
 }
 
-#footer{
+/* footer, header{
     background-color: white;
-}
+} */
 #logo-image{
     width: 125px;
 }
@@ -37,7 +38,6 @@ a {
     line-height: 7px;
     text-align: center;
     color: #111010;
-    background: white;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
@@ -76,6 +76,17 @@ hr {
     background-color: #77c3ff;
 }
 
+.link-boxes {
+    background-color: #77c3ff;
+    max-width: 40%;
+}
+
+.link-boxes-buttons {
+    max-width: 40%;
+    border:none;
+}
+
+
 body.dragging,
 body.dragging * {
     cursor: move !important;
@@ -98,12 +109,12 @@ body.dragging * {
 ol.example li.placeholder {
     position: relative;
     /** More li styles **/
-}
+/* }
 
 ol.example li.placeholder:before {
     position: absolute;
     /** Define arrowhead **/
-} */
+} */ */
 
 #home-profile-image {
     width: 75px;
@@ -118,13 +129,22 @@ hr {
     color: #050a30;
 }
 
-#show{
-    background-color: lightcoral;
-}
 
 @media screen and (max-width: 1000px) {
     
     .jumbotron {
         width: 80%;
     }
+
+
+.link-boxes {
+    background-color: #77c3ff;
+    max-width: 90%;
+}
+
+.link-boxes-buttons {
+    max-width: 90%;
+    border:none;
+}
+
 }
