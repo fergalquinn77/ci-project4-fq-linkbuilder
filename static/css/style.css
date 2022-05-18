@@ -10,6 +10,9 @@ body {
     transform: translatex(-50%);
 }
 
+header {
+    height:125px;
+}
 /* footer, header{
     background-color: white;
 } */
