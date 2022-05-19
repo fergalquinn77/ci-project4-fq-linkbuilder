@@ -1,6 +1,6 @@
 body {
     color: #050a30;
-    background-image: linear-gradient(grey, white, grey);
+    background-image: linear-gradient(rgb(128, 128, 128), white, grey);
 }
 
 /* main {

@@ -21,7 +21,7 @@ def add_link(request):
     form = LinkForm()
 
     if request.method == 'POST':
-        form = LinkForm(request.POST)
+        form = LinkForm(request.POST, request.FILES)
         form_url = request.POST.get('link')
         url_pass=''
         try:
@@ -33,6 +33,7 @@ def add_link(request):
         if form.is_valid() and url_pass==True:
             new_form = form.save(commit=False)
             new_form.user = request.user
+            messages.success(request, f'Your link has been added')
             new_form.save()
             return redirect('links-home')
     
@@ -49,7 +50,7 @@ def edit_link(request, url_links_id):
     if request.user == link.user:
 
         if request.method == 'POST':
-            form = LinkForm(request.POST, instance=link)
+            form = LinkForm(request.POST, request.FILES, instance=link)
             form_url = request.POST.get('link')
             url_pass=''
             try:
@@ -61,6 +62,7 @@ def edit_link(request, url_links_id):
             if form.is_valid() and url_pass==True:
                 edit_form = form.save(commit=False)
                 edit_form.user = request.user
+                messages.success(request, f'Your changes have been saved')
                 edit_form.save()
                 return redirect('links-home')
             
@@ -96,7 +98,6 @@ def links_view_external(request, username):
         'links':links,
         'user_profile':user_profile
         }
-    # context["dataset"] = url_links.objects.all().filter(user=user).order_by('-id')
     return render(request, 'links/index_external.html', context)
 
 def toggle_url(request, url_id):

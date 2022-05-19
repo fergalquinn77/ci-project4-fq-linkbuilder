@@ -5,10 +5,10 @@
 <div class="link-boxes-buttons container border mb-2 border-0">
     <div class="row">
         <div class="col-6 text-center pl-0">
-            <a href="{% url 'add-link' %}"><button class="btn btn-success btn-block">Add a link</button></a>
+            <a href="{% url 'add-link' %}"><button class="btn btn-success btn-block font-weight-bold">Add a link</button></a>
         </div>
         <div class="col-6 text-center pr-0">
-            <a href="{% url 'external-view' user.username %}"><button class="btn btn-success btn-block">Preview
+            <a href="{% url 'external-view' user.username %}"><button class="btn btn-success btn-block font-weight-bold">Preview
                     Page</button></a>
         </div>
     </div>
@@ -20,7 +20,7 @@
 
     <div class="row">
         <div class="col-6">
-            <div>
+            <div class="font-weight-bold">
                 {{ url.title }}<a href="{% url 'edit-link' url.id %}">
                     <i data-toggle="edit" class="bi bi-pencil" title="Edit Link"></i>
                 </a>
@@ -35,16 +35,16 @@
             <div class="row">
                 <div class="col-6">
                     <a href="{% url 'delete-link' url.id %}">
-                        <button class="btn btn-danger btn-block">Delete</button>
+                        <button class="btn btn-danger btn-block font-weight-bold">Delete</button>
                     </a>
                 </div>
                 <div class="col-6">
                     <a href="/toggle/{{ url.id }}">
 
                         {% if url.visible is True %}
-                        <button class="btn btn-danger btn-block" id="hidebutton">Hide</button>
+                        <button class="btn btn-danger btn-block font-weight-bold" id="hidebutton">Hide</button>
                         {% else %}
-                        <button class="btn btn-success btn-block" id="showbutton">Show</button>
+                        <button class="btn btn-success btn-block font-weight-bold" id="showbutton">Show</button>
                         {% endif %}
                         </button>
                     </a>
@@ -53,40 +53,6 @@
         </div>
     </div>
 </div>
-
-<!-- <div class="jumbotron">
-
-
-    <div class="text-center">
-        {{ url.title }} <a href="{% url 'edit-link' url.id %}">
-            <i data-toggle="edit" class="bi bi-pencil-square" title="Edit Link"></i>
-        </a>
-    </div>
-    <div class="text-center">
-        {{ url.link }} <a href="{% url 'edit-link' url.id %}">
-            <i data-toggle="edit" class="bi bi-pencil-square" title="Edit Link"></i>
-        </a>
-    </div>
-    <div class="text-center">
-        <a href="{% url 'delete-link' url.id %}">
-            <i data-toggle="delete" class="bi bi-archive" title="Delete Link"></i>
-        </a>
-    </div>
-
-    <a href="/toggle/{{ url.id }}">
-        
-            {% if url.visible is True %}
-            <button id="hide">Hide</button>
-            {% else %} 
-            <button id="show">Show</button>
-            {% endif %}
-        </button>
-    </a>
-
-
-
-</div> -->
-
 
 {% empty %}
 
