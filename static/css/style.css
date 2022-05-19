@@ -88,6 +88,11 @@ a {
 
 }
 
+.url-image {
+    width: 100px;
+    height: 100px;
+}
+
 #external-page-link-boxes {
     background-color: #77c3ff;
 }
