@@ -45,13 +45,17 @@
         </div>
 
         {% else %}
-        <div>
-          <button class="btn btn-sm btn-success"><a href="{% url 'account_login' %}">Login</a></button>
+        <div class="dropdown">
+          <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-expanded="false">
+            <img class="profile-image rounded-circle account-img"
+              src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
+            <a class="dropdown-item" href="{% url 'account_signup' %}">Sign-Up</a>
+          </div>
         </div>
-        <div> 
-          <button class="btn btn-sm btn-info"><a href="{% url 'account_signup' %}">Register</a></button>
-        </div>
-
         {% endif %}
 
       </div>

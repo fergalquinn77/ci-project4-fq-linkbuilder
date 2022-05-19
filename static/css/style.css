@@ -20,6 +20,11 @@ header {
     width: 125px;
 }
 
+.dropdown button {
+    border-width: 0px;
+    background-color: white;
+}
+
 a {
     color: #050a30;
 }
