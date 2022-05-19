@@ -1,7 +1,11 @@
 body {
     color: #050a30;
-    /* background-image: linear-gradient(to bottom, #FFFFFF, rgb(255, 122, 89)); */
+    background-image: linear-gradient(grey, white, grey);
 }
+
+/* main {
+    background-image: linear-gradient(grey, white, grey);
+} */
 
 #logo {
     
@@ -13,9 +17,19 @@ body {
 header {
     height:125px;
 }
-/* footer, header{
+
+.navbar{
+    border-bottom: solid;
+    border-color: lightgray;
+}
+
+footer{
+    height:125px;
     background-color: white;
-} */
+    border-top: solid;
+    border-color: lightgray;
+}
+
 #logo-image{
     width: 125px;
 }
@@ -56,13 +70,7 @@ a {
     color: #2196f3;
 }
 
-hr {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    height: 1px;
-    width: 100%;
-    border-top: 2px solid lightgrey;
-}
+
 
 .jumbotron {
     background-color: #77c3ff;
@@ -101,28 +109,13 @@ body.dragging * {
 }
 
 #external-page-link-boxes:hover {
-    background-color: #007bff;
+    background-color: #4ffa7a;
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
 }
 
-/* .dragged {
-    position: absolute;
-    opacity: 0.5;
-    z-index: 2000;
-}
-
-ol.example li.placeholder {
-    position: relative;
-    /** More li styles **/
-/* }
-
-ol.example li.placeholder:before {
-    position: absolute;
-    /** Define arrowhead **/
-} */ */
 
 #home-profile-image {
     width: 75px;

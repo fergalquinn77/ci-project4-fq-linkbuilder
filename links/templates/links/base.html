@@ -67,33 +67,35 @@
 
     </nav>
   </header>
-  <hr>
-  <div class="overflow-auto">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 offset-md-2">
+  <main>
+
+    <div class="overflow-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
 
 
-          {% for message in messages %}
-          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-            {{ message | safe }}
-            <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+              {{ message | safe }}
+              <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close"><span
+                  aria-hidden="true">&times;</span></button>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
+
       </div>
+      {% block content %}
+      <!-- Content Goes here -->
+      {% endblock content %}
+
+
     </div>
-
-    {% block content %}
-    <!-- Content Goes here -->
-    {% endblock content %}
-
-  </div>
-
-  <footer id="footer">
-    <div class="container-fluid footer mt-auto py-3 fixed-bottom">
-      <hr>
+  </main>
+  <footer class="fixed-bottom">
+    
+    <div class="container-fluid footer mt-auto py-3 overflow-auto">
       <div class="row">
         <div class="col">
         </div>
