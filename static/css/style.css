@@ -16,6 +16,7 @@ body {
 
 header {
     height:125px;
+    margin-bottom: 10px;
 }
 
 .navbar{
@@ -24,7 +25,7 @@ header {
 }
 
 footer{
-    height:125px;
+    height:75px;
     background-color: white;
     border-top: solid;
     border-color: lightgray;
@@ -108,10 +109,10 @@ a {
 }
 
 
-body.dragging,
+/* body.dragging,
 body.dragging * {
     cursor: move !important;
-}
+} */
 
 #external-page-link-boxes:hover {
     background-color: #4ffa7a;
@@ -145,12 +146,17 @@ hr {
 
 .link-boxes {
     background-color: #77c3ff;
-    max-width: 90%;
+    max-width: 100%;
 }
 
 .link-boxes-buttons {
     max-width: 90%;
     border:none;
+}
+
+.url-image, .profile-image{
+    height: 75px;
+    width:75px;
 }
 
 }
