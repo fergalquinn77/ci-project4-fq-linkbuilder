@@ -9,7 +9,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="mx-auto mt-5 jumbotron text-center">
+    <div class="mx-auto mt-5 jumbotron">
 
       <h2>{% trans "Sign In" %}</h2>
 
@@ -26,7 +26,7 @@
         {% endif %}
 
         <div><button class="btn btn-sm btn-success primaryAction" type="submit">{% trans "Sign In" %}</button>
-          <button class="btn btn-sm btn-info"><a href="{% url 'account_signup' %}">Register</a></button></div>
+          <button class="btn btn-sm btn-warning"><a href="{% url 'account_signup' %}">Sign Up</a></button></div>
       </form>
 
 

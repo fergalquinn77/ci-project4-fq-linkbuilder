@@ -40,7 +40,7 @@ footer{
     background-color: white;
 }
 
-.profile-image {
+.profile-image, .company-profile-pic{
     width: 100px;
     height: 100px;
 }
@@ -88,6 +88,11 @@ a {
 
 hr {
     margin-top: 10px;
+}
+
+#addlink, #previewpage {
+    background-color: #050a30;
+    border-color: #050a30;
 }
 
 /* Jumbotron used on login, register and sign-out */
