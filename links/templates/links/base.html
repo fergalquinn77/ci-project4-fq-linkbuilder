@@ -7,11 +7,15 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Have you lots of links and looking to consolidate in one single link!" />
 
   <!-- Bootstrap CSS -->
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -26,16 +30,15 @@
         {% if user.is_authenticated %}
         <div class="dropdown">
           <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-expanded="false">
+            aria-expanded="false" aria-label="Login-In and Register">
 
 
 
             {% if "placeholder" in user.profile.profile_image.url %}
             <img class="profile-image rounded-circle account-img"
-              src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+              src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1653061938/start_nj5sn5.png">
             {% else %}
-            <img class="profile-image rounded-circle account-img"
-              src="{{ user.profile.profile_image.url }}">
+            <img class="profile-image rounded-circle account-img" src="{{ user.profile.profile_image.url }}">
             {% endif %}
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -49,7 +52,7 @@
           <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-expanded="false">
             <img class="profile-image rounded-circle account-img"
-              src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+              src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1653061938/start_nj5sn5.png">
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
@@ -94,45 +97,45 @@
     </div>
   </main>
   <div class="fixed-bottom">
-  <footer>
-    
-    <div class="container-fluid footer mt-auto">
-      <div class="row">
-        <div class="col">
-        </div>
-        <div class="text-center col-8">
+    <footer>
 
-          <h6 class="uppercase general-sub">Created by Fergal Quinn</h6>
-          <ul class="list-inline social-links">
-            <li class="list-inline-item">
-              <a target="_blank" href="https://github.com/fergalquinn77">
-                <i class="fab fa-github" aria-hidden="true"></i>
-                <span class="sr-only">Github</span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a target="_blank" href="https://www.linkedin.com/in/fergal-quinn-85247316/">
-                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                <span class="sr-only">Linkedin</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="col">
+      <div class="container-fluid footer mt-auto">
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="text-center col-8 mt-1">
+
+            <h6 class="uppercase general-sub">Created by Fergal Quinn</h6>
+            <ul class="list-inline social-links">
+              <li class="list-inline-item">
+                <a target="_blank" href="https://github.com/fergalquinn77">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                  <span class="sr-only">Github</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a target="_blank" href="https://www.linkedin.com/in/fergal-quinn-85247316/">
+                  <i class="fab fa-linkedin" aria-hidden="true"></i>
+                  <span class="sr-only">Linkedin</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+          </div>
+
         </div>
 
       </div>
-      
-    </div>
-  </footer>
-</div>
+    </footer>
+  </div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
   </script>
-  
+
 
   <script>
     setTimeout(function () {
