@@ -18,7 +18,6 @@ urlpatterns = [
     path('delete/<int:url_links_id>/', links_views.delete_link, name='delete-link'),  
     path('<username>/', links_views.links_view_external, name='external-view'),
     path('toggle/<url_id>', links_views.toggle_url,name='toggle'),
-    path('learn/', links_views.learn, name='learn'),
 ]
 
 if settings.DEBUG:

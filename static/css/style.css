@@ -81,6 +81,12 @@ footer {
     color: #050a30;
 }
 
+/*Homepage */
+
+#link-builder-phone{
+    max-height: 50vh;
+}
+
 /*General mark-up */
 
 a {

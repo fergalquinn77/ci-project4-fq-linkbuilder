@@ -2,27 +2,32 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div class="container bg-white">
+<div id="home-container" class="container bg-white">
     <div class="row">
-        <div class="col-12 text-center">
-            <h1>One Link Is All You Need</h1>
+        <div class="col-12 text-center mt-2">
+            <h1 class="font-weight-bold">One Link Is All You Need</h1>
         </div>
-        <div class="col-12 text-center">
-            <h2>Connect All Your Links To One Single Link</h2>
+
+        <div class="col-12 text-center font-weight-bold mt-2">
+            Connect All Your Links To One Single Link
         </div>
+        <div class="col-12 text-center mt-2">
+            Already have an account? <a href="{% url 'account_login' %}">Log-in</a> 
+        </div>
+        <div class="col-12 mt-2">
+            <button class="btn rounded-pill btn-success mx-auto d-block font-weight-bold"><a href="{% url 'account_signup' %}">Sign Up</a>
+            </button></div>
+    
+
         <div class="col-12">
-            <button class="btn btn-sm btn-warning"><a href="{% url 'account_signup' %}">Sign Up</a>
-            <button class="btn btn-sm btn-warning"><a href="{% url 'account_login' %}">Sign In</a>
+<img class="mx-auto d-block" id="link-builder-phone" src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1653165767/link-builder-phone_jomdt2.png" alt="Link Builder Phone">
         </div>
+
+
+
     </div>
 
-    <h2>Learn More</h2>
-
-    <p>Learn More</p>
-    
-</div>
 
 
 
-
-{% endblock %}
+    {% endblock %}
