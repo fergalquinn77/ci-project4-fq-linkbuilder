@@ -27,20 +27,20 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="navbar-nav d-flex">
-       
         {% if user.is_authenticated %}
-        
         <div class="dropdown">
           <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-expanded="false" aria-label="Login-In and Register">
 
 
-
+            <!-- {% if "index_external" in request.path %}  -->
+            {{ request.get_full_path }}
+            <!-- {% endif %} -->
             {% if "placeholder" in user.profile.profile_image.url %}
             <img class="profile-image rounded-circle account-img"
-              src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1652951808/uv2zyend3ck99djnjc7x.jpg" alt="Profile image">
+              src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1652951808/uv2zyend3ck99djnjc7x.jpg">
             {% else %}
-            <img class="profile-image rounded-circle account-img" src="{{ user.profile.profile_image.url }}" alt="Profile image">
+            <img class="profile-image rounded-circle account-img" src="{{ user.profile.profile_image.url }}">
             {% endif %}
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -54,7 +54,7 @@
           <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-expanded="false">
             <img class="profile-image rounded-circle account-img"
-              src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1653063392/login_o85g1o.png" alt="Profile image">
+              src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1653063392/login_o85g1o.png">
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="{% url 'account_login' %}">Login</a>
@@ -66,7 +66,7 @@
       </div>
       <div id="logo">
         <a href="{% url 'links-home' %}"><img id="logo-image" src="{% static 'images/Link_Builder.png' %}"
-            alt="Link Builder Logo"></a>
+            alt="Link Builder"></a>
       </div>
       </div>
 

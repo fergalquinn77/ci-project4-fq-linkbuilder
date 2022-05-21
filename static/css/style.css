@@ -95,6 +95,11 @@ hr {
     border-color: #050a30;
 }
 
+/* #showbutton{
+    border-color: #050a30;
+    background-color: #050a30;
+} */
+
 /* Jumbotron used on login, register and sign-out */
 
 .jumbotron {

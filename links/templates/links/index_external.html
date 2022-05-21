@@ -1,21 +1,21 @@
-{% extends "links/base.html" %}
+{% extends "links/base_nologin.html" %}
 
 {% block content %}
 {% if "placeholder" in user.profile.profile_image.url %}
 <div class="container">
   <div class="row">
-      <img class="rounded-circle mx-auto d-block company-profile-pic"
-        src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1652951808/uv2zyend3ck99djnjc7x.jpg">
-      {% else %}
-      <img class="rounded-circle mx-auto d-block company-profile-pic" src="{{ user.profile.profile_image.url }}">
-      {% endif %}
-      
-    </div>
+    <img class="rounded-circle mx-auto d-block company-profile-pic"
+      src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1652951808/uv2zyend3ck99djnjc7x.jpg">
+    {% else %}
+    <img class="rounded-circle mx-auto d-block company-profile-pic" src="{{ user.profile.profile_image.url }}">
+    {% endif %}
 
-    <div class="text-center">
-      <h3 class="text-center">{{ user_profile.company_name }}</h3>
-    </div>
   </div>
+
+  <div class="text-center">
+    <h3 class="text-center">{{ user_profile.company_name }}</h3>
+  </div>
+</div>
 </div>
 </div>
 
