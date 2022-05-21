@@ -15,7 +15,9 @@
             Public Address: <a href="{% url 'external-view' user.username %}" target="_blank">http://www.linkbuilder.com/{{user.username}}</a>
         </div>
         <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">Update</button>
+            <button class="btn btn-success" type="submit">Update</button>
+            <a class="btn btn-danger" href="{{ request.META.HTTP_REFERER }}">Cancel</a>
+            
         </div>
     </form>
 </div>
