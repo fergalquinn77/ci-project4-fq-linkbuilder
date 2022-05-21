@@ -17,7 +17,10 @@ def links_view(request):
     return render(request, 'links/index.html', context)
 
 def learn(request):
-    return render(request, 'links/learn.html')
+    if request.user.is_authenticated:
+        return links_view(request)
+    else:
+        return render(request, 'links/learn.html')
 
 @login_required
 def add_link(request):
