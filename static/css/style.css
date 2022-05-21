@@ -6,7 +6,7 @@ body {
 
 /* Nav-Bar */
 
-.navbar{
+.navbar {
     border-bottom: solid;
     border-color: lightgray;
 }
@@ -19,17 +19,17 @@ body {
     transform: translatex(-50%);
 }
 
-#logo-image{
+#logo-image {
     width: 125px;
 }
 
 header {
-    height:125px;
+    height: 125px;
     margin-bottom: 10px;
 }
 
-footer{
-    height:75px;
+footer {
+    height: 75px;
     background-color: white;
     border-top: solid;
     border-color: lightgray;
@@ -40,7 +40,8 @@ footer{
     background-color: white;
 }
 
-.profile-image, .company-profile-pic{
+.profile-image,
+.company-profile-pic {
     width: 100px;
     height: 100px;
 }
@@ -90,9 +91,18 @@ hr {
     margin-top: 10px;
 }
 
-#addlink, #previewpage {
+#addlink,
+#previewpage {
     background-color: #050a30;
     border-color: #050a30;
+}
+
+#addlink:hover, #previewpage:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    font-size: 2rem;
 }
 
 /* #showbutton{
@@ -128,7 +138,7 @@ hr {
 
 .link-boxes-buttons {
     max-width: 40%;
-    border:none;
+    border: none;
 }
 
 /* External Page viewable witout login */
@@ -141,28 +151,40 @@ hr {
     -o-transition: all 0.35s ease-in-out;
 }
 
+#urltitle {
+    font-size: 1.25rem;
+}
+
+#urllink {
+    font-size: 1rem;
+}
+
 /* Media queries for devices below 1000px */
 
 @media screen and (max-width: 1000px) {
-    
+
     .jumbotron {
         width: 80%;
     }
 
 
-.link-boxes {
-    background-color: #77c3ff;
-    max-width: 100%;
-}
+    .link-boxes {
+        background-color: #77c3ff;
+        max-width: 100%;
+    }
 
-.link-boxes-buttons {
-    max-width: 90%;
-    border:none;
-}
+    .link-boxes-buttons {
+        max-width: 90%;
+        border: none;
+    }
 
-.url-image, .profile-image{
-    height: 75px;
-    width:75px;
-}
+    .url-image,
+    .profile-image {
+        height: 75px;
+        width: 75px;
+    }
 
-}
+    .col-6 {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
