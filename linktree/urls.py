@@ -8,7 +8,8 @@ from django.contrib.auth.decorators import login_required
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', links_views.links_view, name='links-home'),
+    path('', links_views.learn, name='home'),
+    path('index/', links_views.links_view, name='links-home'),
     path('register/', accounts_views.register, name='register'),
     path('accounts/', include('allauth.urls')),
     path('accounts/profile/', accounts_views.profile, name='profile'),
@@ -17,6 +18,7 @@ urlpatterns = [
     path('delete/<int:url_links_id>/', links_views.delete_link, name='delete-link'),  
     path('<username>/', links_views.links_view_external, name='external-view'),
     path('toggle/<url_id>', links_views.toggle_url,name='toggle'),
+    path('learn/', links_views.learn, name='learn'),
 ]
 
 if settings.DEBUG:

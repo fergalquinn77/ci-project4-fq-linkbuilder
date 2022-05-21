@@ -1,0 +1,28 @@
+{% extends "links/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container bg-white">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>One Link Is All You Need</h1>
+        </div>
+        <div class="col-12 text-center">
+            <h2>Connect All Your Links To One Single Link</h2>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-sm btn-warning"><a href="{% url 'account_signup' %}">Sign Up</a>
+            <button class="btn btn-sm btn-warning"><a href="{% url 'account_login' %}">Sign In</a>
+        </div>
+    </div>
+
+    <h2>Learn More</h2>
+
+    <p>Learn More</p>
+    
+</div>
+
+
+
+
+{% endblock %}

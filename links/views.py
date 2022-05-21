@@ -8,12 +8,16 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 
 
+
 @login_required
 def links_view(request):
     context = {
         }
     context["dataset"] = url_links.objects.all().filter(user=request.user).order_by('-id')
     return render(request, 'links/index.html', context)
+
+def learn(request):
+    return render(request, 'links/learn.html')
 
 @login_required
 def add_link(request):
