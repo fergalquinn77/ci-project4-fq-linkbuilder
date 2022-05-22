@@ -3,7 +3,7 @@ This project is based on the LinkTree web application concept. Companies and ind
 
 Link Builder allows users create one landing link (https://www.linkbuilder.com/username) which displays all the users links.
 
-![Responsive screenshot showing site on different screen sizes](docs/images/responsive.JPG)
+![Responsive screenshot showing site on different screen sizes](docs/images/responsive.jpg)
 
 [Deployed site](https://ci-fq-linktree-p4.herokuapp.com/)
 
@@ -98,39 +98,29 @@ Link Builder allows users create one landing link (https://www.linkbuilder.com/u
 # **Planning Phase**
 ## **Strategy** 
 ### **Site Aims:**
-It takes a new developer around 20-25 interviews to land their first developer job. Not including the total number of applications sent out by a job seeker.
 
-Keeping track of one's applications can be troublesome. When a company responds, it can be hard to remember the job post requirements, especially when users use multiple sites to check for roles. Worse yet, several months have passed since you sent the application.
+Companies often have many links they need to be displayed to customers. However some platforms like Instagram restrict the number of URL's that can be included in their Bio.
 
-This app aims to streamline the process by allowing users to submit a Job advert of interest. Once approved by the admin, the job spec would be neatly stored to refer to later, along with any notes or insights the user wishes to keep. 
+This app aims to provide a user and simple interface that allows them to use one single link that contains many other links.
 
-Doing this will allow the user to track what is expected during the selection process and make it easier for the candidate to research the potential employer/role upon response to their application. The advert is safely stored on the site. The personal board would also allow the user to make notes to track their application to review their insights of the process and any company feedback provided after an interview.
+### Brainstorming:
+
+My brother and I work in the licenced trade and have a number of venues that regularly use social media. We brainstormed what features we would find useful and have detailed these below.
 
 ### Opportunities:
-The was an extended range of features during my brainstorming session for this site. I had to use a feasibility chart to narrow it down and prioritize the scope of the intended strategy. 
+There was awide range of features I came up with during our brainstorming session for this site. I used a feasibility chart to narrow them down and prioritize the scope of the intended strategy. 
 
 Opportunity | Importance | Viability/Feasibility
 ---|---|---
-Job search | 5 | 5
-User can pin jobs | 5 | 5
-User specific job notes | 5 | 5
-Landing page with site overview | 5 | 5
-Progress tracker (Kanban board) | 3 | 1
-Direct application to jobs | 2 | 1 
-Manually add jobs (admin/employer) | 5 | 5
-Jobs blog | 1 | 3
-Tips/resources | 2 | 4
-Personal insights | 5 | 5 
-Employer ratings | 1 | 5 
-Number of users applied | 1 | 1 
-User log in | 5 | 5
-Direct email to an employer with CV/cover letter attachments | 2 | 1 
-Community mentorship | 1 | 1
-Freelance specific jobs board | 1 | 1
-API to fetch jobs data | 5 | 2 
-User profile | 5 | 5
+Add/Edit/Delete links | 5 | 5
+User can toggle between hide/show links | 5 | 5
+User can have a unique landing page to display links | 5 | 5
+User can drag and drop links to re-order | 5 | 3
+Set up their profile including picture and social media links | 4 | 5 
+User can review stats on how many times each link is clicked | 3 | 1
+Set up a schedule for the links to be displayed | 3 | 2
 ----------------------------------------|----|----
-Totals | 59 | 60 
+Totals | 30 | 26 
 
 Viability and feasibility in the above table are based on both time and current level of ability using different languages/frameworks. 
 
@@ -140,33 +130,22 @@ Due to the imbalance in scores above, there will be some trade-offs. However, I 
 
 I have further divided this table into three categories to help prioritize the order of importance and clarify the MVP required to launch as a basic proof of concept while meeting the above objective. These three categories are:-
 * UX efforts **must** address these:
-    * User can pin Jobs.
-    * Manually add jobs (approved only by admin).
-    * User-specific job notes.
-    * Personal insights.
-    * User login.
+    * Add/Edit/Delete links.
+    * User can have a unique landing page to display links.
+    * Set up their profile including picture and social media links.
   
 * UX efforts **should** accommodate these:
-    * API to fetch jobs data
-    * Tips/resources.
-    * Progress tracker (Kanban board).
-    * User profiles
-    * Landing page with site overview.
-    * Job search.
+    * User can toggle between hide/show links.
   
 * **Unwise** use of time to address there:
-    * Direct application to jobs.
-    * Jobs blog.
-    * Employer ratings.
-    * Number of users applied.
-    * Direct email to an employer with CV/cover letter attachments.
-    * Community mentorship.
-    * Freelance-specific jobs board.
+    * User can drag and drop links to re-order.
+    * User can review stats on how many times each link is clicked.
+    * Set up a schedule for the links to be displayed.
   
 ## **Structure**   
-To help me visualize a typical user journey around the site, I used [draw.io](https://app.diagrams.net/) to help me plan out the various routes a user could take through the site. This flow changed slightly throughout development, specifically with the dropping of an API for the jobs data. However, in general, it guided the process.
+To help me visualize a typical user journey around the site, I used [draw.io](https://app.diagrams.net/) to help me plan out the various routes a user could take through the site.
   
-![User Journeys flow chart](docs/flowcharts/user-Journey.jpg)
+![User Journeys flow chart](docs/flowcharts/user-journey.jpg)
   
 ### **User Stories:**  
   
