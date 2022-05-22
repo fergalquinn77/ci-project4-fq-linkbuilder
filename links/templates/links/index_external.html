@@ -7,13 +7,14 @@
     <img class="rounded-circle mx-auto d-block company-profile-pic"
       src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1652951808/uv2zyend3ck99djnjc7x.jpg" alt="profile image">
     {% else %}
-    <img class="rounded-circle mx-auto d-block company-profile-pic" src="{{ user.profile.profile_image.url }}" alt="profile image">
+    <img class="rounded-circle mx-auto d-block company-profile-pic" src="{{ user.profile.profile_image.url }}"
+      alt="profile image">
     {% endif %}
 
   </div>
 
   <div class="text-center">
-    <h1 class="text-center">{{ user_profile.company_name }}</h3>
+    <h1>{{ user_profile.company_name }}</h1>
   </div>
 </div>
 </div>
@@ -29,7 +30,8 @@
     <div class="row">
       <div class="col-2">
         {% if "placeholder" in url.url_image.url %}
-        <img class="url-image account-img m-1" src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1653063392/no-url-image_shz0ng.png" alt="Link image">
+        <img class="url-image account-img m-1"
+          src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1653063392/no-url-image_shz0ng.png" alt="Link image">
         {% else %}
         <img class="url-image account-img m-1" src="{{ url.url_image.url }}" alt="Link image">
         {% endif %}
@@ -40,7 +42,7 @@
           {{ url.title }}
         </div>
         <div id="urllink">
-         {{ url.link }}
+          {{ url.link }}
         </div>
       </div>
       <div class="col-2">
@@ -53,12 +55,40 @@
 
 </div>
 {% endif %}
+
 {% empty %}
-
-<tr>
-  <td>You have no data</td>
-</tr>
+<div class="jumbotron text-center">
+  <h1>No Links To Display<h1>
+</div>
 {% endfor %}
-
-
+<div class="container">
+<div class="row">
+  <ul class="list-inline social-links mx-auto d-block">
+    {% if user.profile.twitter|length > 0 %}
+    <li class="list-inline-item">
+      <a target="_blank" href="{{ user.profile.twitter }}">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+        <span class="sr-only">Twitter</span>
+      </a>
+    </li>
+    {% endif %}
+    {% if user.profile.facebook|length > 0 %}
+    <li class="list-inline-item">
+      <a target="_blank" href="{{ user.profile.facebook }}">
+        <i class="fab fa-facebook" aria-hidden="true"></i>
+        <span class="sr-only">Facebook</span>
+      </a>
+    </li>
+    {% endif %}
+    {% if user.profile.instagram|length > 0 %}
+    <li class="list-inline-item">
+      <a target="_blank" href="{{ user.profile.instagram }}">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+        <span class="sr-only">Instagram</span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</div>
+</div>
 {% endblock %}

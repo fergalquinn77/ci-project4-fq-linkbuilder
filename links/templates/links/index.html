@@ -56,15 +56,19 @@
 
 {% empty %}
 
-<div class="link-boxes container border mb-2 py-3">
-
-
+<div class="jumbotron">
     <div class="row">
-        <div class="col-6">
-            <h1>Test Text</h1>
+        <div class="col-12 text-center mt-2">
+            <h1 class="font-weight-bold">To Get Started</h1>
         </div>
+        <div class="col-12 text-center mt-2">
+            1. <a href="{% url 'profile' %}">Click Here</a> To Update Your Profile 
+        </div>
+        <div class="col-12 text-center mt-2">
+            2. Add Links By Clicking On The 'Add Link' Button
+        </div>
+        
     </div>
-</div>
 
 {% endfor %}
 
