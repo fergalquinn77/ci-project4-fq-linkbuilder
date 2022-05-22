@@ -161,10 +161,6 @@ h1 {
     font-size: 1.25rem;
 }
 
-#urllink {
-    font-size: 1rem;
-}
-
 /* Media queries for devices below 1000px */
 
 @media screen and (max-width: 1000px) {

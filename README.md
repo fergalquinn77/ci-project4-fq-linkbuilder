@@ -7,94 +7,6 @@ Link Builder allows users create one landing link (https://www.linkbuilder.com/u
 
 [Deployed site](https://ci-fq-linktree-p4.herokuapp.com/)
 
-# **Table Of Contents**
-* [**Link Builder**](#link-builder)
-* [**Planning Phase**](#planning-phase)
-  * [**Strategy**](#strategy)
-    * [**Site Aims:**](#site-aims)
-    * [Opportunities:](#opportunities)
-  * [**Scope**](#scope)
-  * [**Structure**](#structure)
-    * [**User Stories:**](#user-stories)
-    * [**User Stories dropped as part of the agile process**](#user-stories-dropped-as-part-of-the-agile-process)
-  * [**Skeleton**](#skeleton)
-    * [**Wireframes:**](#wireframes)
-    * [**Database Schema**](#database-schema)
-  * [**Surface**](#surface)
-    * [**Color scheme:**](#color-scheme)
-    * [**Typography**:](#typography)
-      * [***Condiment:***](#condiment)
-      * [***Lato:***](#lato)
-* [**Agile Development Process**](#agile-development-process)
-* [**Features**](#features)
-  * [**Site Navigation**](#site-navigation)
-    * [**Navbar**](#navbar)
-      * [***Logo:***](#logo)
-      * [***Signed Out:***](#signed-out)
-      * [***Signed In:***](#signed-in)
-      * [***Hamburger menu on smaller screen sizes:***](#hamburger-menu-on-smaller-screen-sizes)
-    * [**Hero Images:**](#hero-images)
-      * [***Job Openings/Landing Page:***](#job-openingslanding-page)
-      * [***Add Job Form Page:***](#add-job-form-page)
-    * [***Saved jobs page:***](#saved-jobs-page)
-    * [***Insights page:***](#insights-page)
-    * [***Edit note form page:***](#edit-note-form-page)
-  * [**AllAuth Pages**](#allauth-pages)
-    * [***Sign In:***](#sign-in)
-      * [***Form Errors:***](#form-errors)
-    * [***Sign Up:***](#sign-up)
-      * [***Form Errors:***](#form-errors-1)
-    * [***Sign Out:***](#sign-out)
-  * [**Site Instructions**](#site-instructions)
-    * [***Access to instructions page:***](#access-to-instructions-page)
-      * [***Nav link:***](#nav-link)
-      * [***On page Button:***](#on-page-button)
-      * [***Note form Anchor tag:***](#note-form-anchor-tag)
-  * [**Main Page Content**](#main-page-content)
-    * [***Job Openings page:***](#job-openings-page)
-      * [***Add Job Button:***](#add-job-button)
-      * [***Add Job Form:***](#add-job-form)
-      * [***Add Job Success message:***](#add-job-success-message)
-    * [***Job Openings and Pinned Board Content:***](#job-openings-and-pinned-board-content)
-      * [***Job Preview Card (logged out):***](#job-preview-card-logged-out)
-      * [***Job Preview Card (Logged in):***](#job-preview-card-logged-in)
-      * [***Job Preview Card Footer (Logged in as admin user):***](#job-preview-card-footer-logged-in-as-admin-user)
-    * [***Full Job Details Page***](#full-job-details-page)
-      * [***Full details card (unpinned):***](#full-details-card-unpinned)
-      * [***Full details card (pinned):***](#full-details-card-pinned)
-        * [**Full job card**](#full-job-card)
-      * [***Notes form:***](#notes-form)
-      * [***Notes Accordion:***](#notes-accordion)
-        * [**Note:**](#note)
-        * [**Insight:**](#insight)
-    * [***Insights PAge:***](#insights-page-1)
-      * [***Add Insight Button:***](#add-insight-button)
-      * [***Add Insight Form:***](#add-insight-form)
-      * [***Add Insight Form Errors:***](#add-insight-form-errors)
-        * [**Short description field error:**](#short-description-field-error)
-        * [**Short description field error:**](#short-description-field-error-1)
-      * [***Insight left success message:***](#insight-left-success-message)
-      * [***Insight Item Display:***](#insight-item-display)
-      * [***Timeline:***](#timeline)
-    * [***Contact Us Page:***](#contact-us-page)
-    * [***Pagination:***](#pagination)
-    * [***Footer:***](#footer)
-  * [**Error pages**](#error-pages)
-    * [***Members Only Page:***](#members-only-page)
-    * [***500 Server Error Page:***](#500-server-error-page)
-    * [***404 Page Not Found Error Page:***](#404-page-not-found-error-page)
-  * [**Warning Modals**](#warning-modals)
-    * [***Delete Note/Insight:***](#delete-noteinsight)
-    * [***Delete Job:***](#delete-job)
-    * [***Unpin Job:***](#unpin-job)
-    * [***Delete element from the DOM:***](#delete-element-from-the-dom)
-* [**Future development**](#future-development)
-* [**Testing Phase**](#testing-phase)
-* [**Deployment**](#deployment)
-* [**Technologies used**](#technologies-used)
-* [Honorable mentions](#honorable-mentions)
-* [Credits](#credits)
-
 # **Planning Phase**
 ## **Strategy** 
 ### **Site Aims:**
@@ -150,53 +62,42 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
 ### **User Stories:**  
   
 * As an **Admin** I can...
-    * **use a text editor within the admin panel** so that **I can create a job description in a way that is clear and appeals to the eye when creating a job post**    
-    * ...**Log into a user interface** so that **I can easily manage data via a user interface**
-    * ... **Filter and search all custom models from the admin page** so that **I can utilize the admin page to review, edit and delete data quickly.**
-    * ...**Easily navigate the admin panel** so that **I can view, search, add and delete jobs**
-    * ...**Approve new job posts offered by the community for the community** so that **I can ensure that posts are not malicious, false, misleading, or incomplete.**
-    * ...**Delete a Job post** so that **I can remove jobs that are no longer relevant or available.**
-    *  ...**Edit a job post without using the admin panel** to that **if I spot a mistake or update a job post, I can do so quickly and easily without issue.**
+    * **Access the admin interface** so that **Manually edit user and link details**    
+    * ... **Filter and search all users from the admin page** so that **I can utilize the admin page to review, edit and delete user data quickly.**
+    * ...**Easily navigate the admin panel** so that **I can view, search, add and delete links**
  
 * As an **Unregistered User** I can... 
-    * ...**quickly determine the subject of the site** so that **from the landing page I can see if I want to continue spending my time on this site and register**
-    * ...**register for an account** so that **I can enjoy a personalized experience as a job seeker**
-    * ...**browse the available jobs (brief description only)** so that **I can see if I wish to register with the site or not**
+    * ...**access a user page without the required to have an account** so that **I can access the users links and social media links**
   
 * As a **Registered User** I can... 
-    * ...**Pin jobs to a board** so that **I can refer back to them later with minimal effort**
-    * ...**browse the full details of the available jobs** so that **I can see the full job spec and how to apply**  
-    * ...**leave notes specific to the job on my pinboard** so that **I can keep track of specific milestones in the application process**
-    * ...**turn a note into an insight** so that **it can be seen on a separate page showing learnings from the entire process of the job hunting process**
-    * ...**delete previous notes and insights** so that **I can delete notes or insights that are no longer relevant to me.**
-    * ...**see a timeline of insights** so that **I can track them over time**
-    * ...**Add my job posts** so that **I may make notes and insights to track my progress.**
-    * ...**edit previously made notes and insights** so that **I may correct mistakes or further elaborate on an existing comment/insights.**
-    * ...**See balanced forms with an included text editor for the main field** so that **I can have a pleasant visual experience across the site, and my job post and notes/insight look visually appealing in the style and layout when the submitted data is displayed.**
-    * ...**Delete or edit insights from the insights page** so that **I can update or delete insights without job posts no longer visible.**
-    * .**Create insights directly from the insights page** so that **I can document my general learning along my career path that may not be specific to a job role advertised on the site.**
+    * ...**register an account** so that **I can start building my single link**
+    * ...**add links** so that **build my linktree**  
+    * ...**set a profile picture and company profile** so that **it gives my site a better identity**
+    * ...**add, edit and delete links** so that **modify my linktree**
+    * ...**Toggle a link to show or hide** so that **turn the link off and on when I need it**
+    * ...**Schedule links** so that **they can automatcially appear and disappear from my page according to my schedule**
  
 * As a **Site User** I can...
     * ...**see appropriate responses upon specific interactions with the site** so that **I know my edit, deletion, submission has been successful.**
     * ...**See appealing colors and uniform style themes** so that **every page and part of the process stimulates a positive response.**
     * ...**Access the site from any size screen and still have a pleasant experience on the site** so that **I am not restricted to which devices I can use on the site**
     * ...**access a live URL** so that **I can use the site**
-    * **view open job posts** so that **I can decide which ones are of interest to me.**
     * ...**type a URL into the web browser** so that **I can access the site's various pages**
     *  ...**see uniformity on each page and clearly distinguish the content subject** so that **I can quickly and familiarly navigate the page.**
     * ... **Find relevant contact details** so that **I can contact the site admin via email**
   
 ### **User Stories dropped as part of the agile process**
-* As a **Registered User** I can **create a profile** so that **I can save key details relevant to my job search.**
+* As a **Registered User** I can **Schedule links** so that **they can automatcially appear and disappear from my page according to my schedule**
+* As a **Registered User** I can **see analytics on how many people accessed my links** so that **what links are the most popular**
+* As a **Registered User** I can **drag and drop links** so that **I can easily reorder their positions on my site**
 
 
 ## **Skeleton**
 ### **Wireframes:**
-* [Homepage wireframes](docs/wireframes/homepage.png)  
-* [Full job details wireframes](docs/wireframes/job-full-details.png)
-* [Job opening page wireframes](docs/wireframes/jobs-openings.png)
-* [Pinned jobs page wireframes](docs/wireframes/pinned-jobs.png)
-* [insights page wireframes](docs/wireframes/insights.png)
+* [External Page - No Login Required](docs/wireframes/external-page-login-not-required.png)
+* [Homepage - No Login Required](docs/wireframes/homepage-no-login-required.png)
+* [Index Page - Login Required](docs/wireframes/index-page-login-required.png)
+
 
 I added a hero image to each page during development and made the Job Opening page the home page. I added some forms to edit notes/insights and add a job; however, these were last-minute additions and were a simple form alone on the page. I deemed there were no wireframes required for these.
 
