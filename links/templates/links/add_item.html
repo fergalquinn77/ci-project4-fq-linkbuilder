@@ -1,7 +1,6 @@
 {% extends "links/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-
 <div class="jumbotron">
     <h1>Add a link</h1>
     <form method="POST" enctype="multipart/form-data">
@@ -17,7 +16,6 @@
                 <button class="btn btn-danger" type="button"
                     onclick="location.href='{% url 'links-home' %}'">Cancel</button>
             </p>
-
         </div>
 </div>
 </form>

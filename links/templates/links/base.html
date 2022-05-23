@@ -27,15 +27,10 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="navbar-nav d-flex">
-
         {% if user.is_authenticated %}
-
         <div class="dropdown">
           <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-expanded="false" aria-label="Login-In and Register">
-
-
-
             {% if "placeholder" in user.profile.profile_image.url %}
             <img class="profile-image rounded-circle account-img"
               src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1652951808/uv2zyend3ck99djnjc7x.jpg"
@@ -50,7 +45,6 @@
             <a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a>
           </div>
         </div>
-
         {% else %}
         <div class="dropdown">
           <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -64,24 +58,18 @@
           </div>
         </div>
         {% endif %}
-
       </div>
       <div id="logo">
         <a href="{% url 'home' %}"><img id="logo-image" src="{% static 'images/Link_Builder.png' %}"
             alt="Link Builder Logo"></a>
       </div>
-      
-
     </nav>
   </header>
   <main>
-
     <div class="overflow-auto">
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
-
-
             {% for message in messages %}
             <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
               {{ message | safe }}
@@ -91,25 +79,20 @@
             {% endfor %}
           </div>
         </div>
-
       </div>
       {% block content %}
       <!-- Content Goes here -->
       {% endblock content %}
-
-
     </div>
   </main>
   <div class="fixed-bottom">
     <footer>
-
       <div class="container-fluid footer mt-auto">
         <div class="row">
           <div class="col">
           </div>
           <div class="text-center col-8 mt-1">
             <div class="uppercase general-sub">Created by Fergal Quinn</div>
-
             <ul class="list-inline social-links">
               <li class="list-inline-item">
                 <a target="_blank" href="https://github.com/fergalquinn77">
@@ -127,19 +110,15 @@
           </div>
           <div class="col">
           </div>
-
         </div>
-
       </div>
     </footer>
   </div>
-
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
   </script>
-
 
   <script>
     setTimeout(function () {
@@ -150,5 +129,4 @@
   </script>
 
 </body>
-
 </html>

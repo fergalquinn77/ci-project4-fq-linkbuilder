@@ -1,5 +1,4 @@
 {% extends "links/base.html" %}
-
 {% block content %}
 {% if "placeholder" in user.profile.profile_image.url %}
 <div class="container">
@@ -10,19 +9,17 @@
     <img class="rounded-circle mx-auto d-block company-profile-pic" src="{{ user_profile.profile_image.url }}"
       alt="profile image">
     {% endif %}
-
   </div>
-
+  {% if user_profile.company_name|length > 0  %}
   <div class="text-center">
     <h1>{{ user_profile.company_name }}</h1>
   </div>
 </div>
-
+{% endif %}
 {% for url in links %}
-
 {% if url.visible == True %}
 <a href="{{ url.link }}">
-  <div id="external-page-link-boxes" class="container border mb-2 rounded">
+  <div class="external-page-link-boxes container border mb-2 rounded">
     <div class="row">
       <div class="col-2">
         {% if "placeholder" in url.url_image.url %}
@@ -33,22 +30,16 @@
         {% endif %}
       </div>
       <div class="col-8 text-center d-flex flex-column align-self-center">
-
-        <div id="urltitle" class="font-weight-bold">
+        <div class="urltitle font-weight-bold">
           {{ url.title }}
         </div>
       </div>
       <div class="col-2">
-
       </div>
     </div>
   </div>
 </a>
-
-
-</div>
 {% endif %}
-
 {% empty %}
 <div class="jumbotron text-center">
   <h1>No Links To Display<h1>

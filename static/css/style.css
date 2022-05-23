@@ -133,7 +133,7 @@ h1 {
     height: 100px;
 }
 
-#external-page-link-boxes {
+.external-page-link-boxes {
     background-color: #77c3ff;
 }
 
@@ -157,7 +157,7 @@ h1 {
     -o-transition: all 0.35s ease-in-out;
 }
 
-#urltitle {
+.urltitle {
     font-size: 1.25rem;
 }
 

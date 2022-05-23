@@ -1,9 +1,7 @@
 {% extends "links/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-
 <div class="jumbotron">
-
     <h2>Edit details</h2>
     <form method="POST" action="" enctype="multipart/form-data">
         {% csrf_token %}
@@ -16,7 +14,6 @@
                 <button class="btn btn-danger" type="button"
                     onclick="location.href='{% url 'links-home' %}'">Cancel</button>
             </p>
-
         </div>
     </form>
 </div>
