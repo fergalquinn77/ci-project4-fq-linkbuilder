@@ -135,23 +135,16 @@ The navbar is simple and has a clear call to action (login). The logo is centere
   
 #### ***Signed In:***
 Changes to the nav bar when logged in are:
-* Register and Login nav items replaced with Logout.     
-![Navbar when logged in](docs/images/features/navbar/signed-in.JPG)  
+
+Register and Login nav items replaced with Logout and Profile. It also includes the users profile picture if they have one.     
+![Navbar when logged in](docs/images/features/navbar/navbar-login-with-profile-pic.jpg)
+
+If the user does not have a profile picture, then the following navbar shows:
+![Navbar when logged in](docs/images/features/navbar/navbar-login-no-profile-pic.jpg)
   
-* Jobs and Tracking dropdowns are now clickable, and the color matches the other nav items.
-    ![Jobs dropdown](docs/images/features/navbar/jobs-dropdown.JPG)  
-    ![Jobs dropdown](docs/images/features/navbar/tracking-dropdown.JPG)
-  
-#### ***Hamburger menu on smaller screen sizes:***
-To display the menu properly on smaller screen sizes, a burger menu was implemented using bootstrap.  
-![Jobs dropdown](docs/images/features/navbar/mobile-menu.JPG)   
-![Jobs dropdown](docs/images/features/navbar/mobile-menu-open.JPG) 
-  
-### **Hero Images:**
-I picked the hero images to portray the page's theme to the user. 
-#### ***Job Openings/Landing Page:***
-I wanted something that inspired the user in their job search for this page. The neon sign saying "Do something great" aligns with the people I spoke to when researching what a user would want out of a job. Out of the five people I asked, "Why did you decide to change jobs last?" 4 said they wanted a career that felt more fulfilling for them and had an impact. The chosen image was to personify this desire.  
-![Job Opening page hero image](docs/images/features/hero-images/job-openings.JPG)  
+### **First Time User:**
+When a user lands on the root url, they are displayed with a page that lets the user know what the site is about and gives them instructions on how to progress
+![Home Page Instructions](docs/images/features/homepage-instructions.jpg).
 
 #### ***Add Job Form Page:***
 I wanted an image that invoked a positive feeling for both users and employers, adding a job to share with the community.

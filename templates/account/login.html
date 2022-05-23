@@ -11,7 +11,7 @@
   <div class="row">
     <div class="mx-auto mt-5 jumbotron">
 
-      <h2>{% trans "Sign In" %}</h2>
+      <h2 class="text-center border-bottom border-dark">{% trans "Sign In" %}</h2>
 
 
       <p>{% blocktrans %}If you have not created an account yet, then please
@@ -25,7 +25,7 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
 
-        <div><button class="btn btn-sm btn-success primaryAction" type="submit">{% trans "Sign In" %}</button>
+        <div class="text-center"><button class="btn btn-sm btn-success primaryAction" type="submit">{% trans "Sign In" %}</button>
           <button class="btn btn-sm btn-warning"><a href="{% url 'account_signup' %}">Sign Up</a></button></div>
           
       </form>
