@@ -17,16 +17,17 @@
         </div>
     </div>
 </div>
+
 {% for url in dataset %}
-<div class="link-boxes container border mb-2 py-3 rounded">
+<div class="link-boxes container border mb-2 py-3 rounded wrapper">
     <div class="row">
-        <div class="col-6 overflow-hidden">
-            <div class="font-weight-bold">
+        <div class="col-6">
+            <div class="font-weight-bold overflow-hidden">
                 {{ url.title }}<a href="{% url 'edit-link' url.id %}">
                     <i data-toggle="edit" class="bi bi-pencil" title="Edit Link"></i>
                 </a>
             </div>
-            <div>
+            <div class="overflow-hidden">
                 {{ url.link }}<a href="{% url 'edit-link' url.id %}">
                     <i data-toggle="edit" class="bi bi-pencil" title="Edit Link"></i>
                 </a>
@@ -51,6 +52,7 @@
         </div>
     </div>
 </div>
+
 {% empty %}
 <div class="jumbotron">
     <div class="row">

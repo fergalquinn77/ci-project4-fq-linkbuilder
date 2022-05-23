@@ -1,23 +1,30 @@
 {% extends "links/base.html" %}
 {% block content %}
-{% if "placeholder" in user.profile.profile_image.url %}
+
 <div class="container">
+
   <div class="row">
-    <img class="rounded-circle mx-auto d-block company-profile-pic"
+    {% if "placeholder" in user.profile.profile_image.url %}
+    <img class="rounded-circle mx-auto d-block company-profile-pic m-1"
       src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1652951808/uv2zyend3ck99djnjc7x.jpg" alt="profile image">
     {% else %}
-    <img class="rounded-circle mx-auto d-block company-profile-pic" src="{{ user_profile.profile_image.url }}"
+    <img class="rounded-circle mx-auto d-block company-profile-pic m-1" src="{{ user_profile.profile_image.url }}"
       alt="profile image">
     {% endif %}
   </div>
+
+
   {% if user_profile.company_name|length > 0  %}
   <div class="text-center">
     <h1>{{ user_profile.company_name }}</h1>
   </div>
+  {% endif %}
 </div>
-{% endif %}
+
+
 {% for url in links %}
 {% if url.visible == True %}
+
 <a href="{{ url.link }}">
   <div class="external-page-link-boxes container border mb-2 rounded">
     <div class="row">
@@ -39,12 +46,16 @@
     </div>
   </div>
 </a>
+
 {% endif %}
+
+
 {% empty %}
 <div class="jumbotron text-center">
   <h1>No Links To Display<h1>
 </div>
 {% endfor %}
+
 <div class="container">
   <div class="row">
     <ul class="list-inline social-links mx-auto d-block">
@@ -75,4 +86,5 @@
     </ul>
   </div>
 </div>
+
 {% endblock %}
