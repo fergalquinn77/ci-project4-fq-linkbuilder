@@ -27,9 +27,9 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="navbar-nav d-flex">
-       
+
         {% if user.is_authenticated %}
-        
+
         <div class="dropdown">
           <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
             aria-expanded="false" aria-label="Login-In and Register">
@@ -38,9 +38,11 @@
 
             {% if "placeholder" in user.profile.profile_image.url %}
             <img class="profile-image rounded-circle account-img"
-              src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1652951808/uv2zyend3ck99djnjc7x.jpg" alt="Profile image">
+              src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1652951808/uv2zyend3ck99djnjc7x.jpg"
+              alt="Profile image">
             {% else %}
-            <img class="profile-image rounded-circle account-img" src="{{ user.profile.profile_image.url }}" alt="Profile image">
+            <img class="profile-image rounded-circle account-img" src="{{ user.profile.profile_image.url }}"
+              alt="Profile image">
             {% endif %}
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -68,7 +70,7 @@
         <a href="{% url 'home' %}"><img id="logo-image" src="{% static 'images/Link_Builder.png' %}"
             alt="Link Builder Logo"></a>
       </div>
-      </div>
+      
 
     </nav>
   </header>
@@ -106,8 +108,8 @@
           <div class="col">
           </div>
           <div class="text-center col-8 mt-1">
-<div class="uppercase general-sub">Created by Fergal Quinn</div>
-            
+            <div class="uppercase general-sub">Created by Fergal Quinn</div>
+
             <ul class="list-inline social-links">
               <li class="list-inline-item">
                 <a target="_blank" href="https://github.com/fergalquinn77">

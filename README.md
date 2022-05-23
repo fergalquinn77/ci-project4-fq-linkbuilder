@@ -111,7 +111,7 @@ I also removed my user model in favor of the default model provided by the ALLAU
 
 Below is the final version of the ERD generated via the PGadmin tool connected to my Heroku Postgres database. There are only the three custom tables (Notes, Jobs, PinnedJobs); the rest were generated automatically by various Libraries.
 
-![Final ERD](docs/images/erd.png)
+![Final ERD](docs/images/erd-linkbuilder.jpeg)
  
 Within my models.py, I also have a function using the @receiver decorator to create a PinnedJobs object whenever a user registers; the object is user-specific and links a user to a many2many list of the user's pinned jobs within the PinnedJobs table. Later this can be further developed into a user profile.
 
