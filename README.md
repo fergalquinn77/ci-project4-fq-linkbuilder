@@ -102,57 +102,36 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
 I added a hero image to each page during development and made the Job Opening page the home page. I added some forms to edit notes/insights and add a job; however, these were last-minute additions and were a simple form alone on the page. I deemed there were no wireframes required for these.
 
 ### **Database Schema**
-Below is my initial plan for my database tables:  
-![Entity-Relationship-Model](docs/data-model/data-entity-relationship.jpg) 
+Below is the simple relationship diagram for my database tables:  
+![Entity-Relationship-Model](docs/images/erd-linkbuilder.jpeg) 
 
-My initial plan for my database tables included using a JSON with data from the API. Since I abandoned this idea early on, I replaced the JSON with a jobs model.
-
-I also removed my user model in favor of the default model provided by the ALLAUTH library. I combined the notes and insights tables into a single table with a boolean felid to indicate if the entry was a note or insight.
-
-Below is the final version of the ERD generated via the PGadmin tool connected to my Heroku Postgres database. There are only the three custom tables (Notes, Jobs, PinnedJobs); the rest were generated automatically by various Libraries.
-
-![Final ERD](docs/images/erd-linkbuilder.jpeg)
- 
-Within my models.py, I also have a function using the @receiver decorator to create a PinnedJobs object whenever a user registers; the object is user-specific and links a user to a many2many list of the user's pinned jobs within the PinnedJobs table. Later this can be further developed into a user profile.
+The entity relationship diagram is quite simple. I use the build in User model combined with a profile model. There is a link model with a one to zero or many relationship User -> Links.
 
 ## **Surface**
 ### **Color scheme:**
-I used the following [Image](docs/images/jaguar-logo.png) to generate the following color scheme on [coolers.co](https://coolors.co/603f3f-a0acca-e4b67c-de9f13-000000). The resultant color scheme was:
-![Color Scheme](docs/images/jag-colors.jpg)
-
-Adapting the above throughout the development process. The final list of colors used has been placed in the below [color grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23fcf6ba%2C%0D%0A%23b38728%2C%0D%0A%23fbf5b7%2C%0D%0A%23bf953f%0D%0A%23000%0D%0A%23fffdd0%2C%0D%0A%23fafafa%2C%0D%0A%23603f3f%2C%0D%0A%23fdfd96%2C%0D%0A%23e4b67c%2C%0D%0A%23efefef%2C%0D%0A%23de9f13%2C%0D%0A%23dee2e6%2C%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp) to check contrast scores.
+The main colors used in the site are contained in the color grid below. I used [Contrast Eight Shapes](https://contrast-grid.eightshapes.com/) to test the background colors against the colors used for font. 
 
 ![Color gird](docs/images/color-grid.jpg)
 
 ### **Typography**:
 
-For this project, I used two different fonts. 
-#### ***Condiment:***
-* For the J.A.G Logo. I wanted a jagged effect to emphasize the word JAG. 
-
-#### ***Lato:***
-* The main font for the remainder of the site. This font was used for its soft edges to match most elements' border-radius attributes.
+For this project, I used the Montserrat font. This font was used in the Logo (designed in [Canva](http://www.canva.com)). The font is simple and not too stylised. I feel it works well for this particular project.
 
 # **Agile Development Process**
-I used [JIRA](https://dnlbowers.atlassian.net/jira/software/projects/PJG/boards/4/roadmap) to track and create issues/user stories. I will provide login credentials for the above project space when submitting the project. However, you can find a summary of my agile process/learnings [here](AGILE.md).
+I used the Agile Process for development of this web application. 
   
 # **Features**
 ## **Site Navigation**
 ### **Navbar**
 #### ***Logo:***
-When brainstorming names for the site, the phrase "Jobs A Gooden" came to mind when thinking about finding the perfect job; this term gave rise to the acronym J.A.G. For this reason, I used the below image as the logo/mascot of the brand.
-
-The Font used was a cursive style on purpose because of the jagged appearance it gave the text.  
-  
-![Site Logo](docs/images/features/navbar/logo.JPG)
+The name 'Link Builder' is in keeping with the purpose of the site. I used [Canva](http://www.canva.com) to design the logo.
   
 #### ***Signed Out:***
-The navbar allows the user to navigate the site easily. When signed out of the page, it shows the following:
+The navbar is simple and has a clear call to action (login). The logo is centered on the navbar.The navbar allows the user to navigate the site easily. When signed out of the page, it shows the following:
 * Shows link to register.
 * Shows login link.
-* Jobs and Tracking dropdown menus are disabled and show a different color than the other nav items.
-* Logo with company acronym and mascot. The logo also serves as a link back to the home page at any point in the user's journey.  
-![Navbar when logged out](docs/images/features/navbar/signed-out.JPG)
+
+![Navbar when logged out](docs/images/features/navbar/nav-bar-no-login.jpg)
   
 #### ***Signed In:***
 Changes to the nav bar when logged in are:
