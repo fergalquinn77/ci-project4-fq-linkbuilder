@@ -6,4 +6,4 @@ from .models import url_links
 @admin.register(url_links)
 class url_linksAdmin(admin.ModelAdmin):
     list_display = ('user', 'title')
-    search_fields = ['title']
+    search_fields = ['user','title']

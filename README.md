@@ -144,7 +144,7 @@ If the user does not have a profile picture, then the following navbar shows:
   
 ### **First Time User:**
 When a user lands on the root url, they are displayed with a page that lets the user know what the site is about and gives them instructions on how to progress
-![Home Page Instructions](docs/images/features/homepage-instructions.jpg).
+![Home Page Instructions](docs/images/features/homepage-instructions.jpg)
 
 #### ***Register Page***
 The sign-up page is simple with a color scheme in keeping with the rest of the site. 
@@ -156,8 +156,30 @@ The sign-up page is simple with a color scheme in keeping with the rest of the s
 When a user has no links and is on their homepage (logged-in), they are displayed with a simple message on how to start using the site.
 
 ![Instructions](docs/images/features/instructions-no-links.jpg)
+
+### **Logged in user:**
+
+When a user is logged in and has links/data added, they are displayed with a list of their links on the homepage:
+
+![Instructions](docs/images/features/logged-in-user/index-page.jpg)
+
+It gives the user full CRUD ability and also allows them to preview what their external page will look like. When the user clicks on the 'Preview Page' button - a preview of their external 'single link' site shows
+
+![Preview Page](docs/images/features/logged-in-user/preview-page.jpg)
   
-### ***Saved jobs page:***
+#### ***Adding/Deleting/Updating Links***
+
+Adding/Editing a Link
+
+The user is displayed with a simple interface for entering a new link or editing an existing link.
+
+![Add Link](docs/images/features/logged-in-user/add-link.jpg)
+![Edit Link](docs/images/features/logged-in-user/edit-details.JPG)
+
+There is validation for both forms on the url entered. It checks for a 200 response and gives an error message if this is not received (i.e. not a valid URL)
+
+![Invalid URL](docs/images/features/logged-in-user/invalid-url.jpg)
+
 The chosen image shows a man sticking posits to the wall and making notes to track their ideas. I felt this nicely personified the site's intention to save jobs and make notes as a user brainstorms and tracks the journey of their future career path.
 
 ![Saved Job page hero image](docs/images/features/hero-images/pinboard.JPG)
