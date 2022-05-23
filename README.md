@@ -146,10 +146,16 @@ If the user does not have a profile picture, then the following navbar shows:
 When a user lands on the root url, they are displayed with a page that lets the user know what the site is about and gives them instructions on how to progress
 ![Home Page Instructions](docs/images/features/homepage-instructions.jpg).
 
-#### ***Add Job Form Page:***
-I wanted an image that invoked a positive feeling for both users and employers, adding a job to share with the community.
+#### ***Register Page***
+The sign-up page is simple with a color scheme in keeping with the rest of the site. 
   
-![Add Job Form Hero Image](docs/images/features/hero-images/add-job.JPG)
+![Register Page](docs/images/features/sign-up-page.jpg)
+
+#### ***No Links Added Yet***
+
+When a user has no links and is on their homepage (logged-in), they are displayed with a simple message on how to start using the site.
+
+![Instructions](docs/images/features/instructions-no-links.jpg)
   
 ### ***Saved jobs page:***
 The chosen image shows a man sticking posits to the wall and making notes to track their ideas. I felt this nicely personified the site's intention to save jobs and make notes as a user brainstorms and tracks the journey of their future career path.
