@@ -16,13 +16,11 @@ import dj_database_url
 from django.contrib.messages import constants as messages
 
 if os.path.isfile("env.py"):
-   import env
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-
-
 
 
 # Quick-start development settings - unsuitable for production
@@ -34,7 +32,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
-
 
 
 ALLOWED_HOSTS = ["ci-fq-linktree-p4.herokuapp.com", "localhost"]
@@ -71,13 +68,13 @@ ACCOUNT_EMAIL_REQUIRED = True
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MESSAGE_TAGS = {
-        messages.DEBUG: 'alert-info',
-        messages.INFO: 'alert-info',
-        messages.SUCCESS: 'alert-success',
-        messages.WARNING: 'alert-warning',
-        messages.ERROR: 'alert-danger',
-    }
-    
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -122,10 +119,8 @@ WSGI_APPLICATION = 'linktree.wsgi.application'
 # }
 
 DATABASES = {
-   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
-
-
 
 
 # Password validation
@@ -145,7 +140,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 
 # Internationalization
@@ -172,7 +166,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 
 
 # Default primary key field type

@@ -45,30 +45,30 @@ I have further divided this table into three categories to help prioritize the o
     * Add/Edit/Delete links.
     * User can have a unique landing page to display links.
     * Set up their profile including picture and social media links.
-  
+
 * UX efforts **should** accommodate these:
     * User can toggle between hide/show links.
-  
+
 * **Unwise** use of time to address there:
     * User can drag and drop links to re-order.
     * User can review stats on how many times each link is clicked.
     * Set up a schedule for the links to be displayed.
-  
+
 ## **Structure**   
 To help me visualize a typical user journey around the site, I used [draw.io](https://app.diagrams.net/) to help me plan out the various routes a user could take through the site.
-  
+
 ![User Journeys flow chart](docs/flowcharts/user-journey.jpg)
-  
+
 ### **User Stories:**  
-  
+
 * As an **Admin** I can...
     * **Access the admin interface** so that **Manually edit user and link details**    
     * ... **Filter and search all users from the admin page** so that **I can utilize the admin page to review, edit and delete user data quickly.**
     * ...**Easily navigate the admin panel** so that **I can view, search, add and delete links**
- 
+
 * As an **Unregistered User** I can... 
     * ...**access a user page without the required to have an account** so that **I can access the users links and social media links**
-  
+
 * As a **Registered User** I can... 
     * ...**register an account** so that **I can start building my single link**
     * ...**add links** so that **build my linktree**  
@@ -76,7 +76,7 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
     * ...**add, edit and delete links** so that **modify my linktree**
     * ...**Toggle a link to show or hide** so that **turn the link off and on when I need it**
     * ...**Schedule links** so that **they can automatcially appear and disappear from my page according to my schedule**
- 
+
 * As a **Site User** I can...
     * ...**see appropriate responses upon specific interactions with the site** so that **I know my edit, deletion, submission has been successful.**
     * ...**See appealing colors and uniform style themes** so that **every page and part of the process stimulates a positive response.**
@@ -85,7 +85,7 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
     * ...**type a URL into the web browser** so that **I can access the site's various pages**
     *  ...**see uniformity on each page and clearly distinguish the content subject** so that **I can quickly and familiarly navigate the page.**
     * ... **Find relevant contact details** so that **I can contact the site admin via email**
-  
+
 ### **User Stories dropped as part of the agile process**
 * As a **Registered User** I can **Schedule links** so that **they can automatcially appear and disappear from my page according to my schedule**
 * As a **Registered User** I can **see analytics on how many people accessed my links** so that **what links are the most popular**
@@ -119,20 +119,20 @@ For this project, I used the Montserrat font. This font was used in the Logo (de
 
 # **Agile Development Process**
 I used the Agile Process for development of this web application. 
-  
+
 # **Features**
 ## **Site Navigation**
 ### **Navbar**
 #### ***Logo:***
 The name 'Link Builder' is in keeping with the purpose of the site. I used [Canva](http://www.canva.com) to design the logo.
-  
+
 #### ***Signed Out:***
 The navbar is simple and has a clear call to action (login). The logo is centered on the navbar.The navbar allows the user to navigate the site easily. When signed out of the page, it shows the following:
 * Shows link to register.
 * Shows login link.
 
 ![Navbar when logged out](docs/images/features/navbar/nav-bar-no-login.jpg)
-  
+
 #### ***Signed In:***
 Changes to the nav bar when logged in are:
 
@@ -141,14 +141,14 @@ Register and Login nav items replaced with Logout and Profile. It also includes 
 
 If the user does not have a profile picture, then the following navbar shows:
 ![Navbar when logged in](docs/images/features/navbar/navbar-login-no-profile-pic.jpg)
-  
+
 ### **First Time User:**
 When a user lands on the root url, they are displayed with a page that lets the user know what the site is about and gives them instructions on how to progress
 ![Home Page Instructions](docs/images/features/homepage-instructions.jpg)
 
 #### ***Register Page***
 The sign-up page is simple with a color scheme in keeping with the rest of the site. 
-  
+
 ![Register Page](docs/images/features/sign-up-page.jpg)
 
 #### ***No Links Added Yet***
@@ -166,7 +166,7 @@ When a user is logged in and has links/data added, they are displayed with a lis
 It gives the user full CRUD ability and also allows them to preview what their external page will look like. When the user clicks on the 'Preview Page' button - a preview of their external 'single link' site shows
 
 ![Preview Page](docs/images/features/logged-in-user/preview-page.jpg)
-  
+
 #### ***Adding/Deleting/Updating Links***
 
 Adding/Editing a Link
@@ -183,24 +183,24 @@ There is validation for both forms on the url entered. It checks for a 200 respo
 The chosen image shows a man sticking posits to the wall and making notes to track their ideas. I felt this nicely personified the site's intention to save jobs and make notes as a user brainstorms and tracks the journey of their future career path.
 
 ![Saved Job page hero image](docs/images/features/hero-images/pinboard.JPG)
-  
+
 ### ***Insights page:***
 This hero image sticks with the inspirational theme. The words "Lets your intuition guide you. You are what you have been looking for" are displayed on a pamphlet. There is some [debate in the psychological community](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5020639/#:~:text=Intuition%20and%20insight%20are%20intriguing%20phenomena%20of%20non-analytical,by%20recombining%20the%20single%20elements%20of%20a%20problem.) over the differences between insights and intuition as a type non-analytical mental functioning. However, the common perception is that intuition precedes insight, and for this reason, it seemed fitting to place this inspirational quote on the insights pages.  
-  
+
 ![Insights page hero image](docs/images/features/hero-images/insights.JPG)
-  
+
 ### ***Edit note form page:***
 I chose an image of a person making notes in a copybook for this page.
-  
+
 ![Edit notes Page hero image](docs/images/features/hero-images/notes.JPG)
 
 ## **AllAuth Pages**
 ### ***Sign In:***
 ![sign-in form](docs/images/features/allauth/sign-in.JPG)
-  
+
 #### ***Form Errors:***
 ![Invalid log in credentials](docs/images/features/allauth/signin-formerror.JPG)
-  
+
 ### ***Sign Up:***
 ![sign-up form](docs/images/features/allauth/sign-up.JPG)
 
@@ -209,52 +209,52 @@ I chose an image of a person making notes in a copybook for this page.
 
 ### ***Sign Out:***
 ![Sign out page](docs/images/features/allauth/sign-out.JPG)
-  
+
 ## **Site Instructions**
-  
+
 ![instructions page](docs/images/features/instructions/instructions-page.JPG)
-  
+
 ### ***Access to instructions page:***
 There are three ways a user can access the site instructions detailing how to use the site's primary feature of tracking a job search journey. 
 #### ***Nav link:***
 ![Nav link to instructions page](docs/images/features/instructions/nav-link.JPG)  
-  
+
 #### ***On page Button:***
 There is a button linking the user to the site instructions at the top of the pages main content on the following pages:-
 * Job Openings.
 * Saved Jobs/Jobs Pinboard page.
 * insights page.  
-  
+
 ![Button to instructions](docs/images/features/instructions/button-link.JPG)
 
 #### ***Note form Anchor tag:***
-  
+
 ![Note form Anchor tag](docs/images/features/instructions/note-form-link.JPG)  
-  
+
 ## **Main Page Content**
 ### ***Job Openings page:***
 #### ***Add Job Button:***
 ![Add Job Button](docs/images/features/openings-page/add-job.JPG)
-  
+
 #### ***Add Job Form:***
 * Allows a user to submit a job post for admin approval.
-  
+
 ![Add-Job-Form](docs/images/features/openings-page/add-job-form.JPG)
-  
+
 #### ***Add Job Success message:***
 * Once added, the user will see an alert advising them that the job post has been submitted and is awaiting admin approval.
 * Can cancel the form without the need to complete it.     
 ![Add job success message](docs/images/features/openings-page/add-job-success.JPG)
-  
+
 ### ***Job Openings and Pinned Board Content:***
 #### ***Job Preview Card (logged out):***
 * Visible only from the job openings page.
 * Toggle disabled.
 * Button for full job spec invites the user to log in or sign up.
 * Company name, role, location, salary info, and expiry date visible.
-    
+
 ![Job Preview when logged out](docs/images/features/openings-page/previewcard-loggedout.JPG)  
-  
+
 #### ***Job Preview Card (Logged in):***
 * Only saved jobs will be visible on the jobs pinboard page.
 * From the pinboard page, it will disappear if a post gets unpinned. The remaining jobs will take up the vacated space.
@@ -263,60 +263,60 @@ There is a button linking the user to the site instructions at the top of the pa
 * When a job is unpinned, the toggle goes to the left, and the background turns white.
 * Button for full details clickable and directs the user to the full job spec.
 * Company name, role, location, salary info, and expiry date visible.
-  
+
 ![Job preview when logged in](docs/images/features/openings-page/previewcard-loggedin.JPG)  
 
 #### ***Job Preview Card Footer (Logged in as admin user):***
 * Edit button visible for easy editing of a job post.
 * Delete button visible for easy deletion of a job.
 * Closing date for job role visible.  
-   
+
 ![Card footer for admin](docs/images/features/openings-page/previewfooter-admin.JPG)  
-  
+
 ### ***Full Job Details Page***
 #### ***Full details card (unpinned):***
 * Shows all relevant felids of the job entry.
-  
+
 ![Full job spec card (unpinned)](docs/images/features/job-details/fullspec-unpinned.JPG)
-  
+
 #### ***Full details card (pinned):***
 ##### **Full job card**
 * Toggle turns green and to the right.
 * Card width narrows when wider screens to allow for notes section.
-   
+
 ![Full job spec card (pinned)](docs/images/features/job-details/fullspec-pinned.JPG)
-  
+
 * On narrower screens, card width stays the same, and the button shows to scroll to the notes section instead.  
-  
+
 ![Full job spec card (pinned)](docs/images/features/job-details/fullspec-pinned-mob.JPG)
-  
+
 #### ***Notes form:***
 * Displayed to the right of the job card on wider screens.
 * Displayed underneath job card on narrower screens.  
 ![Notes form on Job details page](docs/images/features/job-details/notes-form.JPG)  
-  
+
 * Error displayed if the short description or note field is left blank.  
 ![Note form error](docs/images/features/job-details/form-error.JPG)
-  
+
 * Success message is shown upon successful submission of a note/insight.  
 ![Note form success](docs/images/features/job-details/form-success.JPG)
-  
+
 #### ***Notes Accordion:***
 * Notes and insights are displayed here in the accordion, located under the note form.
 * Deletions occur without page refresh
 * When leaving a note, the page redirects to a new URL to prevent a note from being left twice by refreshing the page.  
-  
+
 ![Notes accordion](docs/images/features/job-details/notes-accordion.JPG)  
-  
+
 ##### **Note:**
 * When a user unpins a job, their related notes get deleted to prevent a clog up of old data in the database. 
 * Date created is visible.
 * White background.
 * Edit button available to edit note.
 * Delete button available to delete note.
-  
+
 ![Note](docs/images/features/job-details/note.JPG)  
-  
+
 ##### **Insight:**
 * Will be saved even if the job is unpinned.
 * Date created is visible.
@@ -325,65 +325,65 @@ There is a button linking the user to the site instructions at the top of the pa
 * Edit button available to edit insight.
 * Delete button available to delete insight.
 * Noted "marked as insight" in the top right of the body.
-  
+
 ![Note](docs/images/features/job-details/insight.JPG) 
-  
+
 ### ***Insights PAge:***
 #### ***Add Insight Button:***
 Allows the user to add insights without a related job.  
-  
+
 ![Add insight button](docs/images/features/insights-page/add-insight-btn.JPG) 
-  
+
 #### ***Add Insight Form:***
 * Form allows users to create insights with no related job post.
 * Related_job field is automatically set to null.
 * is_insight is automatically set to true when using this form and cannot be changed by the user.  
-  
+
 ![Add Insight form](docs/images/features/insights-page/create-insight-form.JPG) 
-  
+
 #### ***Add Insight Form Errors:***
 When a form submission is invalid, errors are shown to guide the user.
-  
+
 ##### **Short description field error:**
-  
+
 ![Shortdescription form error](docs/images/features/insights-page/insight-form-error-short.JPG)  
-  
+
 ##### **Short description field error:**  
-  
+
 ![note field error](docs/images/features/insights-page/insight-form-error-note.JPG)  
-    
+
 #### ***Insight left success message:***
-  
+
 Once submitting an insight from the insight page, a success message displays on the insights page.
-  
+
 ![Insight success](docs/images/features/insights-page/insights-success.JPG)
-  
+
 #### ***Insight Item Display:***
-  
+
 * Insight item displayed with date created.
 * Short description and note field visible.
 * Button to edit an entry.
 * Button to delete the entry. 
-   
+
 ![Insight item on insights page](docs/images/features/insights-page/insight-item.JPG)
-  
+
 #### ***Timeline:***
-  
+
 Acts as a central focal point for insights, so they display on alternate sides is in the order from newest to oldest.  
-  
+
 ![Insights Timeline](docs/images/features/insights-page/timeline.JPG)
 
 On narrower devices, the insights stack on top of each other:  
-   
+
 ![Insights Timeline Mobile](docs/images/features/insights-page/timeline-mob.JPG)
 ### ***Contact Us Page:***
-  
+
 * Fake email address to contact site admins (In the future, I will be looking into domain names)
 * Navigation button to the job openings page.
 * Navigation button to the job pinboard page.    
-  
+
 ![Contact us page](docs/images/features/contact-us.JPG)
-  
+
 
 ### ***Pagination:***
 It appears on the following pages when:
@@ -395,14 +395,14 @@ It appears on the following pages when:
 ### ***Footer:***
 * Displays page copyright.
 * Displays social media links to contact the author.  
-  
+
 ![Footer](docs/images/features/footer.JPG)
 
 ## **Error pages**
 The below error pages were created out of necessity. A user could still access some pages when logged out. Other pages would show an error due to the logic on the page needing a user object to render the logic from the view.
-  
+
 My initial solution was for this was a members-only page when a user was not logged in. However, due to some URLs being linked to views requiring user-specific data, a default 500 error would be shown. I decided to handle this with a customized error page.
-  
+
 ### ***Members Only Page:***
 
 The members-only page is visible when logged out and trying to access the below pages via the URL:
@@ -410,7 +410,7 @@ The members-only page is visible when logged out and trying to access the below 
 * Edit note/insight form page.
 * Add job form.
 * Add insights form.
-  
+
 ![Member only page](docs/images/features/error-pages/members-pages.JPG)
 
 ### ***500 Server Error Page:***
@@ -419,7 +419,7 @@ The 500 error page appears on those URLs linked to views requiring a user object
 Pages where the error shows when trying to access a page via the URL when logged out:
 * Job pinboard page.
 * Insights page.
-  
+
 ![500 error page](docs/images/features/error-pages/500.JPG)
 
 ### ***404 Page Not Found Error Page:***
@@ -429,7 +429,7 @@ This error shows when a user types a URL into the browser which does not exist w
 ## **Warning Modals**
 ### ***Delete Note/Insight:***
 ![Delete entry (note/insight) warning](docs/images/features/warning-modals/delete-note.JPG)
-  
+
 ### ***Delete Job:***
 ![Delete job warning](docs/images/features/warning-modals/delete-job.JPG)
 
@@ -495,7 +495,7 @@ I have included details of my initial deployment in a separate document called [
 * The code institute Slack community as a whole who tested and supported me throughout. There have been too many to mention everyone who encouraged along the way, but they are all superstars.
 
 * And the biggest thanks goes to my wife and child, who have had to deal with me face to face through it all. Oliver has been my reason for the change, and Analise my inspiration. 
-  
+
 # Credits
 * Balsamiq was used to create the wireframes.
 * The site was developed using VScode.

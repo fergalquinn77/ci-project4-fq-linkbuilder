@@ -184,6 +184,7 @@ html, body {
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
     -o-transition: all 0.35s ease-in-out;
+    color:#050a30;
 }
 
 .urltitle {
@@ -219,3 +220,4 @@ html, body {
         padding-right: 5px;
         padding-left: 5px;
     }
+}

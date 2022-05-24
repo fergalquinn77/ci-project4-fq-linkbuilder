@@ -11,5 +11,6 @@ class url_links(models.Model):
     link = models.URLField(blank=False)
     url_image = CloudinaryField('image', default='url_placeholder')
     visible = models.BooleanField(default=True)
+
     def __str__(self):
         return self.title
