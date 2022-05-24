@@ -89,8 +89,16 @@ footer {
 
 /*General mark-up */
 
-a {
+a, .btn {
     color: #050a30;
+}
+
+.btn-danger{
+    color: white;
+}
+
+a:hover, .btn:hover {
+    color: white;
 }
 
 hr {
@@ -109,6 +117,10 @@ hr {
 
 h1 {
     font-size: 2rem;
+}
+
+.btn-success{
+    background-color: lightgreen;
 }
 
 html, body {
