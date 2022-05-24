@@ -64,16 +64,18 @@ Due to this, the only error I found was in settings.py with ``` AUTH_PASSWORD_VA
 
 ![settings.py pep8 errors](docs/images/PEP8-Validation.jpg) 
 
-The first appears to be a long-standing issue with using the pep8 checker with Django, and there have been some [suggest resolves](). However, Django seems to think shortening these lines is ill advisable. For this reason, I left them to be longer than 80 characters. 
+The first appears to be a long-standing issue with using the pep8 checker with Django. However, Django seems to think shortening these lines is ill advisable. For this reason, I left them to be longer than 80 characters. 
 
 # Manual testing
 Below is a summary of how I manually tested each user story.
 
 ## As an **Admin** I can...
 
-Here I have only tested the admin panel relating to the JOB_SEARCH app, as the other sections relate to imported libraries.
+Here I have only tested the admin panel relating to the links and profile apps.
 
 | Checked | ...**use a text editor within the admin panel** so that **I can create a job description in a way that is clear and appeals to the eye when creating a job post** |
+|:-------:|:--------|
+| &check; | Can add a job post successfully from the admin panel using the summer note editor |
 
 
 

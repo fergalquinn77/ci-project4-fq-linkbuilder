@@ -6,4 +6,4 @@ from .models import profile
 @admin.register(profile)
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('user', 'company_name')
-    search_fields = ['user', 'company_name']
+    search_fields = ['user__username', 'company_name']

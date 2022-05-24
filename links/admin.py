@@ -5,5 +5,7 @@ from .models import url_links
 
 @admin.register(url_links)
 class url_linksAdmin(admin.ModelAdmin):
-    list_display = ('user', 'title')
-    search_fields = ['user','title']
+    list_display = ['user', 'title']
+    search_fields = ['user__username','title']
+    list_filter = ('user',)
+

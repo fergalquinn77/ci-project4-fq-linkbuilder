@@ -180,282 +180,41 @@ There is validation for both forms on the url entered. It checks for a 200 respo
 
 ![Invalid URL](docs/images/features/logged-in-user/invalid-url.jpg)
 
-The chosen image shows a man sticking posits to the wall and making notes to track their ideas. I felt this nicely personified the site's intention to save jobs and make notes as a user brainstorms and tracks the journey of their future career path.
 
-![Saved Job page hero image](docs/images/features/hero-images/pinboard.JPG)
 
-### ***Insights page:***
-This hero image sticks with the inspirational theme. The words "Lets your intuition guide you. You are what you have been looking for" are displayed on a pamphlet. There is some [debate in the psychological community](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5020639/#:~:text=Intuition%20and%20insight%20are%20intriguing%20phenomena%20of%20non-analytical,by%20recombining%20the%20single%20elements%20of%20a%20problem.) over the differences between insights and intuition as a type non-analytical mental functioning. However, the common perception is that intuition precedes insight, and for this reason, it seemed fitting to place this inspirational quote on the insights pages.  
 
-![Insights page hero image](docs/images/features/hero-images/insights.JPG)
-
-### ***Edit note form page:***
-I chose an image of a person making notes in a copybook for this page.
-
-![Edit notes Page hero image](docs/images/features/hero-images/notes.JPG)
-
-## **AllAuth Pages**
-### ***Sign In:***
-![sign-in form](docs/images/features/allauth/sign-in.JPG)
-
-#### ***Form Errors:***
-![Invalid log in credentials](docs/images/features/allauth/signin-formerror.JPG)
-
-### ***Sign Up:***
-![sign-up form](docs/images/features/allauth/sign-up.JPG)
-
-#### ***Form Errors:***
-![Form errors for sign up form](docs/images/features/allauth/signup-formerror.JPG)
-
-### ***Sign Out:***
-![Sign out page](docs/images/features/allauth/sign-out.JPG)
-
-## **Site Instructions**
-
-![instructions page](docs/images/features/instructions/instructions-page.JPG)
-
-### ***Access to instructions page:***
-There are three ways a user can access the site instructions detailing how to use the site's primary feature of tracking a job search journey. 
-#### ***Nav link:***
-![Nav link to instructions page](docs/images/features/instructions/nav-link.JPG)  
-
-#### ***On page Button:***
-There is a button linking the user to the site instructions at the top of the pages main content on the following pages:-
-* Job Openings.
-* Saved Jobs/Jobs Pinboard page.
-* insights page.  
-
-![Button to instructions](docs/images/features/instructions/button-link.JPG)
-
-#### ***Note form Anchor tag:***
-
-![Note form Anchor tag](docs/images/features/instructions/note-form-link.JPG)  
-
-## **Main Page Content**
-### ***Job Openings page:***
-#### ***Add Job Button:***
-![Add Job Button](docs/images/features/openings-page/add-job.JPG)
-
-#### ***Add Job Form:***
-* Allows a user to submit a job post for admin approval.
-
-![Add-Job-Form](docs/images/features/openings-page/add-job-form.JPG)
-
-#### ***Add Job Success message:***
-* Once added, the user will see an alert advising them that the job post has been submitted and is awaiting admin approval.
-* Can cancel the form without the need to complete it.     
-![Add job success message](docs/images/features/openings-page/add-job-success.JPG)
-
-### ***Job Openings and Pinned Board Content:***
-#### ***Job Preview Card (logged out):***
-* Visible only from the job openings page.
-* Toggle disabled.
-* Button for full job spec invites the user to log in or sign up.
-* Company name, role, location, salary info, and expiry date visible.
-
-![Job Preview when logged out](docs/images/features/openings-page/previewcard-loggedout.JPG)  
-
-#### ***Job Preview Card (Logged in):***
-* Only saved jobs will be visible on the jobs pinboard page.
-* From the pinboard page, it will disappear if a post gets unpinned. The remaining jobs will take up the vacated space.
-* Toggle active.
-* When a job is pinned, the toggle goes to the right, and the background turns green.
-* When a job is unpinned, the toggle goes to the left, and the background turns white.
-* Button for full details clickable and directs the user to the full job spec.
-* Company name, role, location, salary info, and expiry date visible.
-
-![Job preview when logged in](docs/images/features/openings-page/previewcard-loggedin.JPG)  
-
-#### ***Job Preview Card Footer (Logged in as admin user):***
-* Edit button visible for easy editing of a job post.
-* Delete button visible for easy deletion of a job.
-* Closing date for job role visible.  
-
-![Card footer for admin](docs/images/features/openings-page/previewfooter-admin.JPG)  
-
-### ***Full Job Details Page***
-#### ***Full details card (unpinned):***
-* Shows all relevant felids of the job entry.
-
-![Full job spec card (unpinned)](docs/images/features/job-details/fullspec-unpinned.JPG)
-
-#### ***Full details card (pinned):***
-##### **Full job card**
-* Toggle turns green and to the right.
-* Card width narrows when wider screens to allow for notes section.
-
-![Full job spec card (pinned)](docs/images/features/job-details/fullspec-pinned.JPG)
-
-* On narrower screens, card width stays the same, and the button shows to scroll to the notes section instead.  
-
-![Full job spec card (pinned)](docs/images/features/job-details/fullspec-pinned-mob.JPG)
-
-#### ***Notes form:***
-* Displayed to the right of the job card on wider screens.
-* Displayed underneath job card on narrower screens.  
-![Notes form on Job details page](docs/images/features/job-details/notes-form.JPG)  
-
-* Error displayed if the short description or note field is left blank.  
-![Note form error](docs/images/features/job-details/form-error.JPG)
-
-* Success message is shown upon successful submission of a note/insight.  
-![Note form success](docs/images/features/job-details/form-success.JPG)
-
-#### ***Notes Accordion:***
-* Notes and insights are displayed here in the accordion, located under the note form.
-* Deletions occur without page refresh
-* When leaving a note, the page redirects to a new URL to prevent a note from being left twice by refreshing the page.  
-
-![Notes accordion](docs/images/features/job-details/notes-accordion.JPG)  
-
-##### **Note:**
-* When a user unpins a job, their related notes get deleted to prevent a clog up of old data in the database. 
-* Date created is visible.
-* White background.
-* Edit button available to edit note.
-* Delete button available to delete note.
-
-![Note](docs/images/features/job-details/note.JPG)  
-
-##### **Insight:**
-* Will be saved even if the job is unpinned.
-* Date created is visible.
-* Light bulb icon next to the short description indicates the note is an insight.
-* Yellow background.
-* Edit button available to edit insight.
-* Delete button available to delete insight.
-* Noted "marked as insight" in the top right of the body.
-
-![Note](docs/images/features/job-details/insight.JPG) 
-
-### ***Insights PAge:***
-#### ***Add Insight Button:***
-Allows the user to add insights without a related job.  
-
-![Add insight button](docs/images/features/insights-page/add-insight-btn.JPG) 
-
-#### ***Add Insight Form:***
-* Form allows users to create insights with no related job post.
-* Related_job field is automatically set to null.
-* is_insight is automatically set to true when using this form and cannot be changed by the user.  
-
-![Add Insight form](docs/images/features/insights-page/create-insight-form.JPG) 
-
-#### ***Add Insight Form Errors:***
-When a form submission is invalid, errors are shown to guide the user.
-
-##### **Short description field error:**
-
-![Shortdescription form error](docs/images/features/insights-page/insight-form-error-short.JPG)  
-
-##### **Short description field error:**  
-
-![note field error](docs/images/features/insights-page/insight-form-error-note.JPG)  
-
-#### ***Insight left success message:***
-
-Once submitting an insight from the insight page, a success message displays on the insights page.
-
-![Insight success](docs/images/features/insights-page/insights-success.JPG)
-
-#### ***Insight Item Display:***
-
-* Insight item displayed with date created.
-* Short description and note field visible.
-* Button to edit an entry.
-* Button to delete the entry. 
-
-![Insight item on insights page](docs/images/features/insights-page/insight-item.JPG)
-
-#### ***Timeline:***
-
-Acts as a central focal point for insights, so they display on alternate sides is in the order from newest to oldest.  
-
-![Insights Timeline](docs/images/features/insights-page/timeline.JPG)
-
-On narrower devices, the insights stack on top of each other:  
-
-![Insights Timeline Mobile](docs/images/features/insights-page/timeline-mob.JPG)
-### ***Contact Us Page:***
-
-* Fake email address to contact site admins (In the future, I will be looking into domain names)
-* Navigation button to the job openings page.
-* Navigation button to the job pinboard page.    
-
-![Contact us page](docs/images/features/contact-us.JPG)
-
-
-### ***Pagination:***
-It appears on the following pages when:
-  * Job Openings page when more than six items are to be displayed.
-  * Job pinboard page when more than six items are to be displayed.
-  * Insights page when more than four items are available.  
-![Pagination bar](docs/images/features/pagination.JPG)
 
 ### ***Footer:***
-* Displays page copyright.
 * Displays social media links to contact the author.  
 
-![Footer](docs/images/features/footer.JPG)
+![Footer](docs/images/footer.jpg)
 
 ## **Error pages**
-The below error pages were created out of necessity. A user could still access some pages when logged out. Other pages would show an error due to the logic on the page needing a user object to render the logic from the view.
-
-My initial solution was for this was a members-only page when a user was not logged in. However, due to some URLs being linked to views requiring user-specific data, a default 500 error would be shown. I decided to handle this with a customized error page.
-
-### ***Members Only Page:***
-
-The members-only page is visible when logged out and trying to access the below pages via the URL:
-* Full job spec page.
-* Edit note/insight form page.
-* Add job form.
-* Add insights form.
-
-![Member only page](docs/images/features/error-pages/members-pages.JPG)
 
 ### ***500 Server Error Page:***
-The 500 error page appears on those URLs linked to views requiring a user object to function. It can cover other scenarios in the future; however, after extensive manual testing, this was the only trigger I found for this page.
+I created a basic 500 & 404 page with button to bring the user back to the homepage.
 
-Pages where the error shows when trying to access a page via the URL when logged out:
-* Job pinboard page.
-* Insights page.
-
-![500 error page](docs/images/features/error-pages/500.JPG)
+![500 error page](docs/images/features/error-pages/500.jpg)
 
 ### ***404 Page Not Found Error Page:***
 This error shows when a user types a URL into the browser which does not exist within the app's domain.
 ![404 error page](docs/images/features/error-pages/404.JPG)
 
 ## **Warning Modals**
-### ***Delete Note/Insight:***
-![Delete entry (note/insight) warning](docs/images/features/warning-modals/delete-note.JPG)
-
-### ***Delete Job:***
-![Delete job warning](docs/images/features/warning-modals/delete-job.JPG)
-
-### ***Unpin Job:***
-![Unpin job warning](docs/images/features/warning-modals/unpin-post.JPG)
-
-### ***Delete element from the DOM:***
-Once deleting a job or unpinning a job, the element is hidden with javascript, and then the page refreshes to fill the vacant spot as the page rerenders. I took the approach of hiding the element first on list views to prevent the user from re-pinning the post before it refreshed. After removing the element, a refresh was required for the other elements to fill the page's space and prevent pagination issues.
-![element hidden with javascript](docs/images/features/warning-modals/hiding-element.JPG)
+### ***Delete Link:***
+![Delete link warning](docs/images/confirm-deletion.jpg)
 
 # **Future development**
-* Automated script to delete/archive hidden job posts by set criteria when actions by admin.
-* Build an online community.
-* Job categories
-* Search feature
-* API for a Job's site
-* Auto email to Job post author when a job is close to expired that it will be deleted after the specified expiration time.
-* [KanBan board](https://codepen.io/josetxu/pen/VwyxZKq) to track applied, round, and response.
-* The ability for the user to keep their added posts private, visible only on their saved jobs board. Currently, hiding a job in this way is only possible if the admin pins the post on the user's behalf from the admin panel. 
-* Counter on admin's delete job button, which shows the number of users with the job pinned. Preventing the Admin from having to check the admin panel for this info prior to deleting the job.
+* I would like to incorporate drag and drop functionality for the ordering of links. I have come across a couple of JQuery solutions that should help here like [Sortable](https://jqueryui.com/sortable/).
+* Include social media login (Facebook/Google).
+* Reset password feature.
+* Analytics feature, providing the user with detailed insights on link clicks. 
 
 # **Testing Phase**
 I have included testing details during and post-development in a separate document called [TESTING.md](TESTING.md).
 
 # **Deployment**
-The final Deployed site can be found [here](https://jobs-a-gooden.herokuapp.com/)
+The final Deployed site can be found [here](https://ci-fq-linktree-p4.herokuapp.com/)
 I have included details of my initial deployment in a separate document called [DEPLOYMENT.md](DEPLOYMENT.md).
 
 # **Technologies used**
@@ -472,57 +231,28 @@ I have included details of my initial deployment in a separate document called [
   * HTML was the base language used to layout the skeleton of all templates.
 * CSS
   * Custom CSS used to style the page and make the appearance look a little more unique.
-* Javascript
-  * I have used Javascript throughout to manipulate the DOM and communicate to the backend to create, read, update, and delete data from the database.
-* Jinja
-  * Jinja was the templating language used in order to implement the views.py logic and models.py data into a template so it could be displayed to the user.
-* Bootstrap 5.1.3
-  * Used to style HTML, CSS, minor javascript. The more I used this framework the most I realized retrospectively how it could have saved me writing several parts of the code I had already written.
+* Bootstrap 4.6.1
+  * Used for the majority of styling throughout the document and for it's fantastic grid system. 
 * Font awesome
   * All icons throughout the page.
 
 
-# Honorable mentions  
-* [Richard Wells](https://github.com/D0nni387) - Mentor extraordinaire. He was ways on call when I needed him and never afraid to pull out the big guns to push that little bit further.
-* [Sean Murphy](https://github.com/nazarja) - Just a legend, any way you slice it, he helped me understand the logic behind my pin job feature by providing examples of similar things and helped me to connect to Heroku through the console of VSCODE
-* [Matt Bodden](https://github.com/MattBCoding) - The comfort of a friend no matter the time of day, the push of a competitor even if I was not playing the game.
-* [Steve Wier](https://github.com/StevenWeir038) - A man and a legend in his own right. Always checking in on me and testing my work. Pushing me to move forward even when I did not feel like it.
-* Guillermo Brachetta - Explained dotenv package and how to use it.
-* Ed_CI - was always there in the project channel and quick to jump in to help
-* [Megan Vella](https://github.com/Medusas71) - Gave me the most extensive testing review of the lot. Always quick to say hello and look for ways to help.
-* Daniel Callaghan - Always hanging out in the PP4 channel and quick to answer any call for help.
-
-* The code institute Slack community as a whole who tested and supported me throughout. There have been too many to mention everyone who encouraged along the way, but they are all superstars.
-
-* And the biggest thanks goes to my wife and child, who have had to deal with me face to face through it all. Oliver has been my reason for the change, and Analise my inspiration. 
+# Mentions  
+* My mentor Chris Quinn and the CI Tutor Team. Chris once again gave great guidance. The Menotor Team (in particular Alex, Ger and Ed who I was in touch with quite alot) were fantastic as always and putting me on the right track when I hit a problem. 
 
 # Credits
 * Balsamiq was used to create the wireframes.
-* The site was developed using VScode.
+* The site was developed using Gitpod.
 * GitHub was used to store my repository.
-* Responsive screenshot made using [techsini.com](https://techsini.com/multi-mockup/index.php)
-* Flow chart symbol meaning taken from [conceptdraw.com](https://www.conceptdraw.com/How-To-Guide/flow-chart-symbols)
-* Guidance on file structure for templates folder from [learndjango.com article](https://learndjango.com/tutorials/template-structure)
-* [Article on writing good user stories](https://www.industriallogic.com/blog/as-a-developer-is-not-a-user-story/)
-* Flow charts made using [draw.io](https://app.diagrams.net/)
-* [coolers.co](https://coolors.co/603f3f-a0acca-e4b67c-de9f13-000000) was used to generate color scheme from the jaguar image
-* [W3cschool](https://www.w3schools.com/howto/howto_css_timeline.asp) was used to source the majority of the code used to create a timeline in CSS for the insights page. Minor styling adjustments were made and the HTML was adapted to include a Jinja for loop to display the relevant data without code repetition.
-* [CSEStack](https://www.csestack.org/display-messages-form-submit-django/) to research using messages upon form submission.
-* The PageTitleViewMixin was taken from [djangoforge.com](https://www.djangoforge.dev/guides/page-titles/)
-* How to handle exceptions [studygyann.com](https://studygyaan.com/django/django-custom-404-error-template-page)
-* The golden gradient color scheme - [brandgradients.com](http://www.brandgradients.com/gold-gradient).
+* Responsive screenshot made using [Am I responsive](https://ui.dev/amiresponsive)
 * Fonts were taken from [Google Fonts](https://fonts.google.com/)
-* Images:
-  * Hero images taken from [upsplash.com](https://unsplash.com) 
-  * Jaguar cartoon image from [https://favpng.com](https://favpng.com/png_view/jaguar-jaguar-clip-art-vector-graphics-cartoon-illustration-png/yF62hEBm)
-* Multiple videos sourced from youtube were used to research a variety of topics:
-    * [Programming with Mosh Python Django Tutorial for Beginners](https://youtu.be/rHux0gMZ3Eg)
-    * [Django forms with Ajax | How to use ajax with django](https://youtu.be/C4fr3SCqgJQ)
-    * [Learn Django - Class-Based Views series](https://youtu.be/ScteNE1jB4g)
+* Color Selection [Eight Shapes]((https://contrast-grid.eightshapes.com/))
+* Logo and landing page image were created on [Canva](https://www.canva.com) 
 * General references:
     * [Geeks for Geeks](https://www.geeksforgeeks.org/)
     * [Stack Overflow](https://stackoverflow.com/)
     * [Code Institute Learning Platform](https://codeinstitute.net/)
     * [Django Documentation](https://docs.djangoproject.com/en/3.2/)
     * [Bootstrap Documentation](https://getbootstrap.com/)
-    * [Jinja Template Documentation](https://jinja.palletsprojects.com/en/3.0.x/templates/)
+    * [Corey Schlafer](https://www.youtube.com/c/Coreyms)
+    * [Codemy](https://www.youtube.com/c/Codemycom)

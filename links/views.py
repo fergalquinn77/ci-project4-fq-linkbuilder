@@ -118,3 +118,6 @@ def error_500_view(request,):
 
 def error_404_view(request,exception):
     return render(request,'links/404.html')
+
+def e404_view(request,exception):
+    return render(request,'links/404.html') 
