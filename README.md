@@ -172,13 +172,9 @@ The user is displayed with a simple interface for entering a new link or editing
 ![Add Link](docs/images/features/logged-in-user/add-link.jpg)
 ![Edit Link](docs/images/features/logged-in-user/edit-details.JPG)
 
-There is validation for both forms on the url entered. It checks for a 200 response and gives an error message if this is not received (i.e. not a valid URL)
+There is **validation** for both forms on the url entered. It checks for a 200 response and gives an error message if this is not received (i.e. not a valid URL)
 
 ![Invalid URL](docs/images/features/logged-in-user/invalid-url.jpg)
-
-
-
-
 
 ### ***Footer:***
 * Displays social media links to contact the author.  
@@ -252,3 +248,4 @@ I have included details of my initial deployment in a separate document called [
     * [Bootstrap Documentation](https://getbootstrap.com/)
     * [Corey Schlafer](https://www.youtube.com/c/Coreyms)
     * [Codemy](https://www.youtube.com/c/Codemycom)
+* [DNLBowers](https://github.com/dnlbowers/jobs-a-gooden) - A great template for Readme
