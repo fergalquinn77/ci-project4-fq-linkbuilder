@@ -73,18 +73,40 @@ Below is a summary of how I manually tested each user story.
 
 Here I have only tested the admin panel relating to the links and profile apps.
 
-| Checked | ...**use a text editor within the admin panel** so that **I can create a job description in a way that is clear and appeals to the eye when creating a job post** |
+| Checked | ...**Access the admin interface** so that **Manually edit user and link details** |
 |:-------:|:--------|
-| &check; | Can add a job post successfully from the admin panel using the summer note editor |
+| &check; | Can edit user details and links |
 
+| Checked | ...**Filter and search all users from the admin page** so that **I can utilize the admin page to review, edit and delete user data quickly.** |
+|:-------:|:--------|
+| &check; | Can filter users - search by username |
+| &check; | Can filter links - search by link title |
 
+| Checked | ...**Easily navigate the admin panel** so that **I can view, search, add and delete links** |
+|:-------:|:--------|
+| &check; | Can search links |
+| &check; | Can create, edit and delete links |
 
 ## As an **Unregistered User** I can...
 
-| Checked | ...**quickly determine the subject of the site** so that **from the landing page, I can see if I want to continue spending my time on this site and register** |
-
+| Checked | ...**access a user page without the required to have an account** so that **I can access the users links and social media links** |
+|:-------:|:--------|
+| &check; | When not logged-in, when I enter the root web-address, I am brought to a page introducing the website and giving sign-up/sign-in options  |
 
 ## As a **Site User** I can...
+| Checked | ...**see appropriate responses upon specific interactions with the site** so that **I know my edit, deletion, submission has been successful.** |
+|:-------:|:--------|
+| &check; | On deletion of a link, I am prompted 'Are you sure you want to delete the link  |
+| &check; | After deleting the link, the user is presented with an updated page with the link deleted  |
 
+| Checked | ...**Add/Edit and Delete Links** so that **I can modify the links displayed on my external page** |
+|:-------:|:--------|
+| &check; | I can add links  |
+| &check; | I can update links  |
+| &check; | I can delete links  |
+
+| Checked | ...**Preview what my external site** so that **I can use what my single-link site will look like to customers** |
+|:-------:|:--------|
+| &check; | I can view my external site that displays my links  |
 
 [Back to Readme](README.md)

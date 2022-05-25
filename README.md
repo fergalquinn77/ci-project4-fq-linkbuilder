@@ -79,12 +79,8 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
 
 * As a **Site User** I can...
     * ...**see appropriate responses upon specific interactions with the site** so that **I know my edit, deletion, submission has been successful.**
-    * ...**See appealing colors and uniform style themes** so that **every page and part of the process stimulates a positive response.**
-    * ...**Access the site from any size screen and still have a pleasant experience on the site** so that **I am not restricted to which devices I can use on the site**
-    * ...**access a live URL** so that **I can use the site**
-    * ...**type a URL into the web browser** so that **I can access the site's various pages**
-    *  ...**see uniformity on each page and clearly distinguish the content subject** so that **I can quickly and familiarly navigate the page.**
-    * ... **Find relevant contact details** so that **I can contact the site admin via email**
+    * ...**Add/Edit and Delete Links** so that **I can modify the links displayed on my external page**
+    * ...**Preview what my external site** so that **I can use what my single-link site will look like to customers**
 
 ### **User Stories dropped as part of the agile process**
 * As a **Registered User** I can **Schedule links** so that **they can automatcially appear and disappear from my page according to my schedule**
