@@ -7,8 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
 
-
-
+# View for displaying user links (login required)
 @login_required
 def links_view(request):
     context = {
@@ -16,17 +15,17 @@ def links_view(request):
     context["dataset"] = url_links.objects.all().filter(user=request.user).order_by('-id')
     return render(request, 'links/index.html', context)
 
+# View for root directory/homepage (no login required)
 def learn(request):
     if request.user.is_authenticated:
         return links_view(request)
     else:
         return render(request, 'links/learn.html')
 
+# View for adding links (login required)
 @login_required
 def add_link(request):
-    
     form = LinkForm()
-
     if request.method == 'POST':
         form = LinkForm(request.POST, request.FILES)
         form_url = request.POST.get('link')
@@ -49,7 +48,7 @@ def add_link(request):
         }
     return render(request, 'links/add_item.html', context)
 
-
+# View for editing links (login required)
 @login_required
 def edit_link(request, url_links_id):
     link = get_object_or_404(url_links, id=url_links_id)
@@ -79,8 +78,10 @@ def edit_link(request, url_links_id):
             }
         return render(request, 'links/edit_item.html', context)
     else:
+        messages.warning(request, 'You do not have access to this page')
         return redirect('links-home')
 
+#View for deleting links (login required)
 @login_required
 def delete_link(request, url_links_id):
     link = get_object_or_404(url_links, id=url_links_id)
@@ -93,6 +94,7 @@ def delete_link(request, url_links_id):
     
         return render(request, 'links/confirm_delete.html',{'link':link})
     else:
+        messages.warning(request, 'You do not have access to this page')
         return redirect('links-home')
 
 #The view for displaying links for a particular username visable without login
@@ -107,12 +109,19 @@ def links_view_external(request, username):
         }
     return render(request, 'links/index_external.html', context)
 
+# Used for toggling linsk from visible to not visible
+@login_required()
 def toggle_url(request, url_id):
     url = get_object_or_404(url_links, id=url_id)
-    url.visible = not url.visible
-    url.save()
-    return redirect('links-home')
+    if request.user==url.user:
+        url.visible = not url.visible
+        url.save()
+        return redirect('links-home')
+    else:
+        messages.warning(request, 'You do not have access to this page')
+        return redirect('links-home')
 
+#500 and 404 error pages
 def error_500_view(request,):
     return render(request,'links/500.html')
 

@@ -186,11 +186,11 @@ There is **validation** for both forms on the url entered. It checks for a 200 r
 ### ***500 Server Error Page:***
 I created a basic 500 & 404 page with button to bring the user back to the homepage.
 
-![500 error page](docs/images/features/error-pages/500.jpg)
+![500 error page](docs/images/500-error.JPG)
 
 ### ***404 Page Not Found Error Page:***
 This error shows when a user types a URL into the browser which does not exist within the app's domain.
-![404 error page](docs/images/features/error-pages/404.JPG)
+
 
 ## **Warning Modals**
 ### ***Delete Link:***

@@ -109,4 +109,10 @@ Here I have only tested the admin panel relating to the links and profile apps.
 |:-------:|:--------|
 | &check; | I can view my external site that displays my links  |
 
+| Checked | ...**not edit/delete/toggle links of other users** so that **only users who created the links, can edit/delete/toggle them** |
+|:-------:|:--------|
+| &check; | I cannot edit a link of another user  |
+| &check; | I cannot delete the link of another user  |
+| &check; | I cannot toggle the link of another user  |
+
 [Back to Readme](README.md)
