@@ -43,9 +43,6 @@
 ![Desktop-Edit](docs/images/lighthouse/edit-a-link-desktop.jpg)
 
 
-#### *Desktop*:
-
-
 ## [CSS](https://jigsaw.w3.org/css-validator/):
 Checking by URL there were a lot of errors coming from the bootstrap and font awesome source code.  However my CSS file was tested by direct upload was found to be free from errors
 ![CSS-check](docs/images/css-check.jpg)

@@ -1,22 +1,11 @@
 # Deployment
 
-## Table of Contents
-* [Deployment](#deployment)
-  * [Initial Deployment](#initial-deployment)
-    * [Create repository](#create-repository)
-    * [Setting up the Workspace (To be done locally via the console of your chosen editor)](#setting-up-the-workspace-to-be-done-locally-via-the-console-of-your-chosen-editor)
-    * [Create Heroku App:](#create-heroku-app)
-    * [Creating Environmental Variables Locally](#creating-environmental-variables-locally)
-    * [Setting up setting.py File](#setting-up-settingpy-file)
-    * [Set up Heroku for use via the console.](#set-up-heroku-for-use-via-the-console)
-  * [Cloning on a Local machine or Via Gitpod Terminal](#cloning-on-a-local-machine-or-via-gitpod-terminal)
-
 ## Initial Deployment
 Below are the steps I took to deploy the site to Heroku and any console commands required to initiate it.
 ### Create repository:
 1. Create a new repository in GitHub and clone it locally following [these instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
     * ***Note*** - If you are cloning my project, then you can skip all pip installs below and just run the following command in the terminal to install all the required libraries/packages at once:
-       * ```pip install -r requirements.txt```
+       * ```pip3 install -r requirements.txt```
     * ***IMPORTANT*** -  If developing locally on your device, ensure you set up/activate the virtual environment ([see below](#setting-up-the-workspace-to-be-done-locally-via-the-console-of-your-chosen-editor)) before installing/generating the requirements.txt file; failure to do this will pollute your machine and put other projects at risk
    
 ### Setting up the Workspace on Gitpod:
@@ -25,10 +14,10 @@ Below are the steps I took to deploy the site to Heroku and any console commands
     * ```pip3 install 'django<4' gunicorn ```
 
 1. Install supporting libraries:
-    * ```pip install dj_database_url psycopg2```
-    * ```pip install dj3-cloudinary-storage```
+    * ```pip3 install dj_database_url psycopg2```
+    * ```pip3 install dj3-cloudinary-storage```
 1. Create requirements.txt:
-    * ```pip freeze --local > requirements.txt```
+    * ```pip3 freeze --local > requirements.txt```
 1. Create an empty folder for your project in your chosen location.
 1. Create a project in the above folder:
     * django-admin startproject <PROJECT_NAME> (in the case of this project, the project name was "linktree")
@@ -57,17 +46,17 @@ The below works on the assumption that you already have an account with [Heroku]
 
 ### Creating Environmental Variables Locally:
 1. Install dotenv package:
-    * pip install python-dotenv
-1. On your local machine, create a file called ".env" at the same level as settings.py and add this to the .gitignore file.
-1. From the Heroku app settings tab, click "reveal config vars" and copy the value of the variable DATABASE_URL. Add this value to a variable called DATABASE_URL in your create .env file:
+    * pip install python-dotenv (not required for Gitpod)
+1. On your local machine/workspace, create a file called "env.py" at the same level as settings.py and add this to the .gitignore file.
+1. From the Heroku app settings tab, click "reveal config vars" and copy the value of the variable DATABASE_URL. Add this value to a variable called DATABASE_URL in your create env.py file:
     * ``` DATABASE_URL=PastedValueFromHerokuHere ``` - ***(note that with the dotenv package no quotation marks are required)***
 1. From your projects settings.py file, copy the SECRET_KEY value and assign it to a variable called SECRET_KEY in your .env file
     * ``` SECRET_KEY=PastedValueFromYourProjectsSettings.pyFile ```
-1. Add DEVELOPMENT variable to .env file:
+1. Add DEVELOPMENT variable to env.py file:
     * ``` DEVELOPMENT=development ```
-1. Add CLOUDINARY_URL variable to .env file:
+1. Add CLOUDINARY_URL variable to env.py file:
     * Log into cloudinary and from the dashboard copy the API Environmental Variable.
-    * Add to .env file like below
+    * Add to env.py file like below
         * ``` CLOUDINARY_URL=PastedApiEnvironmentalVariable ```
 
 
@@ -159,7 +148,7 @@ The below works on the assumption that you already have an account with [Heroku]
     * ```git push heroku main ``` 
 
 ## Cloning on a Local machine or Via Gitpod Terminal
-1. Navigate to the [GitHub repository](https://github.com/dnlbowers/battleships), and follow [these steps to clone the project](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) into your IDE of choice.   
+1. Navigate to the [GitHub repository](https://github.com/fergalquinn77/ci-project4-fq-linkbuilder.git), and follow [these steps to clone the project](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) into your IDE of choice.   
    
    * **Gitpod** only **requires** you to have the **web extension** installed and **click** the **green Gitpod button** from the repositories main page. If you are **using Gitpod**, please **skip step 2** below as you do not require a virtual environment to protect your machine.  
   

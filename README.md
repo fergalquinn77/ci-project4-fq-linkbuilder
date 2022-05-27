@@ -176,6 +176,10 @@ There is **validation** for both forms on the url entered. It checks for a 200 r
 
 ![Invalid URL](docs/images/features/logged-in-user/invalid-url.jpg)
 
+If a user trys to edit/delete/toggle another users links, the following message shows:
+
+![No Access](docs/images/no-access.jpg)
+
 ### ***Footer:***
 * Displays social media links to contact the author.  
 
