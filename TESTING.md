@@ -112,4 +112,10 @@ Here I have only tested the admin panel relating to the links and profile apps.
 | &check; | I cannot delete the link of another user  |
 | &check; | I cannot toggle the link of another user  |
 
+# Further Testing
+
+- I tested that the page works in the different browsers: [Chrome](assets/images/game-chrome-display.jpg), [Safari](assets/images/game-safari-display.jpg), [Firefox](assets/images/firefox-testing-game.jpg).
+- I confirmed that this project is [responsive](docs/images/responsive.jpg), looks good and functions on all standard screen sizes using devtools device toolbar.
+- I confirmed all buttons are working right, executing the correct functions and displaying results correctly on the screen.
+
 [Back to Readme](README.md)

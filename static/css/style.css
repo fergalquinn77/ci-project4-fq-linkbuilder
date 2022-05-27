@@ -28,6 +28,10 @@ header {
     margin-bottom: 10px;
 }
 
+.navbar-nav .dropdown-menu {
+    position: relative;
+}
+
 footer {
     height: 100px;
     background-color: white;
