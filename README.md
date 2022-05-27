@@ -174,6 +174,11 @@ The user is displayed with a simple interface for entering a new link or editing
 
 There is **validation** for both forms on the url entered. It checks for a 200 response and gives an error message if this is not received (i.e. not a valid URL)
 
+#### ***Showing and Hiding Links***
+
+The user can choose to show or hide each link on the homepage by clicking the 'show' or 'hide' button. A spinner appears when the button is click until the page is loaded
+![Spinner](docs/images/spinner.jpg)
+
 ![Invalid URL](docs/images/features/logged-in-user/invalid-url.jpg)
 
 If a user trys to edit/delete/toggle another users links, the following message shows:
