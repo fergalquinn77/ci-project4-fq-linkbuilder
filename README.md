@@ -1,7 +1,7 @@
 # **Link Builder**
 This project is based on the LinkTree web application concept. Companies and individuals often require one URL link to contain information/links for many other sites. In particular, Instagram allows users to have one link in Bio.
 
-Link Builder allows users create one landing link (https://www.linkbuilder.com/username) which displays all the users links.
+Link Builder allows users create one landing link (e.g https://www.linkbuilder.com/fergalquinn) which displays all the users links.
 
 ![Responsive screenshot showing site on different screen sizes](docs/images/responsive.jpg)
 
@@ -90,12 +90,11 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
 
 ## **Skeleton**
 ### **Wireframes:**
+
+I wanted the site to be clean and simple. This is reflected in the wireframes below.
 * [External Page - No Login Required](docs/wireframes/external-page-login-not-required.png)
 * [Homepage - No Login Required](docs/wireframes/homepage-no-login-required.png)
 * [Index Page - Login Required](docs/wireframes/index-page-login-required.png)
-
-
-I added a hero image to each page during development and made the Job Opening page the home page. I added some forms to edit notes/insights and add a job; however, these were last-minute additions and were a simple form alone on the page. I deemed there were no wireframes required for these.
 
 ### **Database Schema**
 Below is the simple relationship diagram for my database tables:  
@@ -114,7 +113,7 @@ The main colors used in the site are contained in the color grid below. I used [
 For this project, I used the Montserrat font. This font was used in the Logo (designed in [Canva](http://www.canva.com)). The font is simple and not too stylised. I feel it works well for this particular project.
 
 # **Agile Development Process**
-I used the Agile Process for development of this web application. 
+I used the Agile Process for development of this web application. I used user story feasability chart to work out what user stories were best to focus my efforts on. I used the Kandan board on Github to track progress.
 
 # **Features**
 ## **Site Navigation**
@@ -143,7 +142,7 @@ When a user lands on the root url, they are displayed with a page that lets the 
 ![Home Page Instructions](docs/images/features/homepage-instructions.jpg)
 
 #### ***Register Page***
-The sign-up page is simple with a color scheme in keeping with the rest of the site. 
+The sign-up page is simple with a color scheme in keeping with the rest of the site. It includes a cancel button in case the user does not wish to proceed. It uses the in-built django validation with an additional requirement of email address. 
 
 ![Register Page](docs/images/features/sign-up-page.jpg)
 
