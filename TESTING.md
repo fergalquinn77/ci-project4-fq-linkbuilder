@@ -1,8 +1,6 @@
-## Bugs and Fixes During the Development Process
-
-
 # Lighthouse
 
+The lighthouse tests show good results for all pages for accessability. There were a number of contrast score issues which were rectified. Mobile scores were slightly lower than desktop in performance for two main reasons - cdn imports from bootstrap and jquery. 
 
 ## No Login Required 
 ### Sign-in:
