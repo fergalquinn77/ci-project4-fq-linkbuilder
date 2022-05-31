@@ -4,7 +4,7 @@
 <div class="container">
 
   <div class="row">
-    {% if "placeholder" in user.profile.profile_image.url %}
+    {% if "placeholder" in user_profile.profile_image.url %}
     <img class="rounded-circle mx-auto d-block company-profile-pic m-1"
       src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1652951808/uv2zyend3ck99djnjc7x.jpg" alt="profile image">
     {% else %}
@@ -31,7 +31,7 @@
       <div class="col-2">
         {% if "placeholder" in url.url_image.url %}
         <img class="url-image account-img m-1"
-          src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1652952932/y5ur4qniznhfzuxqeuhg.jpg" alt="Link image">
+          src="https://res.cloudinary.com/dc4pc9t8i/image/upload/v1653063392/no-url-image_shz0ng.png" alt="Link image">
         {% else %}
         <img class="url-image account-img m-1" src="{{ url.url_image.url }}" alt="Link image">
         {% endif %}
@@ -59,25 +59,25 @@
 <div class="container">
   <div class="row">
     <ul class="list-inline social-links mx-auto d-block">
-      {% if user.profile.twitter|length > 0 %}
+      {% if user_profile.twitter|length > 0 %}
       <li class="list-inline-item">
-        <a target="_blank" href="{{ user.profile.twitter }}">
+        <a target="_blank" href="{{ user_profile.twitter }}">
           <i class="fab fa-twitter" aria-hidden="true"></i>
           <span class="sr-only">Twitter</span>
         </a>
       </li>
       {% endif %}
-      {% if user.profile.facebook|length > 0 %}
+      {% if user_profile.facebook|length > 0 %}
       <li class="list-inline-item">
-        <a target="_blank" href="{{ user.profile.facebook }}">
+        <a target="_blank" href="{{ user_profile.facebook }}">
           <i class="fab fa-facebook" aria-hidden="true"></i>
           <span class="sr-only">Facebook</span>
         </a>
       </li>
       {% endif %}
-      {% if user.profile.instagram|length > 0 %}
+      {% if user_profile.instagram|length > 0 %}
       <li class="list-inline-item">
-        <a target="_blank" href="{{ user.profile.instagram }}">
+        <a target="_blank" href="{{ user_profile.instagram }}">
           <i class="fab fa-instagram" aria-hidden="true"></i>
           <span class="sr-only">Instagram</span>
         </a>
