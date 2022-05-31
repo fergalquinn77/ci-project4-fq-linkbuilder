@@ -11,9 +11,10 @@ from django.contrib.auth.models import User
 # View for displaying user links (login required)
 @login_required
 def links_view(request):
+    data = url_links.objects.all().filter(user=request.user)
     context = {
         }
-    context["dataset"] = url_links.objects.all().filter(user=request.user).order_by('-id')
+    context["dataset"] = data.order_by('-id')
     return render(request, 'links/index.html', context)
 
 
