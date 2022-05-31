@@ -64,6 +64,29 @@ The first appears to be a long-standing issue with using the pep8 checker with D
 # Manual testing
 Below is a summary of how I manually tested each user story.
 
+Usability was tested with the below user acceptance testing, sent to new users to ensure testing from different users, on different devices and browsers to ensure issues were caught and where possible fixed during development.
+
+
+|     | User Actions           | Expected Results | Y/N | Comments    |
+|-------------|------------------------|------------------|------|-------------|
+| Root/Homepage     |                        |                  |      |             |
+| 1           | Click on Sign Up button | Redirection to Sign Up page | Y |          |
+| 2           | Click on the login button | Redirection to Login page | Y |          |
+| Sign-up  
+| 3           | Enter valid email | Field will only accept email address format + unique email | Y |          |
+| 4           | Enter valid username | Field will only accept unique username | Y |          |
+| 5           | Cancel button works | Redirects to page previously on | Y |          |
+| Main Index Page
+| 6          | Add A Link button works | Redirects to add a link page | Y |          |
+| 7          | Preview Page button works | Redirects to external customer page | Y |          |
+| 8          | Delete button works  | Takes user to screen to confirm deletion | Y |          |
+|  9         | Show/Hide button works | Toggles between showing and hiding links | Y |          |
+| 10          | Edit button works | Takes user to edit link page | Y | |
+| External Customer Page
+| 11          | Link boxes work | They take customer to url as inputed by user  | Y |          |
+| 12          | Social Media buttons work| Redirect to social media links as per user profile | Y |          |
+
+
 ## As an **Admin** I can...
 
 Here I have only tested the admin panel relating to the links and profile apps.

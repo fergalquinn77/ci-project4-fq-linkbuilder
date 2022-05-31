@@ -39,7 +39,6 @@ ALLOWED_HOSTS = ["ci-fq-linktree-p4.herokuapp.com", "localhost"]
 # Application definition
 
 INSTALLED_APPS = [
-    # 'links.apps.LinksConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
