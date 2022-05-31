@@ -230,4 +230,8 @@ h1 {
     .navbar{
         padding: 0.5rem 0.25rem;
     }
+
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+    }
 }
