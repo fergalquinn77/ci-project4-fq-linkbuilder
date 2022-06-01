@@ -1,36 +1,27 @@
 # Table of Contents 
 
 <!-- TOC start -->
-- [Lighthouse Reports](#lighthouse-reports)
-  * [No Login Required ](#no-login-required)
-    + [Sign-in:](#sign-in)
-      - [Mobile](#mobile)
-      - [Desktop](#desktop)
-    + [Sign-up:](#sign-up)
-      - [Mobile](#mobile-1)
-      - [Desktop](#desktop-1)
-    + [External Homepage:](#external-homepage)
-      - [Mobile](#mobile-2)
-      - [Desktop](#desktop-2)
-    + [Root Page:](#root-page)
-      - [Mobile](#mobile-3)
-      - [Desktop](#desktop-3)
-  * [Sign-Login Required](#sign-login-required)
-    + [Index Page (Links)](#index-page-links)
-      - [Mobile](#mobile-4)
-      - [Desktop](#desktop-4)
-    + [Add A Link](#add-a-link)
-      - [Mobile](#mobile-5)
-      - [Desktop](#desktop-5)
-    + [Edit A Link](#edit-a-link)
-      - [Mobile](#mobile-6)
-      - [Desktop](#desktop-6)
+- [Validator Testing](#validator-testing)
+  * [Lighthouse Reports](#lighthouse-reports)
+    + [No Login Required ](#no-login-required)
+      - [Sign-in:](#sign-in)
+      - [Sign-up:](#sign-up)
+      - [External Homepage:](#external-homepage)
+      - [Root Page:](#root-page)
+    + [Login Required](#login-required)
+      - [Index Page (Links)](#index-page-links)
+      - [Add A Link](#add-a-link)
+      - [Edit A Link](#edit-a-link)
   * [CSS Checks](#css-checks)
+  * [HTML Checks](#html-checks)
   * [PEP8 Testing](#pep8-testing)
+  * [Javascript Testing](#javascript-testing)
 - [Manual testing](#manual-testing)
-  * [As an **Admin** I can...](#as-an-admin-i-can)
-  * [As an **Unregistered User** I can...](#as-an-unregistered-user-i-can)
-  * [As a **Site User** I can...](#as-a-site-user-i-can)
+  * [User Actions](#user-actions)
+  * [User Stories](#user-stories)
+    + [As an **Admin** I can...](#as-an-admin-i-can)
+    + [As an **Unregistered User** I can...](#as-an-unregistered-user-i-can)
+    + [As a **Site User** I can...](#as-a-site-user-i-can)
 - [Further Testing](#further-testing)
 <!-- TOC end -->
 
@@ -62,7 +53,7 @@ The lighthouse tests show good results for all pages for accessability. There we
 ![Mobile-Root](docs/images/lighthouse/homepage-mobile.jpg)
 - Desktop
 ![Desktop-Root](docs/images/lighthouse/homepage-desktop.jpg)
-### Sign-Login Required
+### Login Required
 #### Index Page (Links)
 - Mobile
 ![Mobile-Index](docs/images/lighthouse/index-page-mobile.jpg)
@@ -93,16 +84,16 @@ I tested my static CSS file using [W3C Validator](https://jigsaw.w3.org/css-vali
 </p>
 
 ## HTML Checks
-No errors were found when passing through the official [W3C validator](https://validator.w3.org/#validate_by_input). Here are the results of each page - [Homepage](assets/images/index-html-check.jpg), [Contact-Us](assets/images/contact-us-html-check.jpg), [Gallery](assets/images/gallery-html-check.jpg).
+No errors were found when passing through the official [W3C validator](https://validator.w3.org/#validate_by_input).
 
 ## PEP8 Testing
-I ran the pep8 validator on all .py files and all past.
+I ran the [PEP8 Validator](http://pep8online.com/) on all .py files and all past.
+
+## Javascript Testing
+I passed the Javascript through the [JSHint Validator](https://jshint.com/). The only warning related to using 'ES6'.
 
 # Manual testing
-Below is a summary of how I manually tested each user story.
-
-Usability was tested with the below user acceptance testing, sent to new users to ensure testing from different users, on different devices and browsers to ensure issues were caught and where possible fixed during development.
-
+## User Actions
 
 |     | User Actions           | Expected Results | Y/N | Comments    |
 |-------------|------------------------|------------------|------|-------------|
@@ -123,8 +114,8 @@ Usability was tested with the below user acceptance testing, sent to new users t
 | 11          | Link boxes work | They take customer to url as inputed by user  | Y |          |
 | 12          | Social Media buttons work| Redirect to social media links as per user profile | Y |          |
 
-
-## As an **Admin** I can...
+## User Stories
+### As an **Admin** I can...
 
 Here I have only tested the admin panel relating to the links and profile apps.
 
@@ -142,13 +133,13 @@ Here I have only tested the admin panel relating to the links and profile apps.
 | &check; | Can search links |
 | &check; | Can create, edit and delete links |
 
-## As an **Unregistered User** I can...
+### As an **Unregistered User** I can...
 
 | Checked | ...**access a user page without the required to have an account** so that **I can access the users links and social media links** |
 |:-------:|:--------|
 | &check; | When not logged-in, when I enter the root web-address, I am brought to a page introducing the website and giving sign-up/sign-in options  |
 
-## As a **Site User** I can...
+### As a **Site User** I can...
 | Checked | ...**see appropriate responses upon specific interactions with the site** so that **I know my edit, deletion, submission has been successful.** |
 |:-------:|:--------|
 | &check; | On deletion of a link, I am prompted 'Are you sure you want to delete the link  |
@@ -169,6 +160,10 @@ Here I have only tested the admin panel relating to the links and profile apps.
 | &check; | I cannot edit a link of another user  |
 | &check; | I cannot delete the link of another user  |
 | &check; | I cannot toggle the link of another user  |
+
+## Unitesting
+
+
 
 # Further Testing
 
