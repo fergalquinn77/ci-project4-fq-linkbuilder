@@ -1,4 +1,41 @@
-# Lighthouse
+# Table of Contents 
+
+<!-- TOC start -->
+- [Lighthouse Reports](#lighthouse-reports)
+  * [No Login Required ](#no-login-required)
+    + [Sign-in:](#sign-in)
+      - [Mobile](#mobile)
+      - [Desktop](#desktop)
+    + [Sign-up:](#sign-up)
+      - [Mobile](#mobile-1)
+      - [Desktop](#desktop-1)
+    + [External Homepage:](#external-homepage)
+      - [Mobile](#mobile-2)
+      - [Desktop](#desktop-2)
+    + [Root Page:](#root-page)
+      - [Mobile](#mobile-3)
+      - [Desktop](#desktop-3)
+  * [Sign-Login Required](#sign-login-required)
+    + [Index Page (Links)](#index-page-links)
+      - [Mobile](#mobile-4)
+      - [Desktop](#desktop-4)
+    + [Add A Link](#add-a-link)
+      - [Mobile](#mobile-5)
+      - [Desktop](#desktop-5)
+    + [Edit A Link](#edit-a-link)
+      - [Mobile](#mobile-6)
+      - [Desktop](#desktop-6)
+  * [CSS Checks](#css-checks)
+  * [PEP8 Testing](#pep8-testing)
+- [Manual testing](#manual-testing)
+  * [As an **Admin** I can...](#as-an-admin-i-can)
+  * [As an **Unregistered User** I can...](#as-an-unregistered-user-i-can)
+  * [As a **Site User** I can...](#as-a-site-user-i-can)
+- [Further Testing](#further-testing)
+<!-- TOC end -->
+
+
+# Lighthouse Reports
 
 The lighthouse tests show good results for all pages for accessability. There were a number of contrast score issues which were rectified. Mobile scores were slightly lower than desktop in performance for two main reasons - cdn imports from bootstrap and jquery. 
 
@@ -41,8 +78,9 @@ The lighthouse tests show good results for all pages for accessability. There we
 ![Desktop-Edit](docs/images/lighthouse/edit-a-link-desktop.jpg)
 
 
-## [CSS](https://jigsaw.w3.org/css-validator/):
-Checking by URL there were a lot of errors coming from the bootstrap and font awesome source code.  However my CSS file was tested by direct upload was found to be free from errors
+## CSS Checks
+I tested my ststaic CSS file and found it to be free from errors.
+
 ![CSS-check](docs/images/css-check.jpg)
 <p>
     <a href="http://jigsaw.w3.org/css-validator/check/referer">
@@ -52,14 +90,8 @@ Checking by URL there were a lot of errors coming from the bootstrap and font aw
     </a>
 </p>
 
-## [PEP8](http://pep8online.com):
-Before using the pep8 validator I ran ``` autopep8 --in-place --aggressive --aggressive <file name> ``` on all py files.  
-
-Due to this, the only error I found was in settings.py with ``` AUTH_PASSWORD_VALIDATORS ``` & ``` STATICFILES_STORAGE ```.   
-
-![settings.py pep8 errors](docs/images/PEP8-Validation.jpg) 
-
-The first appears to be a long-standing issue with using the pep8 checker with Django. However, Django seems to think shortening these lines is ill advisable. For this reason, I left them to be longer than 80 characters. 
+## PEP8 Testing
+I ran the pep8 validator on all .py files and all past.
 
 # Manual testing
 Below is a summary of how I manually tested each user story.

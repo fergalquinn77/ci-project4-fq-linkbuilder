@@ -1,3 +1,5 @@
+
+
 # **Link Builder**
 This project is based on the LinkTree web application concept. Companies and individuals often require one URL link to contain information/links for many other sites. In particular, Instagram allows users to have one link in Bio.
 
@@ -6,7 +8,49 @@ Link Builder allows users create one landing link (e.g https://www.linkbuilder.c
 ![Responsive screenshot showing site on different screen sizes](docs/images/responsive.jpg)
 
 [Deployed site](https://ci-fq-linktree-p4.herokuapp.com/)
-
+# Table of Contents
+<!-- TOC start -->
+- [**Planning Phase**](#planning-phase)
+  * [**Strategy** ](#strategy)
+    + [**Site Aims:**](#site-aims)
+    + [Brainstorming:](#brainstorming)
+    + [Opportunities:](#opportunities)
+  * [**Scope**](#scope)
+  * [**Structure**   ](#structure)
+    + [**User Stories:**  ](#user-stories)
+    + [**User Stories dropped as part of the agile process**](#user-stories-dropped-as-part-of-the-agile-process)
+  * [**Skeleton**](#skeleton)
+    + [**Wireframes:**](#wireframes)
+    + [**Database Schema**](#database-schema)
+  * [**Surface**](#surface)
+    + [**Color scheme:**](#color-scheme)
+    + [**Typography**:](#typography)
+- [**Agile Development Process**](#agile-development-process)
+- [**Features**](#features)
+  * [**Site Navigation**](#site-navigation)
+    + [**Navbar**](#navbar)
+      - [***Logo:***](#logo)
+      - [***Signed Out:***](#signed-out)
+      - [***Signed In:***](#signed-in)
+    + [**First Time User:**](#first-time-user)
+      - [***Register Page***](#register-page)
+      - [***No Links Added Yet***](#no-links-added-yet)
+    + [**Logged in user:**](#logged-in-user)
+      - [***Adding/Deleting/Updating Links***](#addingdeletingupdating-links)
+      - [***Showing and Hiding Links***](#showing-and-hiding-links)
+    + [***Footer:***](#footer)
+  * [**Error pages**](#error-pages)
+    + [***500 Server Error Page:***](#500-server-error-page)
+    + [***404 Page Not Found Error Page:***](#404-page-not-found-error-page)
+  * [**Warning Modals**](#warning-modals)
+    + [***Delete Link:***](#delete-link)
+- [**Future development**](#future-development)
+- [**Testing Phase**](#testing-phase)
+- [**Deployment**](#deployment)
+- [**Technologies used**](#technologies-used)
+- [Mentions  ](#mentions)
+- [Credits](#credits)
+<!-- TOC end -->
 # **Planning Phase**
 ## **Strategy** 
 ### **Site Aims:**
@@ -199,6 +243,7 @@ I created a basic 500 & 404 page with button to bring the user back to the homep
 ### ***404 Page Not Found Error Page:***
 This error shows when a user types a URL into the browser which does not exist within the app's domain.
 
+![404 error page](docs/images/404-error.jpg)
 
 ## **Warning Modals**
 ### ***Delete Link:***
