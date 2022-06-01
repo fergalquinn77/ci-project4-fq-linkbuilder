@@ -43,7 +43,7 @@
                     {% if url.visible is True %}
                     <a class="btn btn-danger btn-block rounded-pill font-weight-bold hidebutton text-white"
                         href="/toggle/{{ url.id }}" title="Hide link on your customer LinkBuilder Page">Hide
-                            </a>
+                    </a>
                     {% else %}
                     <a class="btn btn-success btn-block rounded-pill font-weight-bold showbutton text-dark"
                         href="/toggle/{{ url.id }}" title="Show link on your customer LinkBuilder Page">Show</a>
@@ -58,9 +58,7 @@
 <div class="jumbotron">
     <div class="row">
         <div class="col-12 text-center mt-2">
-            <u>
-                <h1 class="font-weight-bold">To Get Started</h1>
-            </u>
+            <h1 class="font-weight-bold"><u>To Get Started</u></h1>
         </div>
         <div class="col-12 text-center mt-2">
             1. <a href="{% url 'profile' %}">Click Here</a> To Update Your Profile
@@ -73,15 +71,15 @@
 {% endfor %}
 
 <script>
- $(document).ready(function() {
-    $(".hidebutton, .showbutton").click(function() {
-      // disable button
-      $(this).prop("disabled", true);
-      // add spinner to button
-      $(this).html(
-        `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>`
-      );
+    $(document).ready(function () {
+        $(".hidebutton, .showbutton").click(function () {
+            // disable button
+            $(this).prop("disabled", true);
+            // add spinner to button
+            $(this).html(
+                `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>`
+            );
+        });
     });
-});
 </script>
 {% endblock %}

@@ -35,51 +35,53 @@
 <!-- TOC end -->
 
 
-# Lighthouse Reports
+# Validator Testing
+
+## Lighthouse Reports
 
 The lighthouse tests show good results for all pages for accessability. There were a number of contrast score issues which were rectified. Mobile scores were slightly lower than desktop in performance for two main reasons - cdn imports from bootstrap and jquery. 
 
-## No Login Required 
-### Sign-in:
-#### Mobile
+### No Login Required 
+#### Sign-in:
+- Mobile
 ![Mobile-Sign-in](docs/images/lighthouse/signin-mobile.jpg)
-#### Desktop
+- Desktop
 ![Desktop-Sign-in](docs/images/lighthouse/signin-desktop.jpg)
-### Sign-up:
-#### Mobile
+#### Sign-up:
+- Mobile
 ![Mobile-Sign-up](docs/images/lighthouse/signup-mobile.jpg)
-#### Desktop
+- Desktop
 ![Desktop-Sign-up](docs/images/lighthouse/sign-up-desktop.jpg)
-### External Homepage:
-#### Mobile
+#### External Homepage:
+- Mobile
 ![Mobile-External](docs/images/lighthouse/external-landing-page-mobile.jpg)
-#### Desktop
+- Desktop
 ![Desktop-External](docs/images/lighthouse/external-landing-page-mobile.jpg)
-### Root Page:
-#### Mobile
+#### Root Page:
+- Mobile
 ![Mobile-Root](docs/images/lighthouse/homepage-mobile.jpg)
-#### Desktop
+- Desktop
 ![Desktop-Root](docs/images/lighthouse/homepage-desktop.jpg)
-## Sign-Login Required
-### Index Page (Links)
-#### Mobile
+### Sign-Login Required
+#### Index Page (Links)
+- Mobile
 ![Mobile-Index](docs/images/lighthouse/index-page-mobile.jpg)
-#### Desktop
+- Desktop
 ![Desktop-Index](docs/images/lighthouse/index-page-desktop.jpg)
-### Add A Link
-#### Mobile
+#### Add A Link
+- Mobile
 ![Mobile-Add](docs/images/lighthouse/add-a-link-mobile.jpg)
-#### Desktop
+- Desktop
 ![Desktop-Add](docs/images/lighthouse/add-a-link-desktop.jpg)
-### Edit A Link
-#### Mobile
+#### Edit A Link
+- Mobile
 ![Mobile-Edit](docs/images/lighthouse/edit-a-link-mobile.jpg)
-#### Desktop
+- Desktop
 ![Desktop-Edit](docs/images/lighthouse/edit-a-link-desktop.jpg)
 
 
 ## CSS Checks
-I tested my ststaic CSS file and found it to be free from errors.
+I tested my static CSS file using [W3C Validator](https://jigsaw.w3.org/css-validator) and found it to be free from errors.
 
 ![CSS-check](docs/images/css-check.jpg)
 <p>
@@ -89,6 +91,9 @@ I tested my ststaic CSS file and found it to be free from errors.
             alt="Valid CSS!" />
     </a>
 </p>
+
+## HTML Checks
+No errors were found when passing through the official [W3C validator](https://validator.w3.org/#validate_by_input). Here are the results of each page - [Homepage](assets/images/index-html-check.jpg), [Contact-Us](assets/images/contact-us-html-check.jpg), [Gallery](assets/images/gallery-html-check.jpg).
 
 ## PEP8 Testing
 I ran the pep8 validator on all .py files and all past.
