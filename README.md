@@ -12,38 +12,38 @@ Link Builder allows users create one landing link (e.g https://www.linkbuilder.c
 <!-- TOC start -->
 - [**Planning Phase**](#planning-phase)
   * [**Strategy** ](#strategy)
-    + [**Site Aims:**](#site-aims)
-    + [Brainstorming:](#brainstorming)
-    + [Opportunities:](#opportunities)
+    + [**Site Aims**](#site-aims)
+    + [Brainstorming](#brainstorming)
+    + [Opportunities](#opportunities)
   * [**Scope**](#scope)
   * [**Structure**   ](#structure)
-    + [**User Stories:**  ](#user-stories)
+    + [**User Stories**  ](#user-stories)
     + [**User Stories dropped as part of the agile process**](#user-stories-dropped-as-part-of-the-agile-process)
   * [**Skeleton**](#skeleton)
-    + [**Wireframes:**](#wireframes)
+    + [**Wireframes**](#wireframes)
     + [**Database Schema**](#database-schema)
   * [**Surface**](#surface)
-    + [**Color scheme:**](#color-scheme)
-    + [**Typography**:](#typography)
+    + [**Color scheme**](#color-scheme)
+    + [**Typography**](#typography)
 - [**Agile Development Process**](#agile-development-process)
 - [**Features**](#features)
   * [**Site Navigation**](#site-navigation)
     + [**Navbar**](#navbar)
-      - [***Logo:***](#logo)
-      - [***Signed Out:***](#signed-out)
-      - [***Signed In:***](#signed-in)
-    + [**First Time User:**](#first-time-user)
+      - [***Logo***](#logo)
+      - [***Signed Out***](#signed-out)
+      - [***Signed In***](#signed-in)
+    + [**First Time User**](#first-time-user)
       - [***Register Page***](#register-page)
       - [***No Links Added Yet***](#no-links-added-yet)
-    + [**Logged in user:**](#logged-in-user)
+    + [**Logged in user**](#logged-in-user)
       - [***Adding/Deleting/Updating Links***](#addingdeletingupdating-links)
       - [***Showing and Hiding Links***](#showing-and-hiding-links)
-    + [***Footer:***](#footer)
+    + [***Footer***](#footer)
   * [**Error pages**](#error-pages)
-    + [***500 Server Error Page:***](#500-server-error-page)
-    + [***404 Page Not Found Error Page:***](#404-page-not-found-error-page)
+    + [***500 Server Error Page***](#500-server-error-page)
+    + [***404 Page Not Found Error Page***](#404-page-not-found-error-page)
   * [**Warning Modals**](#warning-modals)
-    + [***Delete Link:***](#delete-link)
+    + [***Delete Link***](#delete-link)
 - [**Future development**](#future-development)
 - [**Testing Phase**](#testing-phase)
 - [**Deployment**](#deployment)
@@ -53,17 +53,17 @@ Link Builder allows users create one landing link (e.g https://www.linkbuilder.c
 <!-- TOC end -->
 # **Planning Phase**
 ## **Strategy** 
-### **Site Aims:**
+### **Site Aims**
 
 Companies often have many links they need to be displayed to customers. However some platforms like Instagram restrict the number of URL's that can be included in their Bio.
 
 This app aims to provide a user and simple interface that allows them to use one single link that contains many other links.
 
-### Brainstorming:
+### Brainstorming
 
 My brother and I work in the licenced trade and have a number of venues that regularly use social media. We brainstormed what features we would find useful and have detailed these below.
 
-### Opportunities:
+### Opportunities
 There was awide range of features I came up with during our brainstorming session for this site. I used a feasibility chart to narrow them down and prioritize the scope of the intended strategy. 
 
 Opportunity | Importance | Viability/Feasibility
@@ -103,7 +103,7 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
 
 ![User Journeys flow chart](docs/flowcharts/user-journey.jpg)
 
-### **User Stories:**  
+### **User Stories**  
 
 * As an **Admin** I can...
     * **Access the admin interface** so that **Manually edit user and link details**    
@@ -133,7 +133,7 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
 
 
 ## **Skeleton**
-### **Wireframes:**
+### **Wireframes**
 
 I wanted the site to be clean and simple. This is reflected in the wireframes below.
 * [External Page - No Login Required](docs/wireframes/external-page-login-not-required.png)
@@ -147,12 +147,12 @@ Below is the simple relationship diagram for my database tables:
 The entity relationship diagram is quite simple. I use the build in User model combined with a profile model. There is a link model with a one to zero or many relationship User -> Links.
 
 ## **Surface**
-### **Color scheme:**
+### **Color scheme**
 The main colors used in the site are contained in the color grid below. I used [Contrast Eight Shapes](https://contrast-grid.eightshapes.com/) to test the background colors against the colors used for font. 
 
 ![Color gird](docs/images/color-grid.jpg)
 
-### **Typography**:
+### **Typography**
 
 For this project, I used the Montserrat font. This font was used in the Logo (designed in [Canva](http://www.canva.com)). The font is simple and not too stylised. I feel it works well for this particular project.
 
@@ -162,17 +162,17 @@ I used the Agile Process for development of this web application. I used user st
 # **Features**
 ## **Site Navigation**
 ### **Navbar**
-#### ***Logo:***
+#### ***Logo***
 The name 'Link Builder' is in keeping with the purpose of the site. I used [Canva](http://www.canva.com) to design the logo.
 
-#### ***Signed Out:***
+#### ***Signed Out***
 The navbar is simple and has a clear call to action (login). The logo is centered on the navbar.The navbar allows the user to navigate the site easily. When signed out of the page, it shows the following:
 * Shows link to register.
 * Shows login link.
 
 ![Navbar when logged out](docs/images/features/navbar/nav-bar-no-login.jpg)
 
-#### ***Signed In:***
+#### ***Signed In***
 Changes to the nav bar when logged in are:
 
 Register and Login nav items replaced with Logout and Profile. It also includes the users profile picture if they have one.     
@@ -181,7 +181,7 @@ Register and Login nav items replaced with Logout and Profile. It also includes 
 If the user does not have a profile picture, then the following navbar shows:
 ![Navbar when logged in](docs/images/features/navbar/navbar-login-no-profile-pic.jpg)
 
-### **First Time User:**
+### **First Time User**
 When a user lands on the root url, they are displayed with a page that lets the user know what the site is about and gives them instructions on how to progress
 ![Home Page Instructions](docs/images/features/homepage-instructions.jpg)
 
@@ -196,7 +196,7 @@ When a user has no links and is on their homepage (logged-in), they are displaye
 
 ![Instructions](docs/images/features/instructions-no-links.jpg)
 
-### **Logged in user:**
+### **Logged in user**
 
 When a user is logged in and has links/data added, they are displayed with a list of their links on the homepage:
 
@@ -228,25 +228,25 @@ If a user trys to edit/delete/toggle another users links, the following message 
 
 ![No Access](docs/images/no-access.jpg)
 
-### ***Footer:***
+### ***Footer***
 * Displays social media links to contact the author.  
 
 ![Footer](docs/images/footer.jpg)
 
 ## **Error pages**
 
-### ***500 Server Error Page:***
+### ***500 Server Error Page***
 I created a basic 500 & 404 page with button to bring the user back to the homepage.
 
 ![500 error page](docs/images/500-error.JPG)
 
-### ***404 Page Not Found Error Page:***
+### ***404 Page Not Found Error Page***
 This error shows when a user types a URL into the browser which does not exist within the app's domain.
 
 ![404 error page](docs/images/404-error.jpg)
 
 ## **Warning Modals**
-### ***Delete Link:***
+### ***Delete Link***
 ![Delete link warning](docs/images/confirm-deletion.jpg)
 
 # **Future development**
@@ -282,10 +282,10 @@ I have included details of my initial deployment in a separate document called [
   * All icons throughout the page.
 
 
-# Mentions  
+# **Mentions**  
 * My mentor Chris Quinn and the CI Tutor Team. Chris once again gave great guidance. The Menotor Team (in particular Alex, Ger and Ed who I was in touch with quite alot) were fantastic as always and putting me on the right track when I hit a problem. 
 
-# Credits
+# **Credits**
 * Balsamiq was used to create the wireframes.
 * The site was developed using Gitpod.
 * GitHub was used to store my repository.

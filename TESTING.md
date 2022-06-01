@@ -4,10 +4,10 @@
 - [Validator Testing](#validator-testing)
   * [Lighthouse Reports](#lighthouse-reports)
     + [No Login Required ](#no-login-required)
-      - [Sign-in:](#sign-in)
-      - [Sign-up:](#sign-up)
-      - [External Homepage:](#external-homepage)
-      - [Root Page:](#root-page)
+      - [Sign-in](#sign-in)
+      - [Sign-up](#sign-up)
+      - [External Homepage](#external-homepage)
+      - [Root Page](#root-page)
     + [Login Required](#login-required)
       - [Index Page (Links)](#index-page-links)
       - [Add A Link](#add-a-link)
@@ -22,6 +22,7 @@
     + [As an **Admin** I can...](#as-an-admin-i-can)
     + [As an **Unregistered User** I can...](#as-an-unregistered-user-i-can)
     + [As a **Site User** I can...](#as-a-site-user-i-can)
+  * [Unitesting](#unitesting)
 - [Further Testing](#further-testing)
 <!-- TOC end -->
 
@@ -33,22 +34,22 @@
 The lighthouse tests show good results for all pages for accessability. There were a number of contrast score issues which were rectified. Mobile scores were slightly lower than desktop in performance for two main reasons - cdn imports from bootstrap and jquery. 
 
 ### No Login Required 
-#### Sign-in:
+#### Sign-in
 - Mobile
 ![Mobile-Sign-in](docs/images/lighthouse/signin-mobile.jpg)
 - Desktop
 ![Desktop-Sign-in](docs/images/lighthouse/signin-desktop.jpg)
-#### Sign-up:
+#### Sign-up
 - Mobile
 ![Mobile-Sign-up](docs/images/lighthouse/signup-mobile.jpg)
 - Desktop
 ![Desktop-Sign-up](docs/images/lighthouse/sign-up-desktop.jpg)
-#### External Homepage:
+#### External Homepage
 - Mobile
 ![Mobile-External](docs/images/lighthouse/external-landing-page-mobile.jpg)
 - Desktop
 ![Desktop-External](docs/images/lighthouse/external-landing-page-mobile.jpg)
-#### Root Page:
+#### Root Page
 - Mobile
 ![Mobile-Root](docs/images/lighthouse/homepage-mobile.jpg)
 - Desktop
