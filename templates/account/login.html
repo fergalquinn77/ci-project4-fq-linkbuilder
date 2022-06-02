@@ -25,9 +25,12 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
 
-        <div class="text-center"><button class="btn btn-sm btn-success primaryAction" type="submit">{% trans "Sign In" %}</button>
-          <a href="{% url 'account_signup' %}" class="btn btn-sm btn-warning">Sign Up</a></div>
-          
+        <div class="text-center"><button class="btn btn-sm btn-success primaryAction"
+            type="submit">{% trans "Sign In" %}</button>
+          <a href="{% url 'account_signup' %}" class="btn btn-sm btn-warning">Sign Up</a>
+        </div>
+
+
       </form>
 
 
