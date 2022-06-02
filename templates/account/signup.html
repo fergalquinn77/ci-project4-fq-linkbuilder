@@ -1,11 +1,21 @@
 {% extends "links/base.html" %}
 {% load crispy_forms_tags %}
 {% load i18n %}
+{% load account socialaccount %}
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
+<style>
+  .btn {
+    width: 100px;
+  }
 
+  #google {
+    width: 202px;
+    background-color: white;
+  }
+</style>
 <div class="container">
   <div class="row">
     <div class="mx-auto mt-5 jumbotron">
@@ -21,8 +31,19 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
 
-        <div class="text-center"><button class="btn btn-sm btn-warning" type="submit">{% trans "Sign Up" %} </button>
-        <a class="btn btn-sm btn-danger" href="{{ request.META.HTTP_REFERER }}">{% trans 'Cancel' %}</a></div>
+        <div class="row">
+          <div class="col text-center mb-1">
+            <div class="text-center"><button class="btn btn-sm btn-warning" type="submit">{% trans "Sign Up" %}
+              </button>
+              <a class="btn btn-sm btn-danger" href="{{ request.META.HTTP_REFERER }}">{% trans 'Cancel' %}</a></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <a href="{% provider_login_url 'google' %}" class="btn btn-sm btn" id="google"><i class="fab fa-google"></i>
+              Sign Un With Google</a>
+          </div>
+        </div>
       </form>
     </div>
   </div>

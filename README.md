@@ -186,7 +186,7 @@ When a user lands on the root url, they are displayed with a page that lets the 
 ![Home Page Instructions](docs/images/features/homepage-instructions.jpg)
 
 #### ***Register Page***
-The sign-up page is simple with a color scheme in keeping with the rest of the site. It includes a cancel button in case the user does not wish to proceed. It uses the in-built django validation with an additional requirement of email address. 
+The sign-up page is simple with a color scheme in keeping with the rest of the site. It includes a cancel button in case the user does not wish to proceed. It uses the in-built django validation with an additional requirement of email address. There is also the option to Sign-Up with Google.
 
 ![Register Page](docs/images/features/sign-up-page.jpg)
 
