@@ -7,27 +7,45 @@
 
 {% block content %}
 
+<style>
+.btn{
+  width:100px;
+}
+
+#google{
+  width:202px;
+  background-color: white;
+}
+</style>
+
 <div class="container">
   <div class="row">
     <div class="mx-auto mt-5 jumbotron">
 
       <h2 class="text-center border-bottom border-dark">{% trans "Sign In" %}</h2>
 
-
-      <p>{% blocktrans %}If you have not created an account yet, then please
-        <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-
-
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form|crispy }}
+
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-
-        <div class="text-center"><button class="btn btn-sm btn-success primaryAction"
-            type="submit">{% trans "Sign In" %}</button>
-          <a href="{% url 'account_signup' %}" class="btn btn-sm btn-warning">Sign Up</a>
+        <div class="container">
+          <div class="row">
+            <div class="col text-center mb-1">
+              <button class="btn btn-sm btn-success primaryAction" type="submit">{% trans "Sign In" %}</button>
+              <a href="{% url 'account_signup' %}" class="btn btn-sm btn-warning">Sign Up</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center">
+              <a href="{% provider_login_url 'google' %}" class="btn btn-sm btn" id="google"><i class="fab fa-google"></i> Sign In With Google</a>
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="text-center"><a href="{% url 'password_reset' %}" class="small">Reset Password</a></div>
+          </div>
         </div>
 
 
