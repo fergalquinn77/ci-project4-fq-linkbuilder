@@ -5,6 +5,7 @@ from links import views as links_views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -20,6 +21,26 @@ urlpatterns = [
     path('user/<username>/', links_views.links_view_external,
          name='external-view'),
     path('toggle/<url_id>', links_views.toggle_url, name='toggle'),
+    path('password-reset/',
+         auth_views.PasswordResetView.as_view(
+             template_name='accounts/password_reset.html'
+         ),
+         name='password_reset'),
+    path('password-reset/done/',
+         auth_views.PasswordResetDoneView.as_view(
+             template_name='accounts/password_reset_done.html'
+         ),
+         name='password_reset_done'),
+    path('password-reset-confirm/<uidb64>/<token>/',
+         auth_views.PasswordResetConfirmView.as_view(
+             template_name='accounts/password_reset_confirm.html'
+         ),
+         name='password_reset_confirm'),
+    path('password-reset-complete/',
+         auth_views.PasswordResetCompleteView.as_view(
+             template_name='accounts/password_reset_complete.html'
+         ),
+         name='password_reset_complete'),
 ]
 
 if settings.DEBUG:
