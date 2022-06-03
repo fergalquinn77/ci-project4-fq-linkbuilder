@@ -104,16 +104,18 @@ I passed the Javascript through the [JSHint Validator](https://jshint.com/). The
 | Sign-up  
 | 3           | Enter valid email | Field will only accept email address format + unique email | Y |          |
 | 4           | Enter valid username | Field will only accept unique username | Y |          |
-| 5           | Cancel button works | Redirects to page previously on | Y |          |
+| 5           | Cancel button works | Redirects to page previously on | Y 
+| 6           | Sign-up with Google works | User is able to sign-up with Google | Y 
+|          |
 | Main Index Page
-| 6          | Add A Link button works | Redirects to add a link page | Y |          |
-| 7          | Preview Page button works | Redirects to external customer page | Y |          |
-| 8          | Delete button works  | Takes user to screen to confirm deletion | Y |          |
-|  9         | Show/Hide button works | Toggles between showing and hiding links | Y |          |
-| 10          | Edit button works | Takes user to edit link page | Y | |
+| 7          | Add A Link button works | Redirects to add a link page | Y |          |
+| 8          | Preview Page button works | Redirects to external customer page | Y |          |
+| 9          | Delete button works  | Takes user to screen to confirm deletion | Y |          |
+|  10         | Show/Hide button works | Toggles between showing and hiding links | Y |          |
+| 11          | Edit button works | Takes user to edit link page | Y | |
 | External Customer Page
-| 11          | Link boxes work | They take customer to url as inputed by user  | Y |          |
-| 12          | Social Media buttons work| Redirect to social media links as per user profile | Y |          |
+| 12          | Link boxes work | They take customer to url as inputed by user  | Y |          |
+| 13          | Social Media buttons work| Redirect to social media links as per user profile | Y |          |
 
 ## User Stories
 ### As an **Admin** I can...

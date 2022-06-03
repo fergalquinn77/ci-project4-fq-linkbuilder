@@ -196,6 +196,32 @@ When a user has no links and is on their homepage (logged-in), they are displaye
 
 ![Instructions](docs/images/features/instructions-no-links.jpg)
 
+#### ***Reset Password Feature***
+
+A user can reset their password on login.
+
+![Reset Password](docs/images/features/password-reset.jpg)
+
+When the user clicks on this link, they are asked for their email address
+
+![Reset Password Form](docs/images/features/password-reset-form.jpg)
+
+Once they enter their email, a message is displayed
+
+![Email Sent](docs/images/features/email-sent-password.jpg)
+
+The email to the user with link to progress password reset is below
+
+![Click Link](docs/images/features/email-to-user-password-reset.jpg)
+
+Once the user clicks on the link, they are brough to the following page
+
+![Enter new password](docs/images/features/reset-password-confirm.jpg)
+
+Once they provide new password details, they are brough to the final screen
+
+![Change Complete](docs/images/features/change-complete.jpg)
+
 ### **Logged in user**
 
 When a user is logged in and has links/data added, they are displayed with a list of their links on the homepage:
@@ -251,8 +277,6 @@ This error shows when a user types a URL into the browser which does not exist w
 
 # **Future development**
 * I would like to incorporate drag and drop functionality for the ordering of links. I have come across a couple of JQuery solutions that should help here like [Sortable](https://jqueryui.com/sortable/).
-* Include social media login (Facebook/Google).
-* Reset password feature.
 * Analytics feature, providing the user with detailed insights on link clicks. 
 
 # **Testing Phase**
