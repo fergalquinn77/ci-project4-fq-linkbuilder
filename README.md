@@ -16,7 +16,8 @@ Link Builder allows users create one landing link (e.g https://www.linkbuilder.c
     + [Brainstorming](#brainstorming)
     + [Opportunities](#opportunities)
   * [**Scope**](#scope)
-  * [**Structure**   ](#structure)
+  * [**Structure**](#structure)
+    + [**Agile Development Process**](#agile-development-process)
     + [**User Stories**  ](#user-stories)
     + [**User Stories dropped as part of the agile process**](#user-stories-dropped-as-part-of-the-agile-process)
   * [**Skeleton**](#skeleton)
@@ -25,7 +26,6 @@ Link Builder allows users create one landing link (e.g https://www.linkbuilder.c
   * [**Surface**](#surface)
     + [**Color scheme**](#color-scheme)
     + [**Typography**](#typography)
-- [**Agile Development Process**](#agile-development-process)
 - [**Features**](#features)
   * [**Site Navigation**](#site-navigation)
     + [**Navbar**](#navbar)
@@ -33,7 +33,7 @@ Link Builder allows users create one landing link (e.g https://www.linkbuilder.c
       - [***Signed Out***](#signed-out)
       - [***Signed In***](#signed-in)
   * [**First Time User**](#first-time-user)
-    + [***Sign-Up***](#sign-up)
+    + [***Sign-up***](#sign-up)
     + [***No Links Added Yet***](#no-links-added-yet)
     + [***Reset Password***](#reset-password)
   * [**Logged in user**](#logged-in-user)
@@ -72,12 +72,12 @@ Opportunity | Importance | Viability/Feasibility
 Add/Edit/Delete links | 5 | 5
 User can toggle between hide/show links | 5 | 5
 User can have a unique landing page to display links | 5 | 5
-User can drag and drop links to re-order | 5 | 3
-Set up their profile including picture and social media links | 4 | 5 
-User can review stats on how many times each link is clicked | 3 | 1
-Set up a schedule for the links to be displayed | 3 | 2
+User can drag and drop links to re-order | 3 | 1
+Set up their profile including picture and social media links | 3 | 5 
+User can review stats on how many times each link is clicked | 2 | 1
+Set up a schedule for the links to be displayed | 2 | 1
 ----------------------------------------|----|----
-Totals | 30 | 26 
+Totals | 25 | 23 
 
 Viability and feasibility in the above table are based on both time and current level of ability using different languages/frameworks. 
 
@@ -99,7 +99,12 @@ I have further divided this table into three categories to help prioritize the o
     * User can review stats on how many times each link is clicked.
     * Set up a schedule for the links to be displayed.
 
-## **Structure**   
+## **Structure**
+
+### **Agile Development Process**
+
+I used the Agile Process for development of this web application. The user stories are detailed below. I used the Kanban board on Github to track progress. Coming to the end of this project, I became aware of some cloud based software suites that would have been most useful in tracking development progress (in particular [Craft.io](https://www.craft.io). I plan to use this for my next project.
+
 To help me visualize a typical user journey around the site, I used [draw.io](https://app.diagrams.net/) to help me plan out the various routes a user could take through the site.
 
 ![User Journeys flow chart](docs/flowcharts/user-journey.jpg)
@@ -156,9 +161,6 @@ The main colors used in the site are contained in the color grid below. I used [
 ### **Typography**
 
 For this project, I used the Montserrat font. This font was used in the Logo (designed in [Canva](http://www.canva.com)). The font is simple and not too stylised. I feel it works well for this particular project.
-
-# **Agile Development Process**
-I used the Agile Process for development of this web application. I used user story feasability chart to work out what user stories were best to focus my efforts on. I used the Kanban board on Github to track progress.
 
 # **Features**
 ## **Site Navigation**
