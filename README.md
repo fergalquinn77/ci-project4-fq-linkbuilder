@@ -35,7 +35,7 @@ Link Builder allows users create one landing link (e.g https://www.linkbuilder.c
   * [**First Time User**](#first-time-user)
     + [***Register Page***](#register-page)
     + [***No Links Added Yet***](#no-links-added-yet)
-    + [***Reset Password ***](#reset-password-)
+    + [***Reset Password***](#reset-password)
   * [**Logged in user**](#logged-in-user)
     + [***Adding/Deleting/Updating Links***](#addingdeletingupdating-links)
     + [***Showing and Hiding Links***](#showing-and-hiding-links)
@@ -199,7 +199,7 @@ When a user has no links and is on their homepage (logged-in), they are displaye
 
 ![Instructions](docs/images/features/instructions-no-links.jpg)
 
-### ***Reset Password ***
+### ***Reset Password***
 
 A user can reset their password on login.
 
