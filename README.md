@@ -33,7 +33,7 @@ Link Builder allows users create one landing link (e.g https://www.linkbuilder.c
       - [***Signed Out***](#signed-out)
       - [***Signed In***](#signed-in)
   * [**First Time User**](#first-time-user)
-    + [***Register Page***](#register-page)
+    + [***Sign-Up***](#sign-up)
     + [***No Links Added Yet***](#no-links-added-yet)
     + [***Reset Password***](#reset-password)
   * [**Logged in user**](#logged-in-user)
@@ -65,7 +65,7 @@ This app aims to provide a user and simple interface that allows them to use one
 My brother and I work in the licenced trade and have a number of venues that regularly use social media. We brainstormed what features we would find useful and have detailed these below.
 
 ### Opportunities
-There was awide range of features I came up with during our brainstorming session for this site. I used a feasibility chart to narrow them down and prioritize the scope of the intended strategy. 
+There was a wide range of features I came up with during our brainstorming session for this site. I used a feasibility chart to narrow them down and prioritize the scope of the intended strategy. 
 
 Opportunity | Importance | Viability/Feasibility
 ---|---|---
@@ -158,7 +158,7 @@ The main colors used in the site are contained in the color grid below. I used [
 For this project, I used the Montserrat font. This font was used in the Logo (designed in [Canva](http://www.canva.com)). The font is simple and not too stylised. I feel it works well for this particular project.
 
 # **Agile Development Process**
-I used the Agile Process for development of this web application. I used user story feasability chart to work out what user stories were best to focus my efforts on. I used the Kandan board on Github to track progress.
+I used the Agile Process for development of this web application. I used user story feasability chart to work out what user stories were best to focus my efforts on. I used the Kanban board on Github to track progress.
 
 # **Features**
 ## **Site Navigation**
@@ -186,7 +186,7 @@ If the user does not have a profile picture, then the following navbar shows:
 When a user lands on the root url, they are displayed with a page that lets the user know what the site is about and gives them instructions on how to progress
 ![Home Page Instructions](docs/images/features/homepage-instructions.jpg)
 
-### ***Register Page***
+### ***Sign-up***
 The sign-up page is simple with a color scheme in keeping with the rest of the site. It includes a cancel button in case the user does not wish to proceed. It uses the in-built django validation with an additional requirement of email address. 
 
 I felt that ease of registration is important for the site so I incorporated Django Google Authentication using django-allauth.
@@ -217,11 +217,11 @@ The email to the user with link to progress password reset is below
 
 ![Click Link](docs/images/features/email-to-user-password-reset.jpg)
 
-Once the user clicks on the link, they are brough to the following page
+Once the user clicks on the link, they are brought to the following page
 
 ![Enter new password](docs/images/features/reset-password-confirm.jpg)
 
-Once they provide new password details, they are brough to the final screen
+Once they provide new password details, they are brought to the final screen
 
 ![Change Complete](docs/images/features/change-complete.jpg)
 
