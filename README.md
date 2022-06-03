@@ -32,13 +32,14 @@ Link Builder allows users create one landing link (e.g https://www.linkbuilder.c
       - [***Logo***](#logo)
       - [***Signed Out***](#signed-out)
       - [***Signed In***](#signed-in)
-    + [**First Time User**](#first-time-user)
-      - [***Register Page***](#register-page)
-      - [***No Links Added Yet***](#no-links-added-yet)
-    + [**Logged in user**](#logged-in-user)
-      - [***Adding/Deleting/Updating Links***](#addingdeletingupdating-links)
-      - [***Showing and Hiding Links***](#showing-and-hiding-links)
-    + [***Footer***](#footer)
+  * [**First Time User**](#first-time-user)
+    + [***Register Page***](#register-page)
+    + [***No Links Added Yet***](#no-links-added-yet)
+    + [***Reset Password ***](#reset-password-)
+  * [**Logged in user**](#logged-in-user)
+    + [***Adding/Deleting/Updating Links***](#addingdeletingupdating-links)
+    + [***Showing and Hiding Links***](#showing-and-hiding-links)
+  * [***Footer***](#footer)
   * [**Error pages**](#error-pages)
     + [***500 Server Error Page***](#500-server-error-page)
     + [***404 Page Not Found Error Page***](#404-page-not-found-error-page)
@@ -48,8 +49,8 @@ Link Builder allows users create one landing link (e.g https://www.linkbuilder.c
 - [**Testing Phase**](#testing-phase)
 - [**Deployment**](#deployment)
 - [**Technologies used**](#technologies-used)
-- [Mentions  ](#mentions)
-- [Credits](#credits)
+- [**Mentions**  ](#mentions)
+- [**Credits**](#credits)
 <!-- TOC end -->
 # **Planning Phase**
 ## **Strategy** 
@@ -181,22 +182,24 @@ Register and Login nav items replaced with Logout and Profile. It also includes 
 If the user does not have a profile picture, then the following navbar shows:
 ![Navbar when logged in](docs/images/features/navbar/navbar-login-no-profile-pic.jpg)
 
-### **First Time User**
+## **First Time User**
 When a user lands on the root url, they are displayed with a page that lets the user know what the site is about and gives them instructions on how to progress
 ![Home Page Instructions](docs/images/features/homepage-instructions.jpg)
 
-#### ***Register Page***
-The sign-up page is simple with a color scheme in keeping with the rest of the site. It includes a cancel button in case the user does not wish to proceed. It uses the in-built django validation with an additional requirement of email address. There is also the option to Sign-Up with Google.
+### ***Register Page***
+The sign-up page is simple with a color scheme in keeping with the rest of the site. It includes a cancel button in case the user does not wish to proceed. It uses the in-built django validation with an additional requirement of email address. 
+
+I felt that ease of registration is important for the site so I incorporated Django Google Authentication using django-allauth.
 
 ![Register Page](docs/images/features/sign-up-page.jpg)
 
-#### ***No Links Added Yet***
+### ***No Links Added Yet***
 
 When a user has no links and is on their homepage (logged-in), they are displayed with a simple message on how to start using the site.
 
 ![Instructions](docs/images/features/instructions-no-links.jpg)
 
-#### ***Reset Password Feature***
+### ***Reset Password ***
 
 A user can reset their password on login.
 
@@ -222,7 +225,7 @@ Once they provide new password details, they are brough to the final screen
 
 ![Change Complete](docs/images/features/change-complete.jpg)
 
-### **Logged in user**
+## **Logged in user**
 
 When a user is logged in and has links/data added, they are displayed with a list of their links on the homepage:
 
@@ -232,7 +235,7 @@ It gives the user full CRUD ability and also allows them to preview what their e
 
 ![Preview Page](docs/images/features/logged-in-user/preview-page.jpg)
 
-#### ***Adding/Deleting/Updating Links***
+### ***Adding/Deleting/Updating Links***
 
 Adding/Editing a Link
 
@@ -243,7 +246,7 @@ The user is displayed with a simple interface for entering a new link or editing
 
 There is **validation** for both forms on the url entered. It checks for a 200 response and gives an error message if this is not received (i.e. not a valid URL)
 
-#### ***Showing and Hiding Links***
+### ***Showing and Hiding Links***
 
 The user can choose to show or hide each link on the homepage by clicking the 'show' or 'hide' button. A spinner appears when the button is click until the page is loaded
 ![Spinner](docs/images/spinner.jpg)
@@ -254,7 +257,7 @@ If a user trys to edit/delete/toggle another users links, the following message 
 
 ![No Access](docs/images/no-access.jpg)
 
-### ***Footer***
+## ***Footer***
 * Displays social media links to contact the author.  
 
 ![Footer](docs/images/footer.jpg)
