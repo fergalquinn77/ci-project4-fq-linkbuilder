@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 import requests
-from .models import url_links
-from accounts.models import profile
+from .models import Url_Links
+from accounts.models import Profile
 from .forms import LinkForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -11,7 +11,7 @@ from django.contrib.auth.models import User
 # View for displaying user links (login required)
 @login_required
 def links_view(request):
-    data = url_links.objects.all().filter(user=request.user)
+    data = Url_Links.objects.all().filter(user=request.user)
     context = {
         }
     context["dataset"] = data.order_by('-id')
@@ -54,8 +54,8 @@ def add_link(request):
 
 # View for editing links (login required)
 @login_required
-def edit_link(request, url_links_id):
-    link = get_object_or_404(url_links, id=url_links_id)
+def edit_link(request, Url_Links_id):
+    link = get_object_or_404(Url_Links, id=Url_Links_id)
     if request.user == link.user:
         if request.method == 'POST':
             form = LinkForm(request.POST, request.FILES, instance=link)
@@ -85,8 +85,8 @@ def edit_link(request, url_links_id):
 
 # View for deleting links (login required)
 @login_required
-def delete_link(request, url_links_id):
-    link = get_object_or_404(url_links, id=url_links_id)
+def delete_link(request, Url_Links_id):
+    link = get_object_or_404(Url_Links, id=Url_Links_id)
     if request.user == link.user:
         if request.method == 'POST' and request.user == link.user:
             link.delete()
@@ -102,7 +102,7 @@ def links_view_external(request, username):
     user = User.objects.get(username=username)
     user_profile = profile.objects.get(user=user)
     print(user_profile.company_name)
-    links = url_links.objects.all().filter(user=user).order_by('-id')
+    links = Url_Links.objects.all().filter(user=user).order_by('-id')
     context = {
         'links': links,
         'user_profile': user_profile
@@ -113,7 +113,7 @@ def links_view_external(request, username):
 # Used for toggling linsk from visible to not visible
 @login_required()
 def toggle_url(request, url_id):
-    url = get_object_or_404(url_links, id=url_id)
+    url = get_object_or_404(Url_Links, id=url_id)
     if request.user == url.user:
         url.visible = not url.visible
         url.save()

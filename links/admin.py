@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-from .models import url_links
+from .models import Url_Links
 
 
-@admin.register(url_links)
+@admin.register(Url_Links)
 class url_linksAdmin(admin.ModelAdmin):
     list_display = ['user', 'title']
     search_fields = ['user__username', 'title']

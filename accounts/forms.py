@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .models import profile
+from .models import Profile
 
 
 # Form for user registration
@@ -25,7 +25,7 @@ class UserUpdateForm(forms.ModelForm):
 # Form to update user profile
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
-        model = profile
+        model = Profile
         fields = [
             'company_name',
             'twitter',
