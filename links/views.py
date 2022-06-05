@@ -99,10 +99,9 @@ def delete_link(request, Url_Links_id):
 
 # The view for displaying links for a particular username visable without login
 def links_view_external(request, username):
-    user = User.objects.get(username=username)
-    user_profile = profile.objects.get(user=user)
-    print(user_profile.company_name)
-    links = Url_Links.objects.all().filter(user=user).order_by('-id')
+    user_display = User.objects.get(username=username)
+    user_profile = Profile.objects.get(user=user_display)
+    links = Url_Links.objects.all().filter(user=user_display).order_by('-id')
     context = {
         'links': links,
         'user_profile': user_profile
