@@ -54,8 +54,8 @@ def add_link(request):
 
 # View for editing links (login required)
 @login_required
-def edit_link(request, Url_Links_id):
-    link = get_object_or_404(Url_Links, id=Url_Links_id)
+def edit_link(request, url_links_id):
+    link = get_object_or_404(Url_Links, id=url_links_id)
     if request.user == link.user:
         if request.method == 'POST':
             form = LinkForm(request.POST, request.FILES, instance=link)
@@ -85,8 +85,8 @@ def edit_link(request, Url_Links_id):
 
 # View for deleting links (login required)
 @login_required
-def delete_link(request, Url_Links_id):
-    link = get_object_or_404(Url_Links, id=Url_Links_id)
+def delete_link(request, url_links_id):
+    link = get_object_or_404(Url_Links, id=url_links_id)
     if request.user == link.user:
         if request.method == 'POST' and request.user == link.user:
             link.delete()

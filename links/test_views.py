@@ -28,9 +28,11 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'links/add_item.html')
 
-# #Test Edit Link Page
-#     def test_add_link_page(self):
-#         user = User.objects.create_user('foo', 'myemail@test.com', 'bar')
-#         self.client.login(username='foo', password='bar')
-#         response = self.client.get('/edit/')
-#         self.assertEqual(response.status_code, 200)
+#Test Edit Link Page
+    def test_edit_link_page(self):
+        user = User.objects.create_user('foo', 'myemail@test.com', 'bar')
+        self.client.login(username='foo', password='bar')
+        link = Url_Links.objects.create(title='Test Title', link='http://www.rte.ie', user=user)
+        response = self.client.get(f'/edit/{link.id}/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'links/edit_item.html')
