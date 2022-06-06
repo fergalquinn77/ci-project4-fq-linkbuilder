@@ -20,7 +20,7 @@ urlpatterns = [
          name='delete-link'),
     path('user/<username>/', links_views.links_view_external,
          name='external-view'),
-    path('toggle/<url_id>', links_views.toggle_url, name='toggle'),
+    path('toggle/<url_id>/', links_views.toggle_url, name='toggle'),
     path('password-reset/',
          auth_views.PasswordResetView.as_view(
              template_name='accounts/password_reset.html'

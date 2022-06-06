@@ -36,3 +36,41 @@ class TestViews(TestCase):
         response = self.client.get(f'/edit/{link.id}/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'links/edit_item.html')
+
+#Test Delete Link Page
+    def test_delete_link_page(self):
+        user = User.objects.create_user('foo', 'myemail@test.com', 'bar')
+        self.client.login(username='foo', password='bar')
+        link = Url_Links.objects.create(title='Test Title', link='http://www.rte.ie', user=user)
+        response = self.client.get(f'/delete/{link.id}/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'links/confirm_delete.html')
+
+# #Test Can Edit Link
+#     def test_can_edit_link_page(self):
+#         user = User.objects.create_user('foo', 'myemail@test.com', 'bar')
+#         self.client.login(username='foo', password='bar')
+#         link = Url_Links.objects.create(title='Test Title', link='http://www.rte.ie', user=user)
+#         response = self.client.post(f'/edit/{link.id}/', {'title':'Changed Title'}, url_pass = True)
+#         updated_link = Url_Links.objects.get(id=link.id)
+#         print(updated_link.title)
+#         self.assertEqual(updated_link.title, 'Changed Title')
+
+#Test Can Delete Link
+    def test_delete_link_page(self):
+        user = User.objects.create_user('foo', 'myemail@test.com', 'bar')
+        self.client.login(username='foo', password='bar')
+        link = Url_Links.objects.create(title='Test Title', link='http://www.rte.ie', user=user)
+        response = self.client.post(f'/delete/{link.id}/')
+        existing_items = Url_Links.objects.filter(id=link.id)
+        self.assertEqual(len(existing_items),0)
+
+#Test Toggle Link
+    def test_toggle_link(self):
+        user = User.objects.create_user('foo', 'myemail@test.com', 'bar')
+        self.client.login(username='foo', password='bar')
+        link = Url_Links.objects.create(title='Test Title', link='http://www.rte.ie', user=user)
+        response = self.client.get(f'/toggle/{link.id}/')
+        updated_link = Url_Links.objects.get(id=link.id)  
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(updated_link.visible, False)
