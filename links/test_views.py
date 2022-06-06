@@ -53,11 +53,10 @@ class TestViews(TestCase):
         link = Url_Links.objects.create(title='Test Title', link='http://www.rte.ie', user=user)
         response = self.client.post(f'/edit/{link.id}/', {'title':'Changed Title', 'link':'http://www.rte.ie'})
         updated_link = Url_Links.objects.get(id=link.id)
-        print(updated_link.title)
         self.assertEqual(updated_link.title, 'Changed Title')
 
 #Test Can Delete Link
-    def test_delete_link_page(self):
+    def test_delete_link(self):
         user = User.objects.create_user('foo', 'myemail@test.com', 'bar')
         self.client.login(username='foo', password='bar')
         link = Url_Links.objects.create(title='Test Title', link='http://www.rte.ie', user=user)
@@ -74,3 +73,12 @@ class TestViews(TestCase):
         updated_link = Url_Links.objects.get(id=link.id)  
         self.assertEqual(response.status_code, 302)
         self.assertEqual(updated_link.visible, False)
+
+#Test Can Add Link
+    def test_can_add_link(self):
+        user = User.objects.create_user('foo', 'myemail@test.com', 'bar')
+        self.client.login(username='foo', password='bar')
+        number_links_before = Url_Links.objects.count()
+        response = self.client.post(f'/add/', {'title':'Test New Link', 'link':'http://www.rte.ie'})
+        number_links_after = Url_Links.objects.count()
+        self.assertEqual(number_links_before+1,number_links_after)
