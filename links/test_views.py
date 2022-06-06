@@ -46,15 +46,15 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'links/confirm_delete.html')
 
-# #Test Can Edit Link
-#     def test_can_edit_link_page(self):
-#         user = User.objects.create_user('foo', 'myemail@test.com', 'bar')
-#         self.client.login(username='foo', password='bar')
-#         link = Url_Links.objects.create(title='Test Title', link='http://www.rte.ie', user=user)
-#         response = self.client.post(f'/edit/{link.id}/', {'title':'Changed Title'}, url_pass = True)
-#         updated_link = Url_Links.objects.get(id=link.id)
-#         print(updated_link.title)
-#         self.assertEqual(updated_link.title, 'Changed Title')
+#Test Can Edit Link
+    def test_can_edit_link_page(self):
+        user = User.objects.create_user('foo', 'myemail@test.com', 'bar')
+        self.client.login(username='foo', password='bar')
+        link = Url_Links.objects.create(title='Test Title', link='http://www.rte.ie', user=user)
+        response = self.client.post(f'/edit/{link.id}/', {'title':'Changed Title', 'link':'http://www.rte.ie'})
+        updated_link = Url_Links.objects.get(id=link.id)
+        print(updated_link.title)
+        self.assertEqual(updated_link.title, 'Changed Title')
 
 #Test Can Delete Link
     def test_delete_link_page(self):
