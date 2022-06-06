@@ -7,13 +7,12 @@
         {% csrf_token %}
         {{ form|crispy }}
         <div class="text-center">
-    
-                <button type="submit" class="btn btn-success">
-                    Update
-                </button>
-                <button class="btn btn-danger" type="button"
-                    onclick="location.href='{% url 'links-home' %}'">Cancel</button>
-        
+
+            <button type="submit" class="btn btn-success">
+                Update
+            </button>
+            <button class="btn btn-danger" type="button"
+                onclick="location.href='{% url 'links-home' %}'">Cancel</button>
         </div>
     </form>
 </div>

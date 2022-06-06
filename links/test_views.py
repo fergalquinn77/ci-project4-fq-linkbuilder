@@ -8,11 +8,16 @@ from django.urls import reverse
 
 class TestViews(TestCase):
 
-    # Test Main Index Page
+    # Test Index Page
     def test_index_page(self):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'links/learn.html')
+        user = User.objects.create_user('foo', 'myemail@test.com', 'bar')
+        self.client.login(username='foo', password='bar')
+        response = self.client.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'links/index.html')
 
     # Test External View Page
     def test_external_page(self):
@@ -93,6 +98,7 @@ class TestViews(TestCase):
                                     'link': 'http://www.rte.ie'})
         number_links_after = Url_Links.objects.count()
         self.assertEqual(number_links_before+1, number_links_after)
+        self.assertTemplateUsed('index/')
 
     # Test Can Add Link with invalid URL
     def test_can_add_link(self):

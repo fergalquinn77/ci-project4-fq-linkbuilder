@@ -2,7 +2,6 @@
 {% block content %}
 
 <div class="container">
-
   <div class="row">
     {% if "placeholder" in user_profile.profile_image.url %}
     <img class="rounded-circle mx-auto d-block company-profile-pic m-1"
@@ -12,8 +11,6 @@
       alt="profile image">
     {% endif %}
   </div>
-
-
   {% if user_profile.company_name|length > 0  %}
   <div class="text-center">
     <h1>{{ user_profile.company_name }}</h1>
