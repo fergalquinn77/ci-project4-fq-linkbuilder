@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 import requests
-from .models import Url_Links
+from .models import Url_Links, Url_Clicks
 from accounts.models import Profile
 from .forms import LinkForm
 from django.contrib.auth.decorators import login_required

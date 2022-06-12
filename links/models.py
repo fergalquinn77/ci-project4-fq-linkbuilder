@@ -13,3 +13,10 @@ class Url_Links(models.Model):
 
     def __str__(self):
         return self.title
+
+class Url_Clicks(models.Model):
+    count = models.PositiveIntegerField(default=0)
+    link = models.ForeignKey(Url_Links, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.link} clicked {self.count}"
