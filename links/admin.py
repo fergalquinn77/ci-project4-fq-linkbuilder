@@ -4,7 +4,8 @@ from .models import Url_Links
 
 
 @admin.register(Url_Links)
-class url_linksAdmin(admin.ModelAdmin):
+class LinksAdmin(admin.ModelAdmin):
     list_display = ['user', 'title']
     search_fields = ['user__username', 'title']
     list_filter = ('user',)
+

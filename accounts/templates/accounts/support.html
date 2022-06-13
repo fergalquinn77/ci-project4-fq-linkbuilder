@@ -1,0 +1,27 @@
+{% extends "links/base.html" %}
+
+{% block content %}
+
+{% for ticket in tickets_open %}
+
+<div class="container">
+    <div class="row">
+      <div class="col">
+        {{ ticket.query }}
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+    </div>
+  </div>
+{% empty %}
+<div class="jumbotron">
+    You don't have any open support tickets
+</div>
+{% endfor %}
+
+
+{% endblock %}

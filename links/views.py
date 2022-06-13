@@ -1,12 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 import requests
-from .models import Url_Links, Support_Messages, Support_Ticket
+from .models import Url_Links
 from accounts.models import Profile
 from .forms import LinkForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
-from django.views.generic.base import RedirectView
 
 
 # View for displaying user links (login required)
@@ -127,16 +126,6 @@ def toggle_url(request, url_id):
     else:
         messages.warning(request, 'You do not have access to this page')
         return redirect('links-home')
-
-# Used to display all support queries
-@login_required()
-def display_tickets(request):
-    tickets = Support_Ticket.objects.all()
-    context = {
-        'tickets': tickets
-        }
-    return render(request, 'links/support.html', context)
-
 
 # 500 and 404 error pages
 def error_500_view(request,):

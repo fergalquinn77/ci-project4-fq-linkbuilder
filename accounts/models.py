@@ -17,6 +17,39 @@ class Profile(models.Model):
     def __str__(self):
         return f"Profile for {self.user}"
 
+STATUS = ((0, "Open"), (1, "Closed"))
+
+# Model for dealing with support tickets
+class Support_Tickets(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200,blank=False)
+    query = models.TextField(blank=False)
+    status = models.IntegerField(choices=STATUS, default=0)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    class Meta:
+        verbose_name_plural = 'Support Tickets'
+
+    def __str__(self):
+        return self.title
+
+class Tickets_Messages(models.Model):
+    ticket = models.ForeignKey(Support_Tickets, on_delete=models.CASCADE,
+                             related_name="Ticket")
+    created_on = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    message = models.TextField(blank=False)
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.user}"
+
 
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):

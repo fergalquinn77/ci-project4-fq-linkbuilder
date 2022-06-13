@@ -14,8 +14,11 @@ class Url_Links(models.Model):
 
     def __str__(self):
         return self.title
+    
+    class Meta:
+        verbose_name_plural = 'URL Links'
 
-STATUS = ((0, "New"), (1, "Open"), (2, "Closed"))
+STATUS = ((0, "Open"), (1, "Closed"))
 
 # Model for dealing with support tickets
 class Support_Ticket(models.Model):
@@ -28,6 +31,9 @@ class Support_Ticket(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
+
+    class Meta:
+        verbose_name_plural = 'Support Tickets'
 
     def __str__(self):
         return self.title

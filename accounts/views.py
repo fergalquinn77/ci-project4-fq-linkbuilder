@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Profile
+from .models import Profile, Support_Tickets, Tickets_Messages
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 
 # Create your views here.
@@ -41,3 +41,14 @@ def profile(request):
         'p_form': p_form
     }
     return render(request, 'accounts/profile.html', context)
+
+# Used to display all support queries
+@login_required()
+def display_tickets(request):
+    tickets = Support_Tickets.objects.all().order_by("-created_on")
+    tickets_open = tickets.filter(status="0", user=request.user)
+    print(tickets_open)
+    context = {
+        'tickets_open': tickets_open
+        }
+    return render(request, 'accounts/support.html', context)

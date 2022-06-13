@@ -17,6 +17,7 @@ urlpatterns = [
     path('add/', links_views.add_link, name='add-link'),
     path('edit/<int:url_links_id>/', links_views.edit_link, name='edit-link'),
     path('counter/<int:linkid>/', links_views.link_count_then_redirect, name='click-counter'),
+    path('support/', accounts_views.display_tickets, name='open-support-tickets'),
     path('delete/<int:url_links_id>/', links_views.delete_link,
          name='delete-link'),
     path('user/<username>/', links_views.links_view_external,
