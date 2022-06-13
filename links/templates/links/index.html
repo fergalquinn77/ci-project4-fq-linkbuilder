@@ -32,14 +32,17 @@
                     <i data-toggle="edit" class="bi bi-pencil" title="Edit Link"></i>
                 </a>
             </div>
+            <div>
+                <small class="text-white" data-toggle="tooltip" data-placement="right" title="Number of clicks this link has received on your linkbuilder site">Click count = {{ url.click_count }}</small>
+            </div>
         </div>
         <div class="col-6">
-            <div class="row">
-                <div class="col-6">
+            <div class="row h-100">
+                <div class="col-6 my-auto">
                     <a class="btn btn-danger btn-block rounded-pill font-weight-bold text-white"
                         href="{% url 'delete-link' url.id %}">Delete</a>
                 </div>
-                <div class="col-6">
+                <div class="col-6 my-auto">
                     {% if url.visible is True %}
                     <a class="btn btn-danger btn-block rounded-pill font-weight-bold hidebutton text-white"
                         href="/toggle/{{ url.id }}" title="Hide link on your customer LinkBuilder Page">Hide

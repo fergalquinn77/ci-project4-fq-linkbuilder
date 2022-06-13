@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404, reverse
 import requests
-from .models import Url_Links, Url_Clicks
+from .models import Url_Links
 from accounts.models import Profile
 from .forms import LinkForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.views.generic.base import RedirectView
 
 
 # View for displaying user links (login required)
@@ -108,8 +109,14 @@ def links_view_external(request, username):
         }
     return render(request, 'links/index_external.html', context)
 
+# Render page from link click on external landing page
+def link_count_then_redirect(request, linkid):
+    link = url = get_object_or_404(Url_Links, id=linkid)
+    link.click_count += 1
+    link.save()
+    return redirect(link.link)
 
-# Used for toggling linsk from visible to not visible
+# Used for toggling links from visible to not visible
 @login_required()
 def toggle_url(request, url_id):
     url = get_object_or_404(Url_Links, id=url_id)

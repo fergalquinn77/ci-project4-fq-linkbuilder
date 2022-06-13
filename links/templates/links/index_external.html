@@ -22,7 +22,7 @@
 {% for url in links %}
 {% if url.visible == True %}
 
-<a href="{{ url.link }}">
+<a href="{% url 'click-counter' url.pk %}">
   <div class="external-page-link-boxes container border mb-2 rounded">
     <div class="row">
       <div class="col-2">
