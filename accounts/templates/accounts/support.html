@@ -2,24 +2,37 @@
 
 {% block content %}
 
+<h1 class="text-center">Open Support Tickets</h1>
 {% for ticket in tickets_open %}
 
-<div class="container">
-    <div class="row">
-      <div class="col">
-        {{ ticket.query }}
+<div class="link-boxes container border mb-2 py-3 rounded wrapper">
+  <div class="row">
+      <div class="col-6">
+          <div class="font-weight-bold overflow-hidden">
+              {{ ticket.title }}
+          </div>
+          <div class="overflow-hidden">
+              {{ ticket.query|truncatechars:75 }}
+          </div>
       </div>
-      <div class="col-sm">
-        One of three columns
-      </div>
-      <div class="col-sm">
-        One of three columns
-      </div>
+      <div class="col-6">
+        <div class="row h-100">
+            <div class="col-6 my-auto">
+                <a class="btn btn-success btn-block rounded-pill font-weight-bold"
+                    href="">View Query</a>
+            </div>
+            <div class="col-6 my-auto">
+                <a class="btn btn-danger btn-block rounded-pill font-weight-bold"
+                    href="/toggle-ticket-status/{{ ticket.id }}">Mark Resolved
+                </a>
+            </div>
+        </div>
     </div>
   </div>
+</div>
 {% empty %}
 <div class="jumbotron">
-    You don't have any open support tickets
+    You don't have any open support tickets.
 </div>
 {% endfor %}
 

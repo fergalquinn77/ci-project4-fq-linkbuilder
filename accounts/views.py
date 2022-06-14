@@ -1,9 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Profile, Support_Tickets, Tickets_Messages
-from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
+from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm, SupportTicketForm
 
 # Create your views here.
 
@@ -47,8 +47,42 @@ def profile(request):
 def display_tickets(request):
     tickets = Support_Tickets.objects.all().order_by("-created_on")
     tickets_open = tickets.filter(status="0", user=request.user)
-    print(tickets_open)
+    ticket_messages = Tickets_Messages.objects.filter(ticket=tickets)
     context = {
-        'tickets_open': tickets_open
+        'tickets_open': tickets_open,
+        'ticket_messages': ticket_messages
         }
     return render(request, 'accounts/support.html', context)
+
+@login_required
+def add_support_ticket(request):
+    form = SupportTicketForm()
+    if request.method == 'POST':
+        form = SupportTicketForm(request.POST)
+        if form.is_valid():
+            new_form = form.save(commit=False)
+            new_form.user = request.user
+            messages.success(request, f'Your query has been added')
+            new_form.save()
+            return redirect('open-support-tickets')
+    context = {
+        'form': form
+        }
+    return render(request, 'accounts/add_ticket.html', context)
+
+# Used for toggling links from visible to not visible
+@login_required()
+def toggle_ticket_status(request, ticket_id):
+    ticket = get_object_or_404(Support_Tickets, id=ticket_id)
+    if request.user == ticket.user:
+        if ticket.status == 0:
+            ticket.status = 1
+            ticket.save()
+        else:
+            ticket.status = 0
+            ticket.save
+        
+        return redirect('open-support-tickets')
+    else:
+        messages.warning(request, 'You do not have access to this page')
+        return redirect('links-home')

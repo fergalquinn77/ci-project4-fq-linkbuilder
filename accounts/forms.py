@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .models import Profile
+from .models import Profile, Support_Tickets, Tickets_Messages
 
 
 # Form for user registration
@@ -32,3 +32,9 @@ class ProfileUpdateForm(forms.ModelForm):
             'instagram',
             'facebook',
             'profile_image']
+
+# Form for Support Tickets
+class SupportTicketForm(forms.ModelForm):
+    class Meta:
+        model = Support_Tickets
+        fields = ['title', 'query', 'query_image']

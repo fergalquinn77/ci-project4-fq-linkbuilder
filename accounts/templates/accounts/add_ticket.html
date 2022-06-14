@@ -1,0 +1,23 @@
+{% extends "links/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="border-bottom border-dark text-center">Add Support Ticket</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            {{ form|crispy }}
+        </fieldset>
+        <div class="text-center">
+            <p>
+                <button class="btn btn-success" type="submit">
+                    Add Query
+                </button>
+                <button class="btn btn-danger" type="button"
+                    onclick="location.href='{% url 'open-support-tickets' %}'">Cancel</button>
+            </p>
+        </div>
+
+    </form>
+</div>
+{% endblock %}

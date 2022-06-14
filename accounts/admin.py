@@ -13,5 +13,11 @@ class CommentAdmin(admin.ModelAdmin):
 class SupportAdmin(SummernoteModelAdmin):
     list_display = ['user', 'title']
     search_fields = ['user__username', 'title']
+    list_filter = ('user','status')
+
+@admin.register(Tickets_Messages)
+class SupportAdmin(SummernoteModelAdmin):
+    list_display = ['user', 'ticket','message']
+    search_fields = ['user__username', 'ticket']
     list_filter = ('user',)
 
