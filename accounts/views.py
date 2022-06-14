@@ -86,3 +86,20 @@ def toggle_ticket_status(request, ticket_id):
     else:
         messages.warning(request, 'You do not have access to this page')
         return redirect('links-home')
+
+# Used for toggling links from visible to not visible
+@login_required()
+def ticket_details(request, ticket_id):
+    ticket = get_object_or_404(Support_Tickets, id=ticket_id)
+    print(ticket)
+    if request.user == ticket.user:
+        ticket_messages = Tickets_Messages.objects.all().filter(ticket=ticket)
+        context = {
+            'ticket': ticket,
+            'ticket_messages': ticket_messages
+            }
+        print(context)
+        return render(request, 'accounts/ticket_detail.html', context)
+    else:
+        messages.warning(request, 'You do not have access to this page')
+        return redirect('links-home')

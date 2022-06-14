@@ -33,7 +33,7 @@ class Support_Tickets(models.Model):
         ordering = ["-created_on"]
 
     class Meta:
-        verbose_name_plural = 'Supprt Tickets'
+        verbose_name_plural = 'Support Tickets'
 
     def __str__(self):
         return self.title
