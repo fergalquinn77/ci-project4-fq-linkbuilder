@@ -43,6 +43,7 @@ urlpatterns = [
              template_name='accounts/password_reset_complete.html'
          ),
          name='password_reset_complete'),
+         path('summernote/', include('django_summernote.urls')),
 ]
 
 if settings.DEBUG:

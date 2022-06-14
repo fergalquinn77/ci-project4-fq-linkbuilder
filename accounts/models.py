@@ -21,7 +21,7 @@ STATUS = ((0, "Open"), (1, "Closed"))
 
 # Model for dealing with support tickets
 class Support_Tickets(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="SupportTickets")
     title = models.CharField(max_length=200,blank=False)
     query = models.TextField(blank=False)
     status = models.IntegerField(choices=STATUS, default=0)
@@ -37,9 +37,10 @@ class Support_Tickets(models.Model):
     def __str__(self):
         return self.title
 
+# Model for dealing with messages relating to support tickets
 class Tickets_Messages(models.Model):
     ticket = models.ForeignKey(Support_Tickets, on_delete=models.CASCADE,
-                             related_name="Ticket")
+                             related_name="Tickets")
     created_on = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     message = models.TextField(blank=False)
