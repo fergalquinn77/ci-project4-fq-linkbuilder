@@ -4,8 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Profile, Support_Tickets, Tickets_Messages
-from .forms import (UserRegisterForm, UserUpdateForm, ProfileUpdateForm,
-SupportTicketForm, SupportMessageForm)
+from .forms import *
 
 
 # User Registration
