@@ -1,9 +1,11 @@
 
 
 # **Link Builder**
-This project is based on the LinkTree web application concept. Companies and individuals often require one URL link to contain information/links for many other sites. In particular, Instagram allows users to have one link in Bio.
 
-Link Builder allows users create one landing link (e.g https://www.linkbuilder.com/fergalquinn) which displays all the users links.
+## **Project Overview**
+Linkbuilder is a full stack web application that allows users to consolodate all their links into one link. This was developed as the Milestone Project 4 for the Code Institute Diploma in Software Development. This project is based on the LinkTree web application concept. 
+
+Companies and individuals often require one URL link to contain information/links for many other sites. In particular, Instagram allows users to have one link in Bio. Link Builder allows users create one landing link (e.g https://www.linkbuilder.com/fergalquinn) which displays all the users links.
 
 ![Responsive screenshot showing site on different screen sizes](docs/images/responsive.jpg)
 
@@ -147,10 +149,11 @@ I wanted the site to be clean and simple. This is reflected in the wireframes be
 * [Index Page - Login Required](docs/wireframes/index-page-login-required.png)
 
 ### **Database Schema**
-Below is the simple relationship diagram for my database tables:  
-![Entity-Relationship-Model](docs/images/erd-linkbuilder.jpeg) 
+Below is the ERD for my database models:  
+![Entity-Relationship-Model](docs/images/erd.png) 
 
-The entity relationship diagram is quite simple. I use the build in User model combined with a profile model. There is a link model with a one to zero or many relationship User -> Links.
+There are 3 models used in the **Accounts App**. This app deals with user accounts/profiles and support tickets/messages. There is one model in the **Links App**. This app deal with user links.
+
 
 ## **Surface**
 ### **Color scheme**

@@ -32,15 +32,11 @@
       </div>
       <div class="col-6">
         <div class="row h-100">
-            <div class="col-6 my-auto">
+            <div class="my-auto mx-auto">
                 <a class="btn btn-success btn-block rounded-pill font-weight-bold"
                     href="{% url 'ticket-details' ticket.id %}">View Ticket</a>
             </div>
-            <div class="col-6 my-auto">
-                <a class="btn btn-danger btn-block rounded-pill font-weight-bold"
-                    href="/toggle-ticket-status/{{ ticket.id }}">Mark Resolved
-                </a>
-            </div>
+            
         </div>
     </div>
   </div>
