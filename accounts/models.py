@@ -5,7 +5,6 @@ from django.dispatch import receiver
 from django.db.models.signals import post_save
 
 
-
 # Model for user profile
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -13,17 +12,20 @@ class Profile(models.Model):
     facebook = models.URLField(max_length=50, blank=True)
     instagram = models.URLField(max_length=50, blank=True)
     twitter = models.URLField(max_length=50, blank=True)
-    profile_image = CloudinaryField('Screenshot', default='profile_placeholder')
+    profile_image = CloudinaryField('Screenshot',
+                                    default='profile_placeholder')
 
     def __str__(self):
         return f"Profile for {self.user}"
 
 STATUS = ((0, "Open"), (1, "Closed"))
 
+
 # Model for dealing with support tickets
 class Support_Tickets(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="SupportTickets")
-    title = models.CharField(max_length=200,blank=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE,
+                             related_name="SupportTickets")
+    title = models.CharField(max_length=200, blank=False)
     query = models.TextField(blank=False)
     status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True, editable=False)
@@ -38,10 +40,11 @@ class Support_Tickets(models.Model):
     def __str__(self):
         return self.title
 
+
 # Model for dealing with messages relating to support tickets
 class Tickets_Messages(models.Model):
     ticket = models.ForeignKey(Support_Tickets, on_delete=models.CASCADE,
-                             related_name="Tickets")
+                               related_name="Tickets")
     created_on = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     message = models.TextField(blank=False)

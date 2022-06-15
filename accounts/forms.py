@@ -33,11 +33,13 @@ class ProfileUpdateForm(forms.ModelForm):
             'facebook',
             'profile_image']
 
+
 # Form for Support Tickets
 class SupportTicketForm(forms.ModelForm):
     class Meta:
         model = Support_Tickets
         fields = ['title', 'query']
+
 
 # Form for Support Messages
 class SupportMessageForm(forms.ModelForm):

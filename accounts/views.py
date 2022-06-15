@@ -1,14 +1,14 @@
+from django.utils import timezone
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Profile, Support_Tickets, Tickets_Messages
-from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm, SupportTicketForm, SupportMessageForm
-from django.utils import timezone
-
-# Create your views here.
+from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm,
+SupportTicketForm, SupportMessageForm
 
 
+# User Registration
 def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
@@ -21,6 +21,7 @@ def register(request):
     return render(request, 'users/register.html', {'form': form})
 
 
+# Profile Creation
 @login_required
 def profile(request):
     u_form = UserUpdateForm(request.POST, instance=request.user)
@@ -43,6 +44,7 @@ def profile(request):
     }
     return render(request, 'accounts/profile.html', context)
 
+
 # Used to display all support queries
 @login_required()
 def display_tickets(request):
@@ -55,6 +57,8 @@ def display_tickets(request):
         }
     return render(request, 'accounts/support.html', context)
 
+
+# Add support ticket
 @login_required
 def add_support_ticket(request):
     form = SupportTicketForm()
@@ -71,6 +75,7 @@ def add_support_ticket(request):
         }
     return render(request, 'accounts/add_ticket.html', context)
 
+
 # Used for toggling links from visible to not visible
 @login_required()
 def toggle_ticket_status(request, ticket_id):
@@ -82,11 +87,12 @@ def toggle_ticket_status(request, ticket_id):
         else:
             ticket.status = 0
             ticket.save
-        
+
         return redirect('open-support-tickets')
     else:
         messages.warning(request, 'You do not have access to this page')
         return redirect('links-home')
+
 
 # Used for toggling links from visible to not visible
 @login_required()
@@ -104,13 +110,13 @@ def ticket_details(request, ticket_id):
             messages.success(request, f'Your message has been posted')
             new_form.save()
             return redirect('ticket-details', ticket.id)
-    
+
     if request.user == ticket.user:
         ticket_messages = Tickets_Messages.objects.all().filter(ticket=ticket)
         context = {
             'ticket': ticket,
             'ticket_messages': ticket_messages,
-            'form':form
+            'form': form
             }
         return render(request, 'accounts/ticket_detail.html', context)
     else:
