@@ -5,6 +5,7 @@ from django.dispatch import receiver
 from django.db.models.signals import post_save
 
 
+
 # Model for user profile
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -25,8 +26,7 @@ class Support_Tickets(models.Model):
     title = models.CharField(max_length=200,blank=False)
     query = models.TextField(blank=False)
     status = models.IntegerField(choices=STATUS, default=0)
-    query_image = CloudinaryField('image', default='url_placeholder')
-    created_on = models.DateTimeField(auto_now_add=True)
+    created_on = models.DateTimeField(auto_now_add=True, editable=False)
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:

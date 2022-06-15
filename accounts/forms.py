@@ -37,4 +37,10 @@ class ProfileUpdateForm(forms.ModelForm):
 class SupportTicketForm(forms.ModelForm):
     class Meta:
         model = Support_Tickets
-        fields = ['title', 'query', 'query_image']
+        fields = ['title', 'query']
+
+# Form for Support Messages
+class SupportMessageForm(forms.ModelForm):
+    class Meta:
+        model = Tickets_Messages
+        fields = ['message']

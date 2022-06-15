@@ -3,7 +3,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Profile, Support_Tickets, Tickets_Messages
-from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm, SupportTicketForm
+from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm, SupportTicketForm, SupportMessageForm
+from django.utils import timezone
 
 # Create your views here.
 
@@ -90,15 +91,27 @@ def toggle_ticket_status(request, ticket_id):
 # Used for toggling links from visible to not visible
 @login_required()
 def ticket_details(request, ticket_id):
+
     ticket = get_object_or_404(Support_Tickets, id=ticket_id)
-    print(ticket)
+
+    form = SupportMessageForm()
+    if request.method == 'POST':
+        form = SupportMessageForm(request.POST)
+        if form.is_valid():
+            new_form = form.save(commit=False)
+            new_form.user = request.user
+            new_form.ticket = Support_Tickets.objects.get(id=ticket_id)
+            messages.success(request, f'Your message has been posted')
+            new_form.save()
+            return redirect('ticket-details', ticket.id)
+    
     if request.user == ticket.user:
         ticket_messages = Tickets_Messages.objects.all().filter(ticket=ticket)
         context = {
             'ticket': ticket,
-            'ticket_messages': ticket_messages
+            'ticket_messages': ticket_messages,
+            'form':form
             }
-        print(context)
         return render(request, 'accounts/ticket_detail.html', context)
     else:
         messages.warning(request, 'You do not have access to this page')

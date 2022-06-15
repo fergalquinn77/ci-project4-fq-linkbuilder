@@ -1,22 +1,47 @@
 {% extends "links/base.html" %}
 {% block content %}
+{% load crispy_forms_tags %}
+{% load tz %}
+
 <div class="jumbotron">
 
-    <h1 class="border-bottom border-dark text-center">{{ticket.title}}</h1>
+    <div class="jumbotron w-100 bg-light">
+        <h1 class="border-bottom border-dark text-center">Question</h1>
 
-    {{ ticket.query }}
+        <div>{{ ticket.query }}</div>
+    </div>
+    <div class="jumbotron w-100 bg-light mt-3 mb-2">
+        <h2 class="border-bottom border-dark text-center">Responses</h2>
 
-    <h2>Responses</h2>
-    {% for ticket_message in ticket_messages %} 
+        {% for ticket_message in ticket_messages %}
 
-    {{ticket_message.message}}
+        <div>
+            <p class="text-muted">By {{ticket_message.user}} on {{ticket_message.created_on}}</p>
+            {{ticket_message.message}}
 
-    {% endfor %}
-        
+            <hr>
+        </div>
+        {% empty %}
+        <p>No responses posted yet</p>
+        {% endfor %}
 
 
+    </div>
 
-
-
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            {{ form|crispy }}
+        </fieldset>
+        <div class="text-center">
+            <p>
+                <button class="btn btn-success" type="submit">
+                    Add Message
+                </button>
+                <button class="btn btn-danger" type="button"
+                    onclick="location.href='{% url 'open-support-tickets' %}'">Cancel</button>
+            </p>
+        </div>
+    </form>
 </div>
 {% endblock %}
