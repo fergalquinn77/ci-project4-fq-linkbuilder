@@ -47,7 +47,8 @@
 </div>
 {% empty %}
 <div class="jumbotron">
-    You don't have any open support tickets.
+    You don't have any open support tickets. <a href="{% url 'add-support-ticket' %}">Click here</a>
+     to add a query.
 </div>
 {% endfor %}
 
