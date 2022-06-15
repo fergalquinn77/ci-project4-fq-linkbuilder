@@ -117,7 +117,7 @@ html, body {
 /*Index Page */
 
 #addlink,
-#previewpage {
+#previewpage, #home, #add-ticket {
     background-color: #050a30;
     border-color: #050a30;
 }

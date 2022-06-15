@@ -4,6 +4,9 @@
 
     <h1 class="border-bottom border-dark text-center">{{ticket.title}}</h1>
 
+    {{ ticket.query }}
+
+    <h2>Responses</h2>
     {% for ticket_message in ticket_messages %} 
 
     {{ticket_message.message}}

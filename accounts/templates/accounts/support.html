@@ -3,8 +3,23 @@
 {% block content %}
 
 <h1 class="text-center">Open Support Tickets</h1>
-{% for ticket in tickets_open %}
 
+
+<div class="link-boxes-buttons container border mb-2 border-0">
+    <div class="row">
+        <div class="col-6 text-center pl-0">
+            <a href="{% url 'add-support-ticket' %}" 
+            id="add-ticket" class="btn btn-success btn-block rounded-pill font-weight-bold text-white" title="Add a ticket">Add a
+                ticket</a>
+        </div>
+        <div class="col-6 text-center pr-0" >
+            <a href="{% url 'links-home' %}"
+            id="home" class="btn btn-success btn-block rounded-pill font-weight-bold text-white"
+                title="Go to home page">Home</a>
+        </div>
+    </div>
+</div>
+{% for ticket in tickets_open %}
 <div class="link-boxes container border mb-2 py-3 rounded wrapper">
   <div class="row">
       <div class="col-6">
