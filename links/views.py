@@ -108,12 +108,14 @@ def links_view_external(request, username):
         }
     return render(request, 'links/index_external.html', context)
 
+
 # Render page from link click on external landing page
 def link_count_then_redirect(request, linkid):
     link = url = get_object_or_404(Url_Links, id=linkid)
     link.click_count += 1
     link.save()
     return redirect(link.link)
+
 
 # Used for toggling links from visible to not visible
 @login_required()
@@ -126,6 +128,7 @@ def toggle_url(request, url_id):
     else:
         messages.warning(request, 'You do not have access to this page')
         return redirect('links-home')
+
 
 # 500 and 404 error pages
 def error_500_view(request,):
