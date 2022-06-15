@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'accounts',
     'links',
     'crispy_forms',
+    'django_extensions',
 ]
 
 SITE_ID = 1
@@ -122,17 +123,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'linktree.wsgi.application'
 
-if DEBUG:
-    DATABASES = {
+# if DEBUG:
+DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-else:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-    }
+# else:
+#     DATABASES = {
+#         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#     }
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -196,3 +197,8 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend'
 ]
+
+GRAPH_MODELS = {
+    'all_applications': True,
+    'group_models': True,
+}

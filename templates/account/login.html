@@ -7,16 +7,7 @@
 
 {% block content %}
 
-<style>
-.btn{
-  width:100px;
-}
 
-#google{
-  width:202px;
-  background-color: white;
-}
-</style>
 
 <div class="container">
   <div class="row">
@@ -34,13 +25,15 @@
         <div class="container">
           <div class="row">
             <div class="col text-center mb-1">
-              <button class="btn btn-sm btn-success primaryAction" type="submit">{% trans "Sign In" %}</button>
-              <a href="{% url 'account_signup' %}" class="btn btn-sm btn-warning">Sign Up</a>
+              <button class="btn btn-sm btn-success primaryAction" type="submit"
+                style="width:100px;">{% trans "Sign In" %}</button>
+              <a href="{% url 'account_signup' %}" class="btn btn-sm btn-warning" style="width:100px;">Sign Up</a>
             </div>
           </div>
           <div class="row">
             <div class="col text-center">
-              <a href="{% provider_login_url 'google' %}" class="btn btn-sm btn" id="google"><i class="fab fa-google"></i> Sign In With Google</a>
+              <a href="{% provider_login_url 'google' %}" class="btn btn-sm"
+                style="width:202px;background-color: white;"><i class="fab fa-google"></i> Sign In With Google</a>
             </div>
           </div>
           <div class="row justify-content-md-center">
