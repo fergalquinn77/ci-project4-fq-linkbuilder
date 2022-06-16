@@ -34,42 +34,92 @@
 The lighthouse tests show good results for all pages for accessability. There were a number of contrast score issues which were rectified. Mobile scores were slightly lower than desktop in performance for two main reasons - cdn imports from bootstrap and jquery. 
 
 ### No Login Required 
-#### Sign-in
-- Mobile
+#### **Sign-in**
+<details>
+<summary>Mobile</summary>
+
 ![Mobile-Sign-in](docs/images/lighthouse/signin-mobile.jpg)
-- Desktop
+</details>
+<details>
+<summary>Desktop</summary>
+
 ![Desktop-Sign-in](docs/images/lighthouse/signin-desktop.jpg)
-#### Sign-up
-- Mobile
+</details>
+
+
+#### **Sign-up**
+<details>
+<summary>Mobile</summary>
+
 ![Mobile-Sign-up](docs/images/lighthouse/signup-mobile.jpg)
-- Desktop
+</details>
+<details>
+<summary>Desktop</summary>
+
 ![Desktop-Sign-up](docs/images/lighthouse/sign-up-desktop.jpg)
-#### External Homepage
-- Mobile
+</details>
+
+#### **External Homepage**
+<details>
+<summary>Mobile</summary>
+
 ![Mobile-External](docs/images/lighthouse/external-landing-page-mobile.jpg)
-- Desktop
-![Desktop-External](docs/images/lighthouse/external-landing-page-mobile.jpg)
-#### Root Page
-- Mobile
-![Mobile-Root](docs/images/lighthouse/homepage-mobile.jpg)
-- Desktop
-![Desktop-Root](docs/images/lighthouse/homepage-desktop.jpg)
+</details>
+
+<details>
+<summary>Desktop</summary>
+
+![Desktop-External](docs/images/lighthouse/external-landing-page-mobile.jpg)</details>
+
+
+#### **Root Page**
+<details>
+<summary>Mobile</summary>
+
+![Mobile-Root](docs/images/lighthouse/homepage-mobile.jpg)</details>
+<details>
+<summary>Desktop</summary>
+
+![Desktop-Root](docs/images/lighthouse/homepage-desktop.jpg)</details>
+
 ### Login Required
-#### Index Page (Links)
-- Mobile
-![Mobile-Index](docs/images/lighthouse/index-page-mobile.jpg)
-- Desktop
-![Desktop-Index](docs/images/lighthouse/index-page-desktop.jpg)
-#### Add A Link
-- Mobile
-![Mobile-Add](docs/images/lighthouse/add-a-link-mobile.jpg)
-- Desktop
-![Desktop-Add](docs/images/lighthouse/add-a-link-desktop.jpg)
-#### Edit A Link
-- Mobile
-![Mobile-Edit](docs/images/lighthouse/edit-a-link-mobile.jpg)
-- Desktop
-![Desktop-Edit](docs/images/lighthouse/edit-a-link-desktop.jpg)
+#### **Index Page (Links)**
+
+<details>
+<summary>Mobile</summary>
+
+![Mobile-Index](docs/images/lighthouse/index-page-mobile.jpg)</details>
+
+<details>
+<summary>Desktop</summary>
+
+![Desktop-Index](docs/images/lighthouse/index-page-desktop.jpg)</details>
+
+
+#### **Add A Link**
+<details>
+<summary>Mobile</summary>
+
+![Mobile-Add](docs/images/lighthouse/add-a-link-mobile.jpg)</details>
+
+<details>
+<summary>Desktop</summary>
+
+![Desktop-Add](docs/images/lighthouse/add-a-link-desktop.jpg)</details>
+
+
+#### **Edit A Link**
+<details>
+<summary>Mobile</summary>
+
+![Mobile-Edit](docs/images/lighthouse/edit-a-link-mobile.jpg)</details>
+
+<details>
+<summary>Desktop</summary>
+
+![Desktop-Edit](docs/images/lighthouse/edit-a-link-desktop.jpg)</details>
+
+
 
 
 ## CSS Checks
@@ -178,6 +228,7 @@ I used Django's unitesting and ran tests to have coverage of over 80% on both ap
 
 ![unit testing Links App](docs/images/coverage_accounts.jpg)
 </details>
+
 # Further Testing
 
 - I tested that the page works in the different browsers: [Chrome](docs/images/chrome.jpg), [Safari](assets/images/game-safari-display.jpg), [Firefox](docs/images/firefox.jpg).

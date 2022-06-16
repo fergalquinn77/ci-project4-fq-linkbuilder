@@ -225,20 +225,32 @@ When the user clicks on this link, they are asked for their email address
 ![Reset Password Form](docs/images/features/password-reset-form.jpg)
 
 Once they enter their email, a message is displayed
+<details>
+<summary>Email Sent</summary>
 
-![Email Sent](docs/images/features/email-sent-password.jpg)
+![Email Sent](docs/images/features/email-sent-password.jpg)</details>
+
 
 The email to the user with link to progress password reset is below
+<details>
+<summary>Reset Password Email</summary>
 
-![Click Link](docs/images/features/email-to-user-password-reset.jpg)
+![Click Link](docs/images/features/email-to-user-password-reset.jpg)</details>
+
 
 Once the user clicks on the link, they are brought to the following page
+<details>
+<summary>Enter New Password</summary>
 
-![Enter new password](docs/images/features/reset-password-confirm.jpg)
+![Enter new password](docs/images/features/reset-password-confirm.jpg)</details>
+
 
 Once they provide new password details, they are brought to the final screen
+<details>
+<summary>Change Complete</summary>
 
-![Change Complete](docs/images/features/change-complete.jpg)
+![Change Complete](docs/images/features/change-complete.jpg)</details>
+
 
 ## **Logged in user**
 
@@ -255,47 +267,95 @@ It gives the user full CRUD ability and also allows them to preview what their e
 Adding/Editing a Link
 
 The user is displayed with a simple interface for entering a new link or editing an existing link.
+<details>
+<summary>Add a link</summary>
 
-![Add Link](docs/images/features/logged-in-user/add-link.jpg)
-![Edit Link](docs/images/features/logged-in-user/edit-details.JPG)
+![Add Link](docs/images/features/logged-in-user/add-link.jpg)</details>
+
+<details>
+<summary>Edit a link</summary>
+
+![Edit Link](docs/images/features/logged-in-user/edit-details.JPG)</details>
+
 
 There is **validation** for both forms on the url entered. It checks for a 200 response and gives an error message if this is not received (i.e. not a valid URL)
+
+<details>
+<summary>Invalid URL</summary>
+
+![Invalid URL](docs/images/features/logged-in-user/invalid-url.jpg)</details>
+
+
+### ***Support Pages***
+
+If the user is having trouble, there is a support page where they can post a query.
+
+<details>
+<summary>Support Page</summary>
+
+![Support-Query](docs/images/support-queries.jpg)</details>
+
+When the user has posted a support ticket, they can view responses to the query on the ticket page
+<details>
+<summary>Ticket Page</summary>
+
+![Ticket-Page](docs/images/support_response.jpg)</details>
 
 ### ***Showing and Hiding Links***
 
 The user can choose to show or hide each link on the homepage by clicking the 'show' or 'hide' button. A spinner appears when the button is click until the page is loaded
-![Spinner](docs/images/spinner.jpg)
+<details>
+<summary>Spinner</summary>
 
-![Invalid URL](docs/images/features/logged-in-user/invalid-url.jpg)
+![Spinner](docs/images/spinner.jpg)</details>
+
+
+
 
 If a user trys to edit/delete/toggle another users links, the following message shows:
+<details>
+<summary>No Access</summary>
 
-![No Access](docs/images/no-access.jpg)
+![No Access](docs/images/no-access.jpg)</details>
+
 
 ## ***Footer***
 * Displays social media links to contact the author.  
+<details>
+<summary>Footer</summary>
 
-![Footer](docs/images/footer.jpg)
+![Footer](docs/images/footer.jpg)</details>
+
 
 ## **Error pages**
 
 ### ***500 Server Error Page***
 I created a basic 500 & 404 page with button to bring the user back to the homepage.
+<details>
+<summary>500 Error Page</summary>
 
-![500 error page](docs/images/500-error.JPG)
+![500 error page](docs/images/500-error.JPG)</details>
+
 
 ### ***404 Page Not Found Error Page***
 This error shows when a user types a URL into the browser which does not exist within the app's domain.
+<details>
+<summary>404 Error Page</summary>
 
-![404 error page](docs/images/404-error.jpg)
+![404 error page](docs/images/404-error.jpg)</details>
+
 
 ## **Warning Modals**
 ### ***Delete Link***
-![Delete link warning](docs/images/confirm-deletion.jpg)
+<details>
+<summary>Delete Warning Link</summary>
+
+![Delete link warning](docs/images/confirm-deletion.jpg)</details>
+
 
 # **Future development**
 * I would like to incorporate drag and drop functionality for the ordering of links. I have come across a couple of JQuery solutions that should help here like [Sortable](https://jqueryui.com/sortable/).
-* Analytics feature, providing the user with detailed insights on link clicks. 
+* Analytics feature, providing the user with more detailed insights on link clicks. 
 
 # **Testing Phase**
 I have included testing details during and post-development in a separate document called [TESTING.md](TESTING.md).
