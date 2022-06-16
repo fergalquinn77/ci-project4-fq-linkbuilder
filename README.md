@@ -40,6 +40,7 @@ Companies and individuals often require one URL link to contain information/link
     + [***Reset Password***](#reset-password)
   * [**Logged in user**](#logged-in-user)
     + [***Adding/Deleting/Updating Links***](#addingdeletingupdating-links)
+    + [***Support Pages***](#support-pages)
     + [***Showing and Hiding Links***](#showing-and-hiding-links)
   * [***Footer***](#footer)
   * [**Error pages**](#error-pages)
