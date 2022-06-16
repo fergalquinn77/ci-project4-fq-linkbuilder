@@ -31,7 +31,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
-DEBUG = False
 
 
 ALLOWED_HOSTS = ["ci-fq-linktree-p4.herokuapp.com", "localhost"]
@@ -123,17 +122,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'linktree.wsgi.application'
 
-# if DEBUG:
-DATABASES = {
+if DEBUG:
+    DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
-    }
-# else:
-#     DATABASES = {
-#         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-#     }
+        }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        }
 
 
 AUTH_PASSWORD_VALIDATORS = [

@@ -12,7 +12,7 @@ urlpatterns = [
     path('', links_views.learn, name='home'),
     path('index/', links_views.links_view, name='links-home'),
     # Account related
-    path('register/', accounts_views.register, name='register'),
+#     path('register/', accounts_views.register, name='register'),
     path('accounts/', include('allauth.urls')),
     path('accounts/profile/', accounts_views.profile, name='profile'),
     # URL Link Model related

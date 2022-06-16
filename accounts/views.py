@@ -8,16 +8,16 @@ from .forms import *
 
 
 # User Registration
-def register(request):
-    if request.method == 'POST':
-        form = UserRegisterForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            return redirect('login')
-    else:
-        form = UserRegisterForm()
-    return render(request, 'users/register.html', {'form': form})
+# def register(request):
+#     if request.method == 'POST':
+#         form = UserRegisterForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             username = form.cleaned_data.get('username')
+#             return redirect('login')
+#     else:
+#         form = UserRegisterForm()
+#     return render(request, 'users/register.html', {'form': form})
 
 
 # Profile Creation
@@ -93,7 +93,7 @@ def toggle_ticket_status(request, ticket_id):
         return redirect('links-home')
 
 
-# Used for toggling links from visible to not visible
+# Used for getting support ticket details
 @login_required()
 def ticket_details(request, ticket_id):
 
@@ -102,13 +102,17 @@ def ticket_details(request, ticket_id):
     form = SupportMessageForm()
     if request.method == 'POST':
         form = SupportMessageForm(request.POST)
-        if form.is_valid():
-            new_form = form.save(commit=False)
-            new_form.user = request.user
-            new_form.ticket = Support_Tickets.objects.get(id=ticket_id)
-            messages.success(request, f'Your message has been posted')
-            new_form.save()
-            return redirect('ticket-details', ticket.id)
+        if request.user == ticket.user:
+            if form.is_valid():
+                new_form = form.save(commit=False)
+                new_form.user = request.user
+                new_form.ticket = Support_Tickets.objects.get(id=ticket_id)
+                messages.success(request, f'Your message has been posted')
+                new_form.save()
+                return redirect('ticket-details', ticket.id)
+        else:
+            messages.warning(request, 'You do not have access to this page')
+            return redirect('links-home') 
 
     if request.user == ticket.user:
         ticket_messages = Tickets_Messages.objects.all().filter(ticket=ticket)
