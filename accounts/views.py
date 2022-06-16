@@ -7,19 +7,6 @@ from .models import Profile, Support_Tickets, Tickets_Messages
 from .forms import *
 
 
-# User Registration
-# def register(request):
-#     if request.method == 'POST':
-#         form = UserRegisterForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             username = form.cleaned_data.get('username')
-#             return redirect('login')
-#     else:
-#         form = UserRegisterForm()
-#     return render(request, 'users/register.html', {'form': form})
-
-
 # Profile Creation
 @login_required
 def profile(request):
@@ -112,7 +99,7 @@ def ticket_details(request, ticket_id):
                 return redirect('ticket-details', ticket.id)
         else:
             messages.warning(request, 'You do not have access to this page')
-            return redirect('links-home') 
+            return redirect('links-home')
 
     if request.user == ticket.user:
         ticket_messages = Tickets_Messages.objects.all().filter(ticket=ticket)
