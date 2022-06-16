@@ -166,8 +166,18 @@ Here I have only tested the admin panel relating to the links and profile apps.
 
 ## Unitesting
 
+I used Django's unitesting and ran tests to have coverage of over 80% on both app's. Here are the results:
 
+<details>
+<summary>Click here to view unit testing for Links App</summary>
 
+![unit testing Links App](docs/images/coverage_links.jpg)
+</details>
+<details>
+<summary>Click here to view unit testing for Accounts App</summary>
+
+![unit testing Links App](docs/images/coverage_accounts.jpg)
+</details>
 # Further Testing
 
 - I tested that the page works in the different browsers: [Chrome](docs/images/chrome.jpg), [Safari](assets/images/game-safari-display.jpg), [Firefox](docs/images/firefox.jpg).

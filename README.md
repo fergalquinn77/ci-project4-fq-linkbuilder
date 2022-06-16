@@ -95,6 +95,7 @@ I have further divided this table into three categories to help prioritize the o
 
 * UX efforts **should** accommodate these:
     * User can toggle between hide/show links.
+    * Support system for users
 
 * **Unwise** use of time to address there:
     * User can drag and drop links to re-order.
@@ -117,6 +118,7 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
     * **Access the admin interface** so that **Manually edit user and link details**    
     * ... **Filter and search all users from the admin page** so that **I can utilize the admin page to review, edit and delete user data quickly.**
     * ...**Easily navigate the admin panel** so that **I can view, search, add and delete links**
+    * ...**Reply to support enquiries** so that **users can have their issues resolved**
 
 * As an **Unregistered User** I can... 
     * ...**access a user page without the required to have an account** so that **I can access the users links and social media links**
@@ -128,6 +130,7 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
     * ...**add, edit and delete links** so that **modify my linktree**
     * ...**Toggle a link to show or hide** so that **turn the link off and on when I need it**
     * ...**Schedule links** so that **they can automatcially appear and disappear from my page according to my schedule**
+    * ...**Post support enquiries** so that **resolve problems I have**
 
 * As a **Site User** I can...
     * ...**see appropriate responses upon specific interactions with the site** so that **I know my edit, deletion, submission has been successful.**
@@ -138,6 +141,8 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
 * As a **Registered User** I can **Schedule links** so that **they can automatcially appear and disappear from my page according to my schedule**
 * As a **Registered User** I can **see analytics on how many people accessed my links** so that **what links are the most popular**
 * As a **Registered User** I can **drag and drop links** so that **I can easily reorder their positions on my site**
+
+I did make a start on analytics, in that the user can see how many times their links have been clicked on. However, there is lots more analytics that can be incorporated into this app.
 
 
 ## **Skeleton**
@@ -150,7 +155,12 @@ I wanted the site to be clean and simple. This is reflected in the wireframes be
 
 ### **Database Schema**
 Below is the ERD for my database models:  
-![Entity-Relationship-Model](docs/images/erd.png) 
+<details>
+<summary>Click here for the ERD model</summary>
+
+![Entity-Relationship-Model](docs/images/erd.png)
+</details>
+ 
 
 There are 3 models used in the **Accounts App**. This app deals with user accounts/profiles and support tickets/messages. There is one model in the **Links App**. This app deal with user links.
 
