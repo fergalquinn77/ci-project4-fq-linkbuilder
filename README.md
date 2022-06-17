@@ -164,13 +164,22 @@ Below is the ERD for my database models:
  
 
 There are 3 models used in the **Accounts App**. This app deals with user accounts/profiles and support tickets/messages. There is one model in the **Links App**. This app deal with user links.
+<details>
+<summary>Click here for custom models</summary>
+
+![Custom-Model](docs/images/erd-models.png)
+</details>
 
 
 ## **Surface**
 ### **Color scheme**
 The main colors used in the site are contained in the color grid below. I used [Contrast Eight Shapes](https://contrast-grid.eightshapes.com/) to test the background colors against the colors used for font. 
 
+<details>
+<summary>Click here for color grid</summary>
+
 ![Color gird](docs/images/color-grid.jpg)
+</details>
 
 ### **Typography**
 
@@ -187,20 +196,36 @@ The navbar is simple and has a clear call to action (login). The logo is centere
 * Shows link to register.
 * Shows login link.
 
+<details>
+<summary>Click here for Navbar when not logged in</summary>
+
 ![Navbar when logged out](docs/images/features/navbar/nav-bar-no-login.jpg)
+</details>
 
 #### ***Signed In***
 Changes to the nav bar when logged in are:
 
 Register and Login nav items replaced with Logout and Profile. It also includes the users profile picture if they have one.     
+<details>
+<summary>Click here for Navbar when logged in</summary>
+
 ![Navbar when logged in](docs/images/features/navbar/navbar-login-with-profile-pic.jpg)
+</details>
 
 If the user does not have a profile picture, then the following navbar shows:
+<details>
+<summary>Navbar with no user profile pic</summary>
+
 ![Navbar when logged in](docs/images/features/navbar/navbar-login-no-profile-pic.jpg)
+</details>
 
 ## **First Time User**
 When a user lands on the root url, they are displayed with a page that lets the user know what the site is about and gives them instructions on how to progress
+<details>
+<summary>Homepage instructions</summary>
+
 ![Home Page Instructions](docs/images/features/homepage-instructions.jpg)
+</details>
 
 ### ***Sign-up***
 The sign-up page is simple with a color scheme in keeping with the rest of the site. It includes a cancel button in case the user does not wish to proceed. It uses the in-built django validation with an additional requirement of email address. 
