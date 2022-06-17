@@ -154,9 +154,25 @@ I did make a start on analytics, in that the user can see how many times their l
 ### **Wireframes**
 
 I wanted the site to be clean and simple. This is reflected in the wireframes below.
-* [External Page - No Login Required](docs/wireframes/external-page-login-not-required.png)
-* [Homepage - No Login Required](docs/wireframes/homepage-no-login-required.png)
-* [Index Page - Login Required](docs/wireframes/index-page-login-required.png)
+<details>
+<summary>External Page - No Login Required</summary>
+
+![External Page - No Login Required](docs/wireframes/external-page-login-not required.png)
+</details> 
+
+<details>
+<summary>Homepage - No Login Required</summary>
+
+![Homepage - No Login Required](docs/wireframes/homepage-no-login-required.png)
+</details>
+
+<details>
+<summary>Index Page - Login Required</summary>
+
+![Index Page - Login Required](docs/wireframes/index-page-login-required.png)
+</details>
+
+
 
 ### **Database Schema**
 Below is the ERD for my database models:  
