@@ -433,7 +433,7 @@ I have included details of my initial deployment in a separate document called [
 
 
 # **Mentions**  
-* My mentor Chris Quinn and the CI Tutor Team. Chris once again gave great guidance. The Menotor Team (in particular Alex, Ger and Ed who I was in touch with quite alot) were fantastic as always and putting me on the right track when I hit a problem. 
+* I would like to thank my mentor Chris Quinn, the CI Tutor Team and Mo Shah. Chris once again gave great guidance. The Menotor Team (in particular Alex, Ger and Ed who I was in touch with quite alot) were fantastic as always and putting me on the right track when I hit a problem. Mo Shah provided valuable feedback to me on my project which I am extremely grateful for.  
 
 # **Credits**
 * Balsamiq was used to create the wireframes.
