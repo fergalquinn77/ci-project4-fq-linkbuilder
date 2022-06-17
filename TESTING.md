@@ -166,6 +166,9 @@ I passed the Javascript through the [JSHint Validator](https://jshint.com/). The
 | External Customer Page
 | 12          | Link boxes work | They take customer to url as inputed by user  | Y |          |
 | 13          | Social Media buttons work| Redirect to social media links as per user profile | Y |          |
+| Support Page
+| 13          | Post Support Ticket | User can [post a support ticket](docs/images/user-test-support-ticket.jpg)  | Y |          |
+| 14          | Can send further messages| Can [post further messages](docs/images/user-test-support-message.jpg) about ticket | Y |          |
 
 ## User Stories
 ### As an **Admin** I can...
@@ -174,17 +177,22 @@ Here I have only tested the admin panel relating to the links and profile apps.
 
 | Checked | ...**Access the admin interface** so that **Manually edit user and link details** |
 |:-------:|:--------|
-| &check; | Can edit user details and links |
+| &check; | Can edit [user profile details](docs/images/admin-edit-profile-details.jpg) and [links](docs/images/admin-edit-link-details.jpg) |
 
-| Checked | ...**Filter and search all users from the admin page** so that **I can utilize the admin page to review, edit and delete user data quickly.** |
+| Checked | ...**Filter and [search all users](docs/images/admin-search-users.jpg) from the admin page** so that **I can utilize the admin page to review, edit and delete user data quickly.** |
 |:-------:|:--------|
-| &check; | Can filter users - search by username |
-| &check; | Can filter links - search by link title |
+| &check; | Can filter users - [search by username](docs/images/admin-filter-users.jpg) |
+| &check; | Can filter links - [search by link title](docs/images/admin-filter-links.jpg) |
 
 | Checked | ...**Easily navigate the admin panel** so that **I can view, search, add and delete links** |
 |:-------:|:--------|
 | &check; | Can search links |
 | &check; | Can create, edit and delete links |
+
+| Checked | ...**[Reply to support enquiries](docs/images/admin-response-support-query.jpg)** so that **users can have their issues resolved** |
+|:-------:|:--------|
+| &check; | Can view user support queries posted in the admin panel |
+| &check; | Can reply to user support queries in the admin panel |
 
 ### As an **Unregistered User** I can...
 
