@@ -157,7 +157,7 @@ I wanted the site to be clean and simple. This is reflected in the wireframes be
 <details>
 <summary>External Page - No Login Required</summary>
 
-![External Page - No Login Required](docs/wireframes/external-page-login-not required.png)
+![External Page - No Login Required](docs/wireframes/external-page-login-not-required.png)
 </details> 
 
 <details>
