@@ -111,7 +111,11 @@ I used the Agile Process for development of this web application. The user stori
 
 To help me visualize a typical user journey around the site, I used [draw.io](https://app.diagrams.net/) to help me plan out the various routes a user could take through the site.
 
+<details>
+<summary>User Journey Flowchart</summary>
+
 ![User Journeys flow chart](docs/flowcharts/user-journey.jpg)
+</details>
 
 ### **User Stories**  
 
@@ -232,23 +236,35 @@ The sign-up page is simple with a color scheme in keeping with the rest of the s
 
 I felt that ease of registration is important for the site so I incorporated Django Google Authentication using django-allauth.
 
-![Register Page](docs/images/features/sign-up-page.jpg)
+<details>
+<summary>Sign Up Page</summary>
+
+![Register Page](docs/images/features/sign-up-page.jpg)</details>
 
 ### ***No Links Added Yet***
 
 When a user has no links and is on their homepage (logged-in), they are displayed with a simple message on how to start using the site.
 
-![Instructions](docs/images/features/instructions-no-links.jpg)
+<details>
+<summary>Site Instructions</summary>
+
+![Instructions](docs/images/features/instructions-no-links.jpg)</details>
 
 ### ***Reset Password***
 
 A user can reset their password on login.
 
-![Reset Password](docs/images/features/password-reset.jpg)
+<details>
+<summary>Password Reset</summary>
+
+![Reset Password](docs/images/features/password-reset.jpg)</details>
 
 When the user clicks on this link, they are asked for their email address
 
-![Reset Password Form](docs/images/features/password-reset-form.jpg)
+<details>
+<summary>Password Reset Form</summary>
+
+![Reset Password Form](docs/images/features/password-reset-form.jpg)</details>
 
 Once they enter their email, a message is displayed
 <details>
@@ -282,11 +298,17 @@ Once they provide new password details, they are brought to the final screen
 
 When a user is logged in and has links/data added, they are displayed with a list of their links on the homepage:
 
-![Instructions](docs/images/features/logged-in-user/index-page.jpg)
+<details>
+<summary>Instructions</summary>
+
+![Instructions](docs/images/features/logged-in-user/index-page.jpg)</details>
 
 It gives the user full CRUD ability and also allows them to preview what their external page will look like. When the user clicks on the 'Preview Page' button - a preview of their external 'single link' site shows
 
-![Preview Page](docs/images/features/logged-in-user/preview-page.jpg)
+<details>
+<summary>Preview Page</summary>
+
+![Preview Page](docs/images/features/logged-in-user/preview-page.jpg)</details>
 
 ### ***Adding/Deleting/Updating Links***
 
