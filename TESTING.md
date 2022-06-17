@@ -167,8 +167,8 @@ I passed the Javascript through the [JSHint Validator](https://jshint.com/). The
 | 12          | Link boxes work | They take customer to url as inputed by user  | Y |          |
 | 13          | Social Media buttons work| Redirect to social media links as per user profile | Y |          |
 | Support Page
-| 13          | Post Support Ticket | User can [post a support ticket](docs/images/user-test-support-ticket.jpg)  | Y |          |
-| 14          | Can send further messages| Can [post further messages](docs/images/user-test-support-message.jpg) about ticket | Y |          |
+| 14         | Post Support Ticket | User can [post a support ticket](docs/images/user-test-support-ticket.jpg)  | Y |          |
+| 15          | Can send further messages| Can [post further messages](docs/images/user-test-support-message.jpg) about ticket | Y |          |
 
 ## User Stories
 ### As an **Admin** I can...
@@ -221,6 +221,12 @@ Here I have only tested the admin panel relating to the links and profile apps.
 | &check; | I cannot edit a link of another user  |
 | &check; | I cannot delete the link of another user  |
 | &check; | I cannot toggle the link of another user  |
+
+| Checked | ...**Post support enquiries** so that **resolve problems I have** |
+|:-------:|:--------|
+| &check; | I can post a support ticket  |
+| &check; | I can post further messages relating to my support ticket  |
+
 
 ## Unitesting
 
