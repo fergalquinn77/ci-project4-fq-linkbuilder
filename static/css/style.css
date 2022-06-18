@@ -11,16 +11,17 @@ body {
     border-color: lightgray;
 }
 
-/* Header and footer*/
+/* Login Pages*/
 
 .btn-login {
     width: 100px;
 }
 
-#google-login {
-    width: 202px;
-    background-color: white;
+.google-login {
+    width:202px;
+    background-color:white;
 }
+
 
 /* Header and footer*/
 
@@ -160,6 +161,10 @@ a,
 a:hover,
 .btn:hover {
     color: white;
+}
+
+.google-login:hover {
+    color:blue;
 }
 
 hr {

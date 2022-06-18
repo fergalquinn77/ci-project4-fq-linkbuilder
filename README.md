@@ -315,9 +315,9 @@ Once they provide new password details, they are brought to the final screen
 When a user is logged in and has links/data added, they are displayed with a list of their links on the homepage:
 
 <details>
-<summary>Instructions</summary>
+<summary>Index Page</summary>
 
-![Instructions](docs/images/features/logged-in-user/index-page.jpg)</details>
+![Index Page](docs/images/features/logged-in-user/index-page.jpg)</details>
 
 It gives the user full CRUD ability and also allows them to preview what their external page will look like. When the user clicks on the 'Preview Page' button - a preview of their external 'single link' site shows
 
@@ -449,7 +449,7 @@ I have included details of my initial deployment in a separate document called [
 
 
 # **Mentions**  
-* I would like to thank my mentor Chris Quinn, the CI Tutor Team and Mo Shah. Chris once again gave great guidance. The Menotor Team (in particular Alex, Ger and Ed who I was in touch with quite alot) were fantastic as always and putting me on the right track when I hit a problem. Mo Shah provided valuable feedback to me on my project which I am extremely grateful for.  
+* I would like to thank my mentor Chris Quinn, the CI Tutor Team and Mo Shah.  The Menotor Team (in particular Alex, Ger and Ed who I was in touch with quite alot) were fantastic as always and putting me on the right track when I hit a problem. Mo Shah provided valuable feedback to me on my project which I am extremely grateful for.  
 
 # **Credits**
 * Balsamiq was used to create the wireframes.
