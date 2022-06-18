@@ -9,7 +9,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="mx-auto mt-5 jumbotron">
+    <div class="mx-auto mt-5 jumbotron p-3">
       <h2 class="text-center border-bottom border-dark">{% trans "Sign Up" %}</h2>
 
       <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
@@ -31,7 +31,7 @@
         </div>
         <div class="row">
           <div class="col text-center">
-            <a href="{% provider_login_url 'google' %}" class="btn btn-sm btn" style="width:202px;background-color: white;"><i class="fab fa-google"></i>
+            <a href="{% provider_login_url 'google' %}" class="btn btn-sm btn google-login"><i class="fab fa-google"></i>
               Sign Un With Google</a>
           </div>
         </div>
