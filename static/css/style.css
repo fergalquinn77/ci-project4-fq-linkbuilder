@@ -22,6 +22,11 @@ body {
     background-color:white;
 }
 
+/* Support Ticket Detail Page*/
+
+.btn-message-page{
+    width: 150px;
+}
 
 /* Header and footer*/
 

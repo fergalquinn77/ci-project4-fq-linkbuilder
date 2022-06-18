@@ -31,14 +31,14 @@
             {{ form|crispy }}
         </fieldset>
         <div class="text-center">
-            <button class="btn btn-success" type="submit" style="width:150px;">
+            <button class="btn btn-success btn-message-page mt-1" type="submit">
                 Add Message
             </button>
-            <button class="btn btn-danger" type="button" onclick="location.href='{% url 'open-support-tickets' %}'"
-                style="width:150px;">Cancel</button>
+            <button class="btn btn-danger btn-message-page mt-1" type="button" onclick="location.href='{% url 'open-support-tickets' %}'"
+                >Cancel</button>
         </div>
         <div class="text-center">
-            <a class="btn btn-warning mt-1" href="/toggle-ticket-status/{{ ticket.id }}" style="width:302px;">Mark
+            <a class="btn btn-warning mt-1 btn-message-page" href="/toggle-ticket-status/{{ ticket.id }}">Mark
                 Resolved
             </a>
         </div>
