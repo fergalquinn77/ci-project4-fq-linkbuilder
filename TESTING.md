@@ -170,6 +170,21 @@ I passed the Javascript through the [JSHint Validator](https://jshint.com/). The
 | 14         | Post Support Ticket | User can [post a support ticket](docs/images/user-test-support-ticket.jpg)  | Y |          |
 | 15          | Can send further messages| Can [post further messages](docs/images/user-test-support-message.jpg) about ticket | Y |          |
 
+## Security
+
+It should be the case that only the logged in user can add/edit/delete their own links and not others users links. This also applies to all other models. I manually tested each model using two usernames - namely, **user1** and **user2** 
+
+|     | User Actions           | Expected Results | Y/N | Comments    |
+|-------------|------------------------|------------------|------|-------------|
+| Links Model     |                        |                  |      |             |
+| 1           | **user2** cannot edit **user1** link  |   Do Not Have Access message | Y |          |
+| 2           | **user2** cannot delete **user1** link | Do Not Have Access message | Y |          |
+| Support Ticket  
+| 3           | **user2** cannot view **user1** support tickets | Do Not Have Access message | Y |          |
+| 4           | **user2** cannot view mark **user1** support tickets as resolved | Do Not Have Access message | Y |          |
+
+If user2 cannot access user1 supports tickets - then they cannot post ticket_messages either (another model). user2 also does not have access to user1 profile so cannot change details on it.
+
 ## User Stories
 ### As an **Admin** I can...
 

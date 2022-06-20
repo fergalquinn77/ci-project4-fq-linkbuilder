@@ -3,7 +3,7 @@
 # **Link Builder**
 
 ## **Project Overview**
-Linkbuilder is a full stack web application that allows users to consolodate all their links into one link. This was developed as the Milestone Project 4 for the Code Institute Diploma in Software Development. This project is based on the LinkTree web application concept. 
+Linkbuilder is a full stack web application that allows users to consolodate all their links into one link. This was developed as the Milestone Project 4 for the Code Institute Diploma in Software Development. This project is based on the [LinkTree](https://linktr.ee/) web application concept. 
 
 Companies and individuals often require one URL link to contain information/links for many other sites. In particular, Instagram allows users to have one link in Bio. Link Builder allows users create one landing link (e.g https://www.linkbuilder.com/fergalquinn) which displays all the users links.
 
