@@ -215,6 +215,10 @@ Here I have only tested the admin panel relating to the links and profile apps.
 |:-------:|:--------|
 | &check; | When not logged-in, when I enter the root web-address, I am brought to a page introducing the website and giving sign-up/sign-in options  |
 
+| Checked | ......**register an account** so that **I can start building my single link** |
+|:-------:|:--------|
+| &check; | An unregistered user is able to sign up easily for an account.  |
+
 ### As a **Site User** I can...
 | Checked | ...**see appropriate responses upon specific interactions with the site** so that **I know my edit, deletion, submission has been successful.** |
 |:-------:|:--------|
@@ -242,6 +246,22 @@ Here I have only tested the admin panel relating to the links and profile apps.
 | &check; | I can post a support ticket  |
 | &check; | I can post further messages relating to my support ticket  |
 
+| Checked | ...**Toggle a link to show or hide** so that **turn the link off and on when I need it** |
+|:-------:|:--------|
+| &check; | I can toggle a link and it will either show or hide is on my external customer site  |
+
+| Checked | ...**set a profile picture and company profile** so that **it gives my site a better identity** |
+|:-------:|:--------|
+| &check; | I can set my profile picture. I can add detail on social media accounts  |
+
+| Checked | ...**see appropriate responses upon specific interactions with the site** so that **I know my edit, deletion, submission has been successful.** |
+|:-------:|:--------|
+| &check; | Users gets messages [example message](docs/images/features/logged-in-user/link-added.jpg) |
+
+| Checked | ...**Preview what my external site** so that **I can use what my single-link site will look like to customers** |
+|:-------:|:--------|
+| &check; | Users can click the Preview Page button when logged in to view their external customer site. |
+    
 
 ## Unitesting
 

@@ -86,8 +86,6 @@ Viability and feasibility in the above table are based on both time and current 
 
 ## **Scope**
 
-Due to the imbalance in scores above, there will be some trade-offs. However, I anticipate that some further trade-offs will need to be made later due to the time set for this project. 
-
 I have further divided this table into three categories to help prioritize the order of importance and clarify the MVP required to launch as a basic proof of concept while meeting the above objective. These three categories are:-
 * UX efforts **must** address these:
     * Add/Edit/Delete links.
@@ -107,7 +105,7 @@ I have further divided this table into three categories to help prioritize the o
 
 ### **Agile Development Process**
 
-I used the Agile Process for development of this web application. The user stories are detailed below. I used the Kanban board on Github to track progress. Coming to the end of this project, I became aware of some cloud based software suites that would have been most useful in tracking development progress (in particular [Craft.io](https://www.craft.io). I plan to use this for my next project.
+I used the Agile Process for development of this web application. The user stories are detailed below. I used the [Kanban board](docs/images/kanban-board.JPG) on Github to track progress. Coming to the end of this project, I became aware of some cloud based software suites that would have been most useful in tracking development progress (in particular [Craft.io](https://www.craft.io). I plan to use this for my next project.
 
 To help me visualize a typical user journey around the site, I used [draw.io](https://app.diagrams.net/) to help me plan out the various routes a user could take through the site.
 
@@ -127,19 +125,17 @@ To help me visualize a typical user journey around the site, I used [draw.io](ht
 
 * As an **Unregistered User** I can... 
     * ...**access a user page without the required to have an account** so that **I can access the users links and social media links**
+    * ...**register an account** so that **I can start building my single link**
 
 * As a **Registered User** I can... 
-    * ...**register an account** so that **I can start building my single link**
+    
     * ...**add links** so that **build my linktree**  
     * ...**set a profile picture and company profile** so that **it gives my site a better identity**
-    * ...**add, edit and delete links** so that **modify my linktree**
+    * ...**Add/Edit and Delete Links** so that **I can modify the links displayed on my external page**
     * ...**Toggle a link to show or hide** so that **turn the link off and on when I need it**
     * ...**Schedule links** so that **they can automatcially appear and disappear from my page according to my schedule**
     * ...**Post support enquiries** so that **resolve problems I have**
-
-* As a **Site User** I can...
     * ...**see appropriate responses upon specific interactions with the site** so that **I know my edit, deletion, submission has been successful.**
-    * ...**Add/Edit and Delete Links** so that **I can modify the links displayed on my external page**
     * ...**Preview what my external site** so that **I can use what my single-link site will look like to customers**
 
 ### **User Stories dropped as part of the agile process**
